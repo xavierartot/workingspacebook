@@ -1,0 +1,19 @@
+.columnColor {
+  background-color: #eee;
+  width: 50%;
+  min-height: 50%;
+  margin: 1em;
+}
+.container {
+  background-color: orange;
+  /*margin-top: 1em*/
+}
+.container2 {
+  background-color: red;
+}
+.tac {
+  text-align: center;
+}
+.bgc-n {
+  background-color: green
+}
