@@ -5,7 +5,8 @@
  * Distributed under terms of the MIT license.
  */
 import React, { Component } from 'react'
-import { Segment, Label, Image, Icon } from 'semantic-ui-react'
+import { Divider, Segment, Label, Image, Icon } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
 class Gallery extends Component {
   render() {
@@ -34,14 +35,34 @@ class Gallery extends Component {
 
           <div className="product-gallery-details">
             <div className="product-details-name">
-              <span className="text-underline">Skull Tidy, Jewellery Box &amp; Accessories Container in White - Perfect for Storing Keys, Jewellery, Stationary, Spare Coins, Cosmetics or Accessories</span>
+              <span className="text-underline">
+                Skull Tidy, Jewellery Box &amp; Accessories Container in White
+              </span>
             </div>
             <div className="product-details-brand">
               <span>
-                <span>by </span>
+                <span>by </span> Artot
               </span>
             </div>
           </div>
+
+          <Divider className="divider" fitted={false} />
+
+          <footer className="footer ui double two column grid">
+            <div className="column tal">
+              <Link className="trending-link" to="/">
+                <Icon as="i" link name="bullhorn" />
+                <span className="trending">Trending</span>
+              </Link>
+            </div>
+            <div className="column tar">
+              <span className="mr1">
+                <Icon as="i" link name="heart" />
+                <span className="number-like">5</span>
+              </span>
+              <Icon as="i" link name="plus circle" />
+            </div>
+          </footer>
         </Segment>
       </div>
     )
