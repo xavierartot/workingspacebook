@@ -5,13 +5,14 @@
  * Distributed under terms of the MIT license.
  */
 import React, { Component } from 'react'
-import { Divider, Segment, Label, Image, Icon } from 'semantic-ui-react'
+import { Modal, Header, Button, Divider, Segment, Label, Image, Icon } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
+import ModalGallery from './ModalGallery'
 
 class Gallery extends Component {
   render() {
     return (
-      <div className="column gallery-col ">
+      <div className="column gallery-col">
         <Segment
           className="gallery"
         >
@@ -25,11 +26,12 @@ class Gallery extends Component {
               $50
           </Label>
           <div className="gallery-image">
-            <Image
-              as="a"
-              href="http://google.com"
-              src="http://place-hold.it/226x210"
-              target="_blank"
+            {/* booleen is a placeholder... waiting for the api */}
+            <ModalGallery
+              description
+              header
+              image
+              userId
             />
           </div>
 
@@ -56,10 +58,10 @@ class Gallery extends Component {
               </Link>
             </div>
             <div className="column tar">
-              <span className="mr1">
+              <Link className="mr1" to="/">
                 <Icon as="i" link name="heart" />
                 <span className="number-like">5</span>
-              </span>
+              </Link>
               <Icon as="i" link name="plus circle" />
             </div>
           </footer>
