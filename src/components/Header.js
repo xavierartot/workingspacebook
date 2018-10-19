@@ -22,7 +22,7 @@ class Header extends Component {
     return (
       <Fragment>
         <Responsive maxWidth={10559} minWidth={768}>
-          <div className="ui vertical center aligned segment">
+          <div className="ui vertical center aligned segment header raised">
             <div className="ui container">
               <div className="ui secondary menu huge greyb font-europa-normal ">
                 <div className="left item">

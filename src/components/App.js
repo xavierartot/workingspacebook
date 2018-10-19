@@ -12,12 +12,11 @@ import Header from './Header'
 // import Add from './Add'
 import PageNotFound from './PageNotFound'
 import Page from './Page'
-import Categories from './Categories'
 import Responsive from './Responsive'
 import Shop from './Shop'
 import Featured from './Featured'
-import 'semantic-ui-css/semantic.min.css'
-import '../css/helper.css'
+import User from './User'
+import Explore from './Explore'
 
 class App extends Component {
   componentDidMount() {
@@ -26,14 +25,16 @@ class App extends Component {
   }
   render() {
     return (
-      <Router basename="" >
+      <Router basename="">
         <Fragment>
           <Header />
           <Switch>
             <Route component={Home} exact path="/" />
+            <Route component={User} exact path="/:id" />
             <Route component={Shop} path="/shop/:id" />
             <Route component={Featured} path="/featured/" />
             <Route component={Page} path="/page/:id" />
+            <Route component={Explore} path="/explore/:id" />
             <Route component={Responsive} path="/responsive" />
             <Route component={PageNotFound} />
           </Switch>
