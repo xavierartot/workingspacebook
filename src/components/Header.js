@@ -7,62 +7,79 @@
 import React, { Component, Fragment } from 'react'
 import { withRouter, NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
-// import { NavBrand, HeaderNav, NavLinkTop } from '../css/Styled'
-import { Menu, Responsive, Icon } from 'semantic-ui-react'
+import { Responsive, Icon, Input, Menu, Button } from 'semantic-ui-react'
 // import '../css/helpers.css'
 
 class Header extends Component {
   state = {
     isActive: false,
   }
+  state = { activeItem: 'gamepad' }
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   render() {
-    const { categories } = this.props
+    const { activeItem } = this.state
     return (
       <Fragment>
         <Responsive maxWidth={10559} minWidth={768}>
-          <Menu className="navbar large labeled pointing">
-            <NavLink
-              activeClassName="activeBrand"
-              className="brand item"
-              to="/"
-            >
-              <Icon name="home" />
-            </NavLink>
-            {Array.isArray(categories) && (
-              categories.map((cat, i) => (
-                <Fragment key={cat.path} >
-                  <NavLink
-                    activeClassName="active"
-                    className="item"
-                    to={`/category/${cat.path}`}
+          <div className="ui vertical center aligned segment">
+            <div className="ui container">
+              <div className="ui secondary menu huge greyb font-europa-normal ">
+                <div className="left item">
+                  <Menu.Item
+                    active={activeItem === 'home'}
+                    as={NavLink}
+                    name="home"
+                    onClick={this.handleItemClick}
+                    to="/"
                   >
-                    {cat.name}
-                  </NavLink>
-                </Fragment>
-              ))
-            )}
-            <div className="right menu">
-              <NavLink activeClassName="activeFake" className="item" to="/">Login</NavLink>
-              <NavLink activeClassName="activeFake" className="item" to="/">Register</NavLink>
+                    <Icon name="home" />
+                    Home
+                  </Menu.Item>
+                  <Menu.Item
+                    active={activeItem === 'shop'}
+                    as={NavLink}
+                    name="shop"
+                    onClick={this.handleItemClick}
+                    to="/shop/categories"
+                  >
+                    <Icon name="shop" />
+                    Shop
+                  </Menu.Item>
+                  <Menu.Item
+                    active={activeItem === 'featured'}
+                    as={NavLink}
+                    name="featured"
+                    onClick={this.handleItemClick}
+                    to="/featured"
+                  >
+                    <Icon name="certificate" />
+                    Featured
+                  </Menu.Item>
+                </div>
+                <div className="menu-logo">
+                  <span>logo</span>
+                </div>
+                <div className="right item">
+                  <Menu.Item className="fz-normal" position="right">
+                    <Input
+                      className="sign-btn "
+                      icon="search"
+                      iconPosition="left"
+                      placeholder="Search..."
+                    />
+                  </Menu.Item>
+                  <Menu.Item className="fz-normal" >
+                    <Button.Group size="small">
+                      <Button toggle >Log in</Button>
+                      <Button.Or />
+                      <Button color="green" toggle>Join</Button>
+                    </Button.Group>
+                  </Menu.Item>
+                </div>
+              </div>
             </div>
-          </Menu>
-        </Responsive>
-
-        {/* CSS is in /css/helpers.css */}
-        <Responsive maxWidth={768}>
-          <nav>
-            <div id="menuToggle">
-              <input type="checkbox" />
-              <span />
-              <span />
-              <span />
-              <ul id="menu">
-                <li><NavLink to="/">Home</NavLink></li>
-                <li><NavLink to="/">About</NavLink></li>
-              </ul>
-            </div>
-          </nav>
+          </div>
         </Responsive>
       </Fragment>
     )

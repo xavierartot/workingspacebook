@@ -14,6 +14,8 @@ import PageNotFound from './PageNotFound'
 import Page from './Page'
 import Categories from './Categories'
 import Responsive from './Responsive'
+import Shop from './Shop'
+import Featured from './Featured'
 import 'semantic-ui-css/semantic.min.css'
 import '../css/helper.css'
 
@@ -29,7 +31,8 @@ class App extends Component {
           <Header />
           <Switch>
             <Route component={Home} exact path="/" />
-            <Route component={Categories} path="/category/:category" />
+            <Route component={Shop} path="/shop/:id" />
+            <Route component={Featured} path="/featured/" />
             <Route component={Page} path="/page/:id" />
             <Route component={Responsive} path="/responsive" />
             <Route component={PageNotFound} />
