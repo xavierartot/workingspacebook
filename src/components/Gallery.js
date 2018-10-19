@@ -5,12 +5,12 @@
  * Distributed under terms of the MIT license.
  */
 import React, { Component } from 'react'
-import { Segment, Label, Container, Image, Icon } from 'semantic-ui-react'
+import { Segment, Label, Image, Icon } from 'semantic-ui-react'
 
 class Gallery extends Component {
   render() {
     return (
-      <div className="column gallery-col">
+      <div className="column gallery-col ">
         <Segment
           className="gallery"
         >

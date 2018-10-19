@@ -23,7 +23,7 @@ class Home extends Component {
       <Fragment>
         <div className="ui vertical center aligned segment home">
           <div className="ui container">
-            <div className="ui secondary menu huge greyb font-europa-normal ">
+            <div className="ui secondary menu huge greyb-home font-europa-normal ">
               <div className="left item">
                 <Menu.Item
                   active={activeItem === 'trending'}
@@ -57,7 +57,7 @@ class Home extends Component {
           </div>
         </div>
         <Container>
-          <div className="ui three column grid">
+          <div className="ui three column grid stackable">
             { [1, 2, 3, 4, 5, 6, 7].map(item => <Gallery key={item}>{item}</Gallery >)}
           </div>
         </Container>
