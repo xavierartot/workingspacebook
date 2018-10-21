@@ -28,10 +28,12 @@
     "stylus": "^0.54.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "build-css": "stylus -c src/stylus/ --out src/css",
+    "watch-css": "yarn run build-css && stylus -c -w src/stylus --out src/css",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
