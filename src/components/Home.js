@@ -5,9 +5,9 @@
  * Distributed under terms of the MIT license.
  */
 import React, { Component, Fragment } from 'react'
-import { Container, Image, Responsive, Icon, Input, Menu, Button } from 'semantic-ui-react'
+import { Container, Menu } from 'semantic-ui-react'
 
-import { withRouter, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Gallery from './Gallery'
 
 class Home extends Component {

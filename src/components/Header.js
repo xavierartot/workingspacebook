@@ -10,6 +10,8 @@ import { connect } from 'react-redux'
 import { Responsive, Icon, Input, Menu, Button } from 'semantic-ui-react'
 // import '../css/helpers.css'
 
+import ModalLogin from './modals/ModalLogin'
+
 class Header extends Component {
   state = {
     isActive: false,
@@ -58,7 +60,9 @@ class Header extends Component {
                   </Menu.Item>
                 </div>
                 <div className="menu-logo">
-                  <span>logo</span>
+                  <span>
+                    <ModalLogin login="login" />
+                  </span>
                 </div>
                 <div className="right item">
                   <Menu.Item className="fz-normal" position="right">

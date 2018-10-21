@@ -17,6 +17,7 @@ import Shop from './Shop'
 import Featured from './Featured'
 import User from './User'
 import Explore from './Explore'
+import Footer from './Footer'
 
 class App extends Component {
   componentDidMount() {
@@ -38,6 +39,7 @@ class App extends Component {
             <Route component={Responsive} path="/responsive" />
             <Route component={PageNotFound} />
           </Switch>
+          <Footer />
         </Fragment>
       </Router>
     )

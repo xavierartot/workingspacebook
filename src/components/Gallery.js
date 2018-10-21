@@ -5,9 +5,9 @@
  * Distributed under terms of the MIT license.
  */
 import React, { Component } from 'react'
-import { Modal, Header, Button, Divider, Segment, Label, Image, Icon } from 'semantic-ui-react'
+import { Divider, Segment, Label, Icon } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
-import ModalGallery from './ModalGallery'
+import ModalGallery from './modals/ModalGallery'
 
 class Gallery extends Component {
   render() {
@@ -20,17 +20,18 @@ class Gallery extends Component {
             as="a"
             className="gallery-ribbon"
             color="teal"
+            href="http://amazon..."
             ribbon="right"
             size="big"
           >
               $50
           </Label>
-          <div className="gallery-image">
-            {/* booleen is a placeholder... waiting for the api */}
+          <div className="gallery-image-container">
             <ModalGallery
               description
               header
-              image
+              image="http://place-hold.it/226x210"
+              productId
               userId
             />
           </div>
@@ -38,7 +39,13 @@ class Gallery extends Component {
           <div className="product-gallery-details">
             <div className="product-details-name">
               <span className="text-underline">
-                Skull Tidy, Jewellery Box &amp; Accessories Container in White
+                <ModalGallery
+                  contentText="Skull Tidy, Jewellery Box &amp; Accessories Container in White"
+                  description
+                  header
+                  productId
+                  userId
+                />
               </span>
             </div>
             <div className="product-details-brand">

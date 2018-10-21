@@ -184,10 +184,12 @@ div.ui.header.ui.segment{
     font-size: 19px;
     margin-top: 1rem;
   }
-  .gallery-image {
+  .gallery-image-container {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .gallery-image {
     cursor: pointer;
   }
   .gallery-col .ui.divider {
@@ -240,4 +242,14 @@ div.ui.header.ui.segment{
     white-space: nowrap;
     text-overflow: ellipsis;
     width: 90%;
+    cursor: pointer;
+  }
+
+  /*Login component*/
+  .ddd {
+  border-radius: 50px;
+  background-color: rgba(235,235,235,0.6);
+  color: #212121;
+  box-sizing: border-box;
+  border: 0;
   }

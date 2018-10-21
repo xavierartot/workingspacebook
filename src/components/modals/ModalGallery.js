@@ -5,20 +5,26 @@
  * Distributed under terms of the MIT license.
  */
 import React, { Component } from 'react'
-import { Modal, Header, Button, Image } from 'semantic-ui-react'
+import { Modal, Header, Image } from 'semantic-ui-react'
 
 class ModalGallery extends Component {
   render() {
+    const {
+      image, contentText,
+    } = this.props
+    const triggerContent = image !== undefined
+      ? (<Image
+        className="gallery-image"
+        src={image}
+        target="_blank"
+      />)
+      : <p>{contentText}</p>
     return (
       <div>
         <Modal
           closeIcon
-          dimmer="blurring"
           size="large"
-          trigger={<Image
-            src="http://place-hold.it/226x210"
-            target="_blank"
-          />}
+          trigger={triggerContent}
         >
           <Modal.Header>Select a Photo</Modal.Header>
           <Modal.Content image>
