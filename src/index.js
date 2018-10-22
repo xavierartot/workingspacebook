@@ -8,6 +8,7 @@ import reducers from './reducers'
 import middlewares from './middlewares'
 import * as serviceWorker from './serviceWorker'
 import 'semantic-ui-css/semantic.min.css'
+import './css/main.css'
 
 const store = createStore(reducers, middlewares)
 

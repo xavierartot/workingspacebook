@@ -7,7 +7,7 @@
 import React, { Component, Fragment } from 'react'
 import { withRouter, NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { Responsive, Icon, Input, Menu, Button } from 'semantic-ui-react'
+import { Dropdown, Responsive, Icon, Input, Menu, Button } from 'semantic-ui-react'
 // import '../css/helpers.css'
 
 import ModalLogin from './modals/ModalLogin'
@@ -61,7 +61,9 @@ class Header extends Component {
                 </div>
                 <div className="menu-logo">
                   <span>
-                    <ModalLogin login="login" />
+                    <ModalLogin contentLogin="Log In">
+                      login and get your collection
+                    </ModalLogin>
                   </span>
                 </div>
                 <div className="right item">
@@ -75,15 +77,70 @@ class Header extends Component {
                   </Menu.Item>
                   <Menu.Item className="fz-normal" >
                     <Button.Group size="small">
-                      <Button toggle >Log in</Button>
-                      <Button.Or />
-                      <Button color="green" toggle>Join</Button>
+                      <ModalLogin contentLogin="Log In">
+                        login and get your collection
+                      </ModalLogin>
+                      <Button toggle>Join</Button>
                     </Button.Group>
                   </Menu.Item>
                 </div>
               </div>
             </div>
           </div>
+        </Responsive>
+        <Responsive className="menu-mobile" maxWidth={768}>
+          <Menu>
+            <Dropdown item text="Menu" >
+              <Dropdown.Menu>
+                <Dropdown.Item>
+                  <Menu.Item
+                    active={activeItem === 'home'}
+                    as={NavLink}
+                    name="home"
+                    onClick={this.handleItemClick}
+                    to="/"
+                  >
+                    <Icon name="home" />
+                    Home
+                  </Menu.Item>
+                </Dropdown.Item>
+                <Dropdown.Item>
+                  <Menu.Item
+                    active={activeItem === 'shop'}
+                    as={NavLink}
+                    name="shop"
+                    onClick={this.handleItemClick}
+                    to="/shop/categories"
+                  >
+                    <Icon name="shop" />
+                    Shop
+                  </Menu.Item>
+                </Dropdown.Item>
+                <Dropdown.Item>
+                  <Menu.Item
+                    active={activeItem === 'featured'}
+                    as={NavLink}
+                    name="featured"
+                    onClick={this.handleItemClick}
+                    to="/featured"
+                  >
+                    <Icon name="certificate" />
+                    Featured
+                  </Menu.Item>
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+            <div className="right item">
+              <Menu.Item className="fz-normal" >
+                <Button.Group size="small">
+                  <ModalLogin contentLogin="Log In">
+                        login and get your collection
+                  </ModalLogin>
+                  <Button toggle>Join</Button>
+                </Button.Group>
+              </Menu.Item>
+            </div>
+          </Menu>
         </Responsive>
       </Fragment>
     )

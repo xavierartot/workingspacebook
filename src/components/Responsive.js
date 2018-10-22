@@ -5,7 +5,6 @@
  * Distributed under terms of the MIT license.
  */
 import React, { Component } from 'react'
-import '../css/helper.css'
 import { Icon, Input, Menu, Button } from 'semantic-ui-react'
 
 class Responsive extends Component {

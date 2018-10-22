@@ -35,7 +35,6 @@ class Gallery extends Component {
               userId
             />
           </div>
-
           <div className="product-gallery-details">
             <div className="product-details-name">
               <span className="text-underline">

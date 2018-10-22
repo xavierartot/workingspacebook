@@ -1,21 +1,17 @@
 /*
- * Login.js
- *
+ * Join.js
  * Copyright (C) 2018 xav <xav@xavs-Mac-mini>
- *
- * Distributed under terms of the MIT license.
  */
 import React, { Component } from 'react'
 import { Message, Form, Input, Button, Segment, Label, Image, Icon } from 'semantic-ui-react'
 
-class Login extends Component {
+class Join extends Component {
   render() {
     return (
       <Form
         error={false}
         loading={false}
-        onSubmit={this.login}
-        size="big"
+        onSubmit={this.join}
         success={false}
       >
         <Message
@@ -52,7 +48,7 @@ class Login extends Component {
           fluid
           loading={false}
           size="large"
-        >Login
+        >Join
         </Button>
         <div className="ui error message" />
 
@@ -60,4 +56,4 @@ class Login extends Component {
     )
   }
 }
-export default Login
+export default Join

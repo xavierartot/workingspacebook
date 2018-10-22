@@ -1,0 +1,6 @@
+.form {
+  border: 0;
+}
+.ui.mini.modal>.header:not(.ui).header-form {
+  font-size: 2rem !important;
+}

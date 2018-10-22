@@ -1,0 +1,77 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ACCOUNT	constants/routes.js	/^export const ACCOUNT = '\/account'$/;"	n
+ADD_CATEGORIES	actions/categories.js	/^export const ADD_CATEGORIES = 'ADD_CATEGORIES'$/;"	n
+App	components/App.js	/^class App extends Component {$/;"	c
+Categories	components/Categories.js	/^class Categories extends Component {$/;"	c
+Click	components/Header.js	/^                    onClick={this.handleItemClick}$/;"	c
+Click	components/Home.js	/^                  onClick={this.handleItemClick}$/;"	c
+Click	components/Responsive.js	/^                  onClick={this.handleItemClick}$/;"	c
+Click	components/Responsive.js	/^                onClick={this.handleItemClick}$/;"	c
+Click	components/Responsive.js	/^              <Menu.Item active={activeItem === 'gamepad'} name="gamepad" onClick={this.handleItemClick}>$/;"	c
+Explore	components/Explore.js	/^class Explore extends Component {$/;"	c
+Featured	components/Featured.js	/^class Featured extends Component {$/;"	c
+Footer	components/Footer.js	/^class Footer extends Component {$/;"	c
+Gallery	components/Gallery.js	/^class Gallery extends Component {$/;"	c
+HOME	constants/routes.js	/^export const HOME = '\/home'$/;"	n
+Header	components/Header.js	/^class Header extends Component {$/;"	c
+Home	components/Home.js	/^class Home extends Component {$/;"	c
+ItemClick	components/Header.js	/^  handleItemClick = (e, { name }) => this.setState({ activeItem: name })$/;"	c
+ItemClick	components/Home.js	/^  handleItemClick = (e, { name }) => this.setState({ activeItem: name })$/;"	c
+ItemClick	components/Responsive.js	/^  handleItemClick = (e, { name }) => this.setState({ activeItem: name })$/;"	c
+LANDING	constants/routes.js	/^export const LANDING = '\/'$/;"	n
+Localhost	serviceWorker.js	/^const isLocalhost = Boolean($/;"	c
+Login	components/forms/Login.js	/^class Login extends Component {$/;"	c
+ModalGallery	components/modals/ModalGallery.js	/^class ModalGallery extends Component {$/;"	c
+ModalLogin	components/modals/ModalLogin.js	/^class ModalLogin extends Component {$/;"	c
+PASSWORD_FORGET	constants/routes.js	/^export const PASSWORD_FORGET = '\/pw-forget'$/;"	n
+Page	components/Page.js	/^class Page extends Component {$/;"	c
+PageNotFound	components/PageNotFound.js	/^class PageNotFound extends Component {$/;"	c
+RECEIVE_CATEGORIES	actions/categories.js	/^export const RECEIVE_CATEGORIES = 'RECEIVE_CATEGORIES'$/;"	n
+Responsive	components/Responsive.js	/^class Responsive extends Component {$/;"	c
+SIGN_IN	constants/routes.js	/^export const SIGN_IN = '\/signin'$/;"	n
+SIGN_UP	constants/routes.js	/^export const SIGN_UP = '\/signup'$/;"	n
+Shop	components/Shop.js	/^class Shop extends Component {$/;"	c
+Submit	components/forms/Login.js	/^        onSubmit={this.login}$/;"	c
+User	components/User.js	/^class User extends Component {$/;"	c
+Width	components/Header.js	/^        <Responsive maxWidth={10559} minWidth={768}>$/;"	c
+addCategory	actions/categories.js	/^export function addCategory(category) {$/;"	f
+categories	reducers/categories.js	/^export default function categories(state = {}, action) {$/;"	f
+checkValidServiceWorker	serviceWorker.js	/^function checkValidServiceWorker(swUrl, config) {$/;"	f
+componentDidMount	components/App.js	/^  componentDidMount() {$/;"	f
+handleInitialData	actions/shared.js	/^export function handleInitialData() { \/\/ middleware thunk$/;"	f
+if	serviceWorker.js	/^              if (config && config.onSuccess) {$/;"	f
+if	serviceWorker.js	/^              if (config && config.onUpdate) {$/;"	f
+if	serviceWorker.js	/^            if (navigator.serviceWorker.controller) {$/;"	f
+if	serviceWorker.js	/^          if (installingWorker.state === 'installed') {$/;"	f
+if	serviceWorker.js	/^      if (isLocalhost) {$/;"	f
+if	serviceWorker.js	/^    if (publicUrl.origin !== window.location.origin) {$/;"	f
+if	serviceWorker.js	/^  if ('serviceWorker' in navigator) {$/;"	f
+if	serviceWorker.js	/^  if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {$/;"	f
+mapStateToProps	components/App.js	/^function mapStateToProps({ categories, posts }) {$/;"	f
+mapStateToProps	components/Header.js	/^function mapStateToProps({ categories }, props) {$/;"	f
+receiveCategories	actions/categories.js	/^export function receiveCategories(categories) {$/;"	f
+register	serviceWorker.js	/^export function register(config) {$/;"	f
+registerValidSW	serviceWorker.js	/^function registerValidSW(swUrl, config) {$/;"	f
+render	components/App.js	/^  render() {$/;"	f
+render	components/Categories.js	/^  render() {$/;"	f
+render	components/Explore.js	/^  render() {$/;"	f
+render	components/Featured.js	/^  render() {$/;"	f
+render	components/Footer.js	/^  render() {$/;"	f
+render	components/Gallery.js	/^  render() {$/;"	f
+render	components/Header.js	/^  render() {$/;"	f
+render	components/Home.js	/^  render() {$/;"	f
+render	components/Page.js	/^  render() {$/;"	f
+render	components/PageNotFound.js	/^  render() {$/;"	f
+render	components/Responsive.js	/^  render() {$/;"	f
+render	components/Shop.js	/^  render() {$/;"	f
+render	components/User.js	/^  render() {$/;"	f
+render	components/forms/Login.js	/^  render() {$/;"	f
+render	components/modals/ModalGallery.js	/^  render() {$/;"	f
+render	components/modals/ModalLogin.js	/^  render() {$/;"	f
+switch	reducers/categories.js	/^  switch (action.type) {$/;"	f
+unregister	serviceWorker.js	/^export function unregister() {$/;"	f

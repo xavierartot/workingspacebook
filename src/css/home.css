@@ -1,0 +1,30 @@
+/*home*/
+div.ui.segment.home {
+  margin-left: 0;
+  border-bottom: 0;
+  margin-top: 1rem;
+}
+/*home menu*/
+.ui.greyb-home a.item {
+  color: #adadad;
+  font-family: europa, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+}
+/*only the 3 first links*/
+div.ui.secondary.menu.greyb-home > .item {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 4px;
+  font-size: 1.35rem;
+  letter-spacing: 0.8px;
+  font-weight: 400;
+}
+/*div.ui.menu .left.item a:hover*/
+.ui.menu.greyb-home .left.item > a:hover {
+  background-color: transparent;
+  color: #525252;
+}
+div.ui.secondary.menu.greyb-home > .left.item {
+  padding-left: 0.3rem;
+}
