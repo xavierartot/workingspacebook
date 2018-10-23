@@ -18,6 +18,7 @@ import Featured from './Featured'
 import User from './User'
 import Explore from './Explore'
 import Footer from './Footer'
+import Profil from './admin/Profil'
 
 import { DB_CONFIG } from '../config/base'
 import * as firebase from 'firebase'
@@ -40,6 +41,7 @@ class App extends Component {
             <Route component={Page} path="/page/:id" />
             <Route component={Explore} path="/explore/:id" />
             <Route component={Responsive} path="/responsive" />
+            <Route component={Profil} path="/:id/likes" />
             <Route component={PageNotFound} />
           </Switch>
           <Footer />

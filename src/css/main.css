@@ -1,3 +1,6 @@
+.m0 {
+  margin: 0;
+}
 .columnColor {
   background-color: #eee;
   width: 50%;
@@ -16,7 +19,8 @@
   align-items: center;
   flex-direction: row;
 }
-.center-columns {
+.center-columns,
+.Profil .segment.jumbotron .titleBox {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,6 +150,25 @@ div.ui.header.ui.segment {
 .fz-normal.item .buttons > button,
 .fz-normal.item .buttons div:last-child {
   margin-left: 1rem;
+}
+.ui.menu .right.item.signedIn .label,
+.right.item.signedIn .dropdown {
+  margin-left: 0;
+}
+.right.item.signedIn .dropdown {
+  margin-left: 2rem;
+}
+.signedIn .ui.dropdown .menu>.divider {
+  margin: 0;
+}
+div.right.item.signedIn .dropdownImage .ui.image {
+  border-radius: 50%;
+}
+.ui.top.right.pointing.dropdown>.menu.dropdownSize {
+  font-size: 1.1rem !important;
+}
+.ui.top.right.pointing.dropdown>.menu.dropdownSize .item {
+  padding: 1em 1.14285714em !important;
 }
 div.ui.segment.home {
   margin-left: 0;
@@ -303,4 +326,27 @@ div.basic.doubleButtons {
   -o-transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
   transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
   transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+}
+.Profil .segment.jumbotron {
+  margin-top: 2rem;
+}
+.Profil .segment.jumbotron .titleBox {
+  padding: 1rem;
+}
+.Profil .segment.jumbotron .titleBox .ui.header {
+  font-family: Europa;
+  font-weight: 300;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.Profil .segment.jumbotron .titleBox .ui.compact.menu {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.Profil .segment.jumbotron .editProfil {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.Profil .segment.jumbotron .ui.floating.label {
+  z-index: 10;
 }

@@ -2,7 +2,6 @@
  * Header.js
  * Copyright (C) 2018 xav <xav@xavs-Mac-mini>
  *
- * Distributed under terms of the MIT license.
  */
 import React, { Component, Fragment } from 'react'
 import { withRouter, NavLink } from 'react-router-dom'
@@ -10,8 +9,12 @@ import { connect } from 'react-redux'
 import { Dropdown, Responsive, Segment, Icon, Input, Menu, Button } from 'semantic-ui-react'
 // import '../css/helpers.css'
 
-import ModalSignIn from './modals/ModalSignIn'
-import ModalSignUp from './modals/ModalSignUp'
+
+import SignedOutLinks from './layouts/SignedOutLinks'
+import SignedOutLinkMobile from './layouts/SignedOutLinkMobile'
+import SignedInLinks from './layouts/SignedInLinks'
+import SignedInLinksMobile from './layouts/SignedInLinksMobile'
+
 
 class Header extends Component {
   state = {
@@ -22,6 +25,12 @@ class Header extends Component {
 
   render() {
     const { activeItem } = this.state
+    const { auth, profile } = this.props
+    const links = true ? <SignedInLinks profile /> : <SignedOutLinks />
+    // const linksMobile = true ? <SignedInLinks profile /> : <SignedOutLinks />
+
+    // console.log(auth);//firebase
+    // const links = auth.uid ? <SignedInLinks profile={profile} /> : <SignedOutLinks />
     return (
       <Fragment>
         <Responsive maxWidth={10559} minWidth={768}>
@@ -67,26 +76,7 @@ class Header extends Component {
                     </span>
                   </div>
                 </Responsive>
-                <div className="right item">
-                  <Menu.Item className="fz-normal" position="right">
-                    <Input
-                      className="sign-btn "
-                      icon="search"
-                      iconPosition="left"
-                      placeholder="Search..."
-                    />
-                  </Menu.Item>
-                  <Menu.Item className="fz-normal" >
-                    <Button.Group size="small">
-                      <ModalSignIn contentLogin="Log In">
-                        login and get your collection
-                      </ModalSignIn>
-                      <ModalSignUp contentLogin="Sign Up">
-                        Join Us
-                      </ModalSignUp>
-                    </Button.Group>
-                  </Menu.Item>
-                </div>
+                {links}
               </div>
             </div>
           </div>
@@ -133,16 +123,7 @@ class Header extends Component {
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-            <div className="right item">
-              <Menu.Item className="fz-normal" >
-                <Button.Group size="small">
-                  <ModalSignIn contentLogin="Log In">
-                    Login
-                  </ModalSignIn>
-                  <Button toggle>Join</Button>
-                </Button.Group>
-              </Menu.Item>
-            </div>
+            {links}
           </Menu>
         </Responsive>
       </Fragment>
