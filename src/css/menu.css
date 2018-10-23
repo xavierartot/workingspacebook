@@ -24,6 +24,9 @@ div.ui.secondary.menu > .item {
   height: 30px;
   border: 0;
 }
+.ui.menu .item .fz-normal .button {
+  border-radius: 50px;
+}
 /*bloc*/
 .menu-logo {
   display: flex;

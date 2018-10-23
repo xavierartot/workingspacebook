@@ -11,9 +11,9 @@ import { Dropdown, Responsive, Segment, Icon, Input, Menu, Button } from 'semant
 
 
 import SignedOutLinks from './layouts/SignedOutLinks'
-import SignedOutLinkMobile from './layouts/SignedOutLinkMobile'
+// import SignedOutLinkMobile from './layouts/SignedOutLinkMobile'
 import SignedInLinks from './layouts/SignedInLinks'
-import SignedInLinksMobile from './layouts/SignedInLinksMobile'
+// import SignedInLinksMobile from './layouts/SignedInLinksMobile'
 
 
 class Header extends Component {
@@ -26,7 +26,7 @@ class Header extends Component {
   render() {
     const { activeItem } = this.state
     const { auth, profile } = this.props
-    const links = true ? <SignedInLinks profile /> : <SignedOutLinks />
+    const links = false ? <SignedInLinks profile /> : <SignedOutLinks />
     // const linksMobile = true ? <SignedInLinks profile /> : <SignedOutLinks />
 
     // console.log(auth);//firebase

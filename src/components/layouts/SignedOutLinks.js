@@ -22,10 +22,10 @@ class SignedOutLinks extends Component {
         <Menu.Item className="fz-normal" >
           <Button.Group size="small">
             <ModalSignIn contentLogin="Log In">
-                        login and get your collection
+              login and get your collection
             </ModalSignIn>
             <ModalSignUp contentLogin="Sign Up">
-                        Join Us
+              Join Us
             </ModalSignUp>
           </Button.Group>
         </Menu.Item>

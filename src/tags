@@ -7,7 +7,10 @@
 ACCOUNT	constants/routes.js	/^export const ACCOUNT = '\/account'$/;"	n
 ADD_CATEGORIES	actions/categories.js	/^export const ADD_CATEGORIES = 'ADD_CATEGORIES'$/;"	n
 App	components/App.js	/^class App extends Component {$/;"	c
+Button	components/auth/ForgotPassword.js	/^  submitButton = (event) => {$/;"	c
 Categories	components/Categories.js	/^class Categories extends Component {$/;"	c
+Change	components/auth/ForgotPassword.js	/^          onChange={this.handleChange}$/;"	c
+Change	components/auth/ForgotPassword.js	/^  handleChange = (e) => {$/;"	c
 Change	components/auth/SignIn.js	/^          onChange={this.handleChange}$/;"	c
 Change	components/auth/SignIn.js	/^  handleChange = (e) => {$/;"	c
 Change	components/auth/SignUp.js	/^          onChange={this.handleChange}$/;"	c
@@ -17,8 +20,7 @@ Click	components/Home.js	/^                  onClick={this.handleItemClick}$/;"	
 Click	components/Responsive.js	/^                  onClick={this.handleItemClick}$/;"	c
 Click	components/Responsive.js	/^                onClick={this.handleItemClick}$/;"	c
 Click	components/Responsive.js	/^              <Menu.Item active={activeItem === 'gamepad'} name="gamepad" onClick={this.handleItemClick}>$/;"	c
-DB_CONFIG	config/base.js	/^export const DB_CONFIG = {$/;"	c
-DB_CONFIG	config/base.js	/^export const DB_CONFIG = {$/;"	n
+Click	components/auth/ForgotPassword.js	/^          onClick={this.submitButton}$/;"	c
 Explore	components/Explore.js	/^class Explore extends Component {$/;"	c
 Featured	components/Featured.js	/^class Featured extends Component {$/;"	c
 Footer	components/Footer.js	/^class Footer extends Component {$/;"	c
@@ -29,26 +31,36 @@ Home	components/Home.js	/^class Home extends Component {$/;"	c
 ItemClick	components/Header.js	/^  handleItemClick = (e, { name }) => this.setState({ activeItem: name })$/;"	c
 ItemClick	components/Home.js	/^  handleItemClick = (e, { name }) => this.setState({ activeItem: name })$/;"	c
 ItemClick	components/Responsive.js	/^  handleItemClick = (e, { name }) => this.setState({ activeItem: name })$/;"	c
+ItemClick	components/admin/Profil.js	/^  handleItemClick = (e, { name }) => this.setState({ activeItem: name })$/;"	c
 Join	components/Join.js	/^class Join extends Component {$/;"	c
 LANDING	constants/routes.js	/^export const LANDING = '\/'$/;"	n
 Localhost	serviceWorker.js	/^const isLocalhost = Boolean($/;"	c
 Login	components/auth/SignUp.js	/^class Login extends Component {$/;"	c
+ModalForgetEmail	components/modals/ModalForgetEmail.js	/^class ModalForgetEmail extends Component {$/;"	c
 ModalGallery	components/modals/ModalGallery.js	/^class ModalGallery extends Component {$/;"	c
 ModalSignIn	components/modals/ModalSignIn.js	/^class ModalSignIn extends Component {$/;"	c
 ModalSignIn	components/modals/ModalSignUp.js	/^class ModalSignIn extends Component {$/;"	c
 PASSWORD_FORGET	constants/routes.js	/^export const PASSWORD_FORGET = '\/pw-forget'$/;"	n
 Page	components/Page.js	/^class Page extends Component {$/;"	c
 PageNotFound	components/PageNotFound.js	/^class PageNotFound extends Component {$/;"	c
+Profil	components/admin/Profil.js	/^class Profil extends Component {$/;"	c
 RECEIVE_CATEGORIES	actions/categories.js	/^export const RECEIVE_CATEGORIES = 'RECEIVE_CATEGORIES'$/;"	n
 Responsive	components/Responsive.js	/^class Responsive extends Component {$/;"	c
 SIGN_IN	constants/routes.js	/^export const SIGN_IN = '\/signin'$/;"	n
 SIGN_UP	constants/routes.js	/^export const SIGN_UP = '\/signup'$/;"	n
 Shop	components/Shop.js	/^class Shop extends Component {$/;"	c
+SignIn	components/auth/ForgotPassword.js	/^class SignIn extends Component {$/;"	c
 SignIn	components/auth/SignIn.js	/^class SignIn extends Component {$/;"	c
+SignedInLinks	components/layouts/SignedInLinks.js	/^class SignedInLinks extends Component {$/;"	c
+SignedInLinksMobile	components/layouts/SignedInLinksMobile.js	/^class SignedInLinksMobile extends Component {$/;"	c
+SignedOutLinkMobile	components/layouts/SignedOutLinkMobile.js	/^class SignedOutLinkMobile extends Component {$/;"	c
+SignedOutLinks	components/layouts/SignedOutLinks.js	/^class SignedOutLinks extends Component {$/;"	c
+Submit	components/auth/ForgotPassword.js	/^        onSubmit={this.handleSubmit}$/;"	c
 Submit	components/auth/SignIn.js	/^        onSubmit={this.handleSubmit}$/;"	c
 Submit	components/auth/SignIn.js	/^  handleSubmit = (event) => {$/;"	c
 Submit	components/auth/SignUp.js	/^        onSubmit={this.handleSubmit}$/;"	c
 Submit	components/auth/SignUp.js	/^  handleSubmit = (event) => {$/;"	c
+Test	components/layouts/SignedInLinks.js	/^const Test = ({ props }) => ($/;"	c
 User	components/User.js	/^class User extends Component {$/;"	c
 Width	components/Header.js	/^                <Responsive as={Segment} minWidth={1000}>$/;"	c
 Width	components/Header.js	/^        <Responsive className="menu-mobile" maxWidth={768}>$/;"	c
@@ -85,8 +97,15 @@ render	components/PageNotFound.js	/^  render() {$/;"	f
 render	components/Responsive.js	/^  render() {$/;"	f
 render	components/Shop.js	/^  render() {$/;"	f
 render	components/User.js	/^  render() {$/;"	f
+render	components/admin/Profil.js	/^  render() {$/;"	f
+render	components/auth/ForgotPassword.js	/^  render() {$/;"	f
 render	components/auth/SignIn.js	/^  render() {$/;"	f
 render	components/auth/SignUp.js	/^  render() {$/;"	f
+render	components/layouts/SignedInLinks.js	/^  render() {$/;"	f
+render	components/layouts/SignedInLinksMobile.js	/^  render() {$/;"	f
+render	components/layouts/SignedOutLinkMobile.js	/^  render() {$/;"	f
+render	components/layouts/SignedOutLinks.js	/^  render() {$/;"	f
+render	components/modals/ModalForgetEmail.js	/^  render() {$/;"	f
 render	components/modals/ModalGallery.js	/^  render() {$/;"	f
 render	components/modals/ModalSignIn.js	/^  render() {$/;"	f
 render	components/modals/ModalSignUp.js	/^  render() {$/;"	f

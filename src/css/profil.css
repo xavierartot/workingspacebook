@@ -1,0 +1,30 @@
+.center-columns,
+.Profil .segment.jumbotron .titleBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Profil .segment.jumbotron {
+  margin-top: 2rem;
+}
+.Profil .segment.jumbotron .titleBox {
+  padding: 1rem;
+}
+.Profil .segment.jumbotron .titleBox .ui.header {
+  font-family: Europa;
+  font-weight: 300;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.Profil .segment.jumbotron .titleBox .ui.compact.menu {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.Profil .segment.jumbotron .editProfil {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.Profil .segment.jumbotron .ui.floating.label {
+  z-index: 10;
+}

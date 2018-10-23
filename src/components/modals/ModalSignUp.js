@@ -19,7 +19,7 @@ class ModalSignIn extends Component {
         <Modal
           closeIcon
           size="large"
-          trigger={<Button circular>{contentLogin}</Button>}
+          trigger={<Button circular className="headerButtonCircle">{contentLogin}</Button>}
         >
           <Modal.Header className="header-form">{this.props.children}</Modal.Header>
           <Modal.Content>

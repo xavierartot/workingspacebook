@@ -31,14 +31,12 @@ class SignedInLinks extends Component {
             placeholder="Search..."
           />
         </Menu.Item>
-        {/* <Icon name="user circle"/> */}
         <Dropdown
           basic
           className="medium"
           compact
-          icon="user circle"
+          icon="star outline"
           pointing="top right"
-          text="user"
         >
           <Dropdown.Menu className="dropdownSize">
             <Dropdown.Item
