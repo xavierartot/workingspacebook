@@ -6,9 +6,9 @@
  */
 import React, { Component } from 'react'
 import { Modal, Column, Grid, Button, Segment, Divider } from 'semantic-ui-react'
-import Login from '../forms/Login'
+import SignIn from '../auth/SignIn'
 
-class ModalLogin extends Component {
+class ModalSignIn extends Component {
   render() {
     const {
       login,
@@ -19,24 +19,20 @@ class ModalLogin extends Component {
         <Modal
           closeIcon
           size="large"
-          trigger={<Button>{contentLogin}</Button>}
+          trigger={<Button circular>{contentLogin}</Button>}
         >
           <Modal.Header className="header-form">{this.props.children}</Modal.Header>
           <Modal.Content>
-            <Grid vertical>
-              <Grid.Column>
-                <Grid.Row>
-                  <Button>Log in with Twitter</Button>
-                  <Button>Log in with Facebook</Button>
-                </Grid.Row>
-              </Grid.Column>
-            </Grid>
+            <div className="centerButtons">
+              <Button circular className="twitterButtons">Log in with Twitter</Button>
+              <Button circular>Log in with Facebook</Button>
+            </div>
             <Divider />
-            <Login />
+            <SignIn />
           </Modal.Content>
         </Modal>
       </div>
     )
   }
 }
-export default ModalLogin
+export default ModalSignIn

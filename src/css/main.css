@@ -4,6 +4,24 @@
   min-height: 50%;
   margin: 1em;
 }
+.d-flex {
+  display: flex;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.center-columns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .orange {
   background-color: #ffa500;
 }
@@ -125,7 +143,8 @@ div.ui.header.ui.segment {
 .fz-normal.ui.menu .item:before {
   background: transparent;
 }
-.fz-normal.item .buttons > button {
+.fz-normal.item .buttons > button,
+.fz-normal.item .buttons div:last-child {
   margin-left: 1rem;
 }
 div.ui.segment.home {
@@ -250,4 +269,25 @@ div.gallery-col .footer .heart:hover {
 }
 .ui.mini.modal>.header:not(.ui).header-form {
   font-size: 2rem !important;
+}
+.centerButtons,
+.ui.form.formWidth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+}
+.ui.button.twitterButtons {
+  margin-bottom: 1rem;
+}
+.ui.form.formWidth {
+  width: 25rem;
+  align-items: normal;
+  margin: auto;
+}
+div.basic.doubleButtons {
+  justify-content: space-between;
+  margin-top: 0;
+  padding-top: 0;
 }

@@ -19,6 +19,9 @@ import User from './User'
 import Explore from './Explore'
 import Footer from './Footer'
 
+import { DB_CONFIG } from '../config/base'
+import * as firebase from 'firebase'
+
 class App extends Component {
   componentDidMount() {
     const { dispatch } = this.props

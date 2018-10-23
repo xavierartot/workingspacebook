@@ -7,10 +7,11 @@
 import React, { Component, Fragment } from 'react'
 import { withRouter, NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { Dropdown, Responsive, Icon, Input, Menu, Button } from 'semantic-ui-react'
+import { Dropdown, Responsive, Segment, Icon, Input, Menu, Button } from 'semantic-ui-react'
 // import '../css/helpers.css'
 
-import ModalLogin from './modals/ModalLogin'
+import ModalSignIn from './modals/ModalSignIn'
+import ModalSignUp from './modals/ModalSignUp'
 
 class Header extends Component {
   state = {
@@ -59,13 +60,13 @@ class Header extends Component {
                     Featured
                   </Menu.Item>
                 </div>
-                <div className="menu-logo">
-                  <span>
-                    <ModalLogin contentLogin="Log In">
-                      login and get your collection
-                    </ModalLogin>
-                  </span>
-                </div>
+                <Responsive as={Segment} minWidth={1000}>
+                  <div className="menu-logo">
+                    <span>
+                      Logo
+                    </span>
+                  </div>
+                </Responsive>
                 <div className="right item">
                   <Menu.Item className="fz-normal" position="right">
                     <Input
@@ -77,10 +78,12 @@ class Header extends Component {
                   </Menu.Item>
                   <Menu.Item className="fz-normal" >
                     <Button.Group size="small">
-                      <ModalLogin contentLogin="Log In">
+                      <ModalSignIn contentLogin="Log In">
                         login and get your collection
-                      </ModalLogin>
-                      <Button toggle>Join</Button>
+                      </ModalSignIn>
+                      <ModalSignUp contentLogin="Sign Up">
+                        Join Us
+                      </ModalSignUp>
                     </Button.Group>
                   </Menu.Item>
                 </div>
@@ -133,9 +136,9 @@ class Header extends Component {
             <div className="right item">
               <Menu.Item className="fz-normal" >
                 <Button.Group size="small">
-                  <ModalLogin contentLogin="Log In">
-                        login and get your collection
-                  </ModalLogin>
+                  <ModalSignIn contentLogin="Log In">
+                    Login
+                  </ModalSignIn>
                   <Button toggle>Join</Button>
                 </Button.Group>
               </Menu.Item>

@@ -1,25 +1,40 @@
 /*
- * Login.js
- *
+ * SignIn
  * Copyright (C) 2018 xav <xav@xavs-Mac-mini>
- *
- * Distributed under terms of the MIT license.
  */
 import React, { Component } from 'react'
 import { Message, Form, Input, Button, Segment, Label, Image, Icon } from 'semantic-ui-react'
 
-class Login extends Component {
+class SignIn extends Component {
+  state = {
+    email: '',
+    errorEmail: false,
+  }
+  handleChange = (e) => {
+    this.setState({
+      [e.target.id]: e.target.value,
+    })
+  }
+  submitButton = (event) => {
+    console.log(this.state)
+    this.setState(() => ({
+      errorEmail: !this.state.errorEmail,
+    }))
+    // then false... if the email exist in DB
+  }
   render() {
     return (
       <Form
+        className="formWidth"
         error={false}
         loading={false}
-        onSubmit={this.login}
-        size="big"
+        onSubmit={this.handleSubmit}
+        size="large"
         success={false}
+        widths="equal"
       >
         <Message
-          content="You're all signed up for the newsletter"
+          content="dddddd"
           header="Form Completed"
           success
         />
@@ -33,31 +48,24 @@ class Login extends Component {
           error={false}
           icon="at"
           iconPosition="left"
-          placeholder="E-mail address"
+          id="email"
+          onChange={this.handleChange}
+          placeholder="Email"
           required
           type="email"
-        />
-        <Form.Field
-          control={Input}
-          error={false}
-          icon="lock"
-          iconPosition="left"
-          placeholder="Password"
-          required
-          type="password"
         />
         <Button
           active={false}
           color="teal"
           fluid
-          loading={false}
+          loading={this.state.errorEmail}
+          onClick={this.submitButton}
           size="large"
-        >Login
+        >Submit
         </Button>
         <div className="ui error message" />
-
       </Form>
     )
   }
 }
-export default Login
+export default SignIn
