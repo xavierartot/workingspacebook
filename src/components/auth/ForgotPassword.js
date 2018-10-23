@@ -51,11 +51,11 @@ class SignIn extends Component {
           id="email"
           onChange={this.handleChange}
           placeholder="Email"
-          required
           type="email"
         />
         <Button
           active={false}
+          circular
           color="teal"
           fluid
           loading={this.state.errorEmail}

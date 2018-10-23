@@ -4,6 +4,7 @@
  */
 import React, { Component } from 'react'
 import { Message, Form, Input, Button, Segment, Label, Image, Icon } from 'semantic-ui-react'
+import ModalForgetEmail from '../modals/ModalForgetEmail'
 
 class SignIn extends Component {
   state = {
@@ -76,16 +77,10 @@ class SignIn extends Component {
             loading={false}
             size="large"
           />
-          <Button
-            active={false}
-            circular
-            color="teal"
-            content="forget"
-            icon="sitemap"
-            labelPosition="left"
-            loading={false}
-            size="large"
-          />
+          <ModalForgetEmail>
+            Forget Your Password
+          </ModalForgetEmail>
+
         </Segment>
         <div className="ui error message" />
 
