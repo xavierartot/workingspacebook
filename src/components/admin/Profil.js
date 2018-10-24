@@ -64,9 +64,13 @@ class Profil extends Component {
     const { activeItem } = this.state
     return (
       <Container className="Profil">
-        <Segment centered className="mt-1 jumbotron" raised>
-          <Label as={Link} color="teal" ribbon="right" to="/">
-            Find Friends
+        <Segment className="mt-1 jumbotron" raised>
+          <Label as={Link} className="profilRibbon" color="teal" ribbon="right" size="big" to="/">
+            <Icon.Group size="large">
+              <Icon inverted name="user" />
+              <Icon corner inverted name="add" />
+            </Icon.Group>
+            <span className="fz-1">Find Friends</span>
           </Label>
           <div className="titleBox">
             <Header as="h1">Xavier Maxim</Header>
@@ -87,7 +91,13 @@ class Profil extends Component {
                 </Label>
               </Menu.Item>
             </Menu>
-            <Link className="editProfil" to="/editprofil">Complete your profil</Link>
+            <Link className="editProfil" to="/editprofil">
+              <Icon.Group className="mr-1" size="small">
+                <Icon name="user" />
+                <Icon corner name="add" />
+              </Icon.Group>
+              complete your profil
+            </Link>
           </div>
         </Segment>
         <Tab

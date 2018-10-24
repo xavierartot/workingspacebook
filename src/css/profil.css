@@ -28,3 +28,14 @@
 .Profil .segment.jumbotron .ui.floating.label {
   z-index: 10;
 }
+.Profil .segment.jumbotron .profilRibbon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+}
+.Profil .segment.jumbotron .profilRibbon span {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-left: 1rem;
+}

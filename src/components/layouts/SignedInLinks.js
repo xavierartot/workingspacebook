@@ -6,7 +6,7 @@ import React, { Component } from 'react'
 import { Label, Dropdown, Icon, Menu, Button, Input } from 'semantic-ui-react'
 import ModalSignIn from '../modals/ModalSignIn'
 import ModalSignUp from '../modals/ModalSignUp'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 const Test = ({ props }) => (
@@ -40,28 +40,28 @@ class SignedInLinks extends Component {
         >
           <Dropdown.Menu className="dropdownSize">
             <Dropdown.Item
-              as={NavLink}
+              as={Link}
               className="dropdownImage"
               content="Max Art sdfs fd sf sdf ds fsdf sdf  w"
               image="http://place-hold.it/50x50"
               to="/pseudo/likes"
             />
             <Dropdown.Item
-              as={NavLink}
+              as={Link}
               content="View Profile"
               icon="paper plane outline"
               to="/pseudo/likes"
             />
             <Dropdown.Divider className="m0" />
             <Dropdown.Item
-              as={NavLink}
+              as={Link}
               content="Edit Profile"
               icon="edit outline"
               to="/"
             />
             <Dropdown.Divider className="m0" />
             <Dropdown.Item
-              as={NavLink}
+              as={Link}
               content="Log Out"
               icon="window close outline"
               to="/"
@@ -69,7 +69,7 @@ class SignedInLinks extends Component {
           </Dropdown.Menu>
         </Dropdown>
         <Menu.Item>
-          <Label circular color="teal">
+          <Label as={Link} circular color="teal" to="/">
           2
           </Label>
         </Menu.Item>

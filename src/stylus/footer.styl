@@ -1,0 +1,33 @@
+//mixins are in general, in production remove it
+.center
+  display: flex
+  justify-content center
+  align-items center
+  flex-direction row
+.center-columns
+  display: flex
+  justify-content center
+  align-items center
+  flex-direction column
+
+.Footer
+  margin-top: 3rem
+  .ui.padded.segment.vertical.segment.bloc
+    min-height: 20vh
+  //responsive part
+  .box
+    @extend .center
+    @media screen and (max-width: 768px)
+      flex-direction column
+    div:first-child
+      width: 50%
+      background-color: red
+    div:last-child
+      width: 50%
+      background-color: orange
+    div:first-child,div:last-child
+      @media screen and (max-width: 768px)
+        width: 100%
+    //segment
+  .menuFooter
+    @extend .center

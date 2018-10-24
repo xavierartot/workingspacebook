@@ -79,9 +79,15 @@ div.ui.header.ui.segment {
 .ui.menu .right.item.signedIn .label,
 .right.item.signedIn .dropdown {
   margin-left: 0;
+  font-weight: 300;
+  font-size: 1rem;
 }
 .right.item.signedIn .dropdown {
   margin-left: 2rem;
+}
+.right.item.signedIn .dropdown i {
+  font-size: 1.9rem;
+  font-weight: 500;
 }
 .signedIn .ui.dropdown .menu>.divider {
   margin: 0;
