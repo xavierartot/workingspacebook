@@ -1,0 +1,97 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+App	App.js	/^class App extends Component {$/;"	c
+Button	auth/ForgotPassword.js	/^  submitButton = (event) => {$/;"	c
+Categories	Categories.js	/^class Categories extends Component {$/;"	c
+Change	auth/ForgotPassword.js	/^          onChange={this.handleChange}$/;"	c
+Change	auth/ForgotPassword.js	/^  handleChange = (e) => {$/;"	c
+Change	auth/SignIn.js	/^          onChange={this.handleChange}$/;"	c
+Change	auth/SignIn.js	/^  handleChange = (e) => {$/;"	c
+Change	auth/SignUp.js	/^          onChange={this.handleChange}$/;"	c
+Change	auth/SignUp.js	/^  handleChange = (e) => {$/;"	c
+Click	Footer.js	/^                <Menu.Item active={activeItem === 'inbox'} name="inbox" onClick={this.handleItemClick}>$/;"	c
+Click	Footer.js	/^                <Menu.Item active={activeItem === 'spam'} name="spam" onClick={this.handleItemClick}>$/;"	c
+Click	Footer.js	/^                <Menu.Item active={activeItem === 'updates'} name="updates" onClick={this.handleItemClick}>$/;"	c
+Click	Header.js	/^                    onClick={this.handleItemClick}$/;"	c
+Click	Responsive.js	/^                  onClick={this.handleItemClick}$/;"	c
+Click	Responsive.js	/^                onClick={this.handleItemClick}$/;"	c
+Click	Responsive.js	/^              <Menu.Item active={activeItem === 'gamepad'} name="gamepad" onClick={this.handleItemClick}>$/;"	c
+Click	auth/ForgotPassword.js	/^          onClick={this.submitButton}$/;"	c
+Click	menus/MenuHome.js	/^                onClick={this.handleItemClick}$/;"	c
+Explore	Explore.js	/^class Explore extends Component {$/;"	c
+Featured	Featured.js	/^class Featured extends Component {$/;"	c
+Footer	Footer.js	/^class Footer extends Component {$/;"	c
+Header	Header.js	/^class Header extends Component {$/;"	c
+Home	Home.js	/^class Home extends Component {$/;"	c
+ItemClick	Footer.js	/^  handleItemClick = (e, { name }) => this.setState({ activeItem: name })$/;"	c
+ItemClick	Header.js	/^  handleItemClick = (e, { name }) => this.setState({ activeItem: name })$/;"	c
+ItemClick	Responsive.js	/^  handleItemClick = (e, { name }) => this.setState({ activeItem: name })$/;"	c
+ItemClick	admin/Profil.js	/^  handleItemClick = (e, { name }) => this.setState({ activeItem: name })$/;"	c
+ItemClick	menus/MenuHome.js	/^  handleItemClick = (e, { name }) => this.setState({ activeItem: name })$/;"	c
+Join	Join.js	/^class Join extends Component {$/;"	c
+Login	auth/SignUp.js	/^class Login extends Component {$/;"	c
+MenuHome	menus/MenuHome.js	/^class MenuHome extends Component {$/;"	c
+MenuShop	menus/MenuShop.js	/^class MenuShop extends Component {$/;"	c
+ModalForgetEmail	modals/ModalForgetEmail.js	/^class ModalForgetEmail extends Component {$/;"	c
+ModalGallery	modals/ModalGallery.js	/^class ModalGallery extends Component {$/;"	c
+ModalSignIn	modals/ModalSignIn.js	/^class ModalSignIn extends Component {$/;"	c
+ModalSignIn	modals/ModalSignUp.js	/^class ModalSignIn extends Component {$/;"	c
+Page	Page.js	/^class Page extends Component {$/;"	c
+PageNotFound	PageNotFound.js	/^class PageNotFound extends Component {$/;"	c
+ProductGallery	ProductGallery.js	/^class ProductGallery extends Component {$/;"	c
+Profil	admin/Profil.js	/^class Profil extends Component {$/;"	c
+Responsive	Responsive.js	/^class Responsive extends Component {$/;"	c
+Shop	Shop.js	/^class Shop extends Component {$/;"	c
+ShopGallery	ShopGallery.js	/^class ShopGallery extends Component {$/;"	c
+SignIn	auth/ForgotPassword.js	/^class SignIn extends Component {$/;"	c
+SignIn	auth/SignIn.js	/^class SignIn extends Component {$/;"	c
+SignedInLinks	layouts/SignedInLinks.js	/^class SignedInLinks extends Component {$/;"	c
+SignedInLinksMobile	layouts/SignedInLinksMobile.js	/^class SignedInLinksMobile extends Component {$/;"	c
+SignedOutLinkMobile	layouts/SignedOutLinkMobile.js	/^class SignedOutLinkMobile extends Component {$/;"	c
+SignedOutLinks	layouts/SignedOutLinks.js	/^class SignedOutLinks extends Component {$/;"	c
+Submit	auth/ForgotPassword.js	/^        onSubmit={this.handleSubmit}$/;"	c
+Submit	auth/SignIn.js	/^        onSubmit={this.handleSubmit}$/;"	c
+Submit	auth/SignIn.js	/^  handleSubmit = (event) => {$/;"	c
+Submit	auth/SignUp.js	/^        onSubmit={this.handleSubmit}$/;"	c
+Submit	auth/SignUp.js	/^  handleSubmit = (event) => {$/;"	c
+Test	layouts/SignedInLinks.js	/^const Test = ({ props }) => ($/;"	c
+User	User.js	/^class User extends Component {$/;"	c
+Width	Header.js	/^                <Responsive as={Segment} minWidth={1000}>$/;"	c
+Width	Header.js	/^        <Responsive className="menu-mobile" maxWidth={768}>$/;"	c
+Width	Header.js	/^        <Responsive maxWidth={10559} minWidth={768}>$/;"	c
+componentDidMount	App.js	/^  componentDidMount() {$/;"	f
+mapStateToProps	App.js	/^function mapStateToProps({ categories, posts }) {$/;"	f
+mapStateToProps	Header.js	/^function mapStateToProps({ categories }, props) {$/;"	f
+render	App.js	/^  render() {$/;"	f
+render	Categories.js	/^  render() {$/;"	f
+render	Explore.js	/^  render() {$/;"	f
+render	Featured.js	/^  render() {$/;"	f
+render	Footer.js	/^  render() {$/;"	f
+render	Header.js	/^  render() {$/;"	f
+render	Home.js	/^  render() {$/;"	f
+render	Join.js	/^  render() {$/;"	f
+render	Page.js	/^  render() {$/;"	f
+render	PageNotFound.js	/^  render() {$/;"	f
+render	ProductGallery.js	/^  render() {$/;"	f
+render	Responsive.js	/^  render() {$/;"	f
+render	Shop.js	/^  render() {$/;"	f
+render	ShopGallery.js	/^  render() {$/;"	f
+render	User.js	/^  render() {$/;"	f
+render	admin/Profil.js	/^  render() {$/;"	f
+render	auth/ForgotPassword.js	/^  render() {$/;"	f
+render	auth/SignIn.js	/^  render() {$/;"	f
+render	auth/SignUp.js	/^  render() {$/;"	f
+render	layouts/SignedInLinks.js	/^  render() {$/;"	f
+render	layouts/SignedInLinksMobile.js	/^  render() {$/;"	f
+render	layouts/SignedOutLinkMobile.js	/^  render() {$/;"	f
+render	layouts/SignedOutLinks.js	/^  render() {$/;"	f
+render	menus/MenuHome.js	/^  render() {$/;"	f
+render	menus/MenuShop.js	/^  render() {$/;"	f
+render	modals/ModalForgetEmail.js	/^  render() {$/;"	f
+render	modals/ModalGallery.js	/^  render() {$/;"	f
+render	modals/ModalSignIn.js	/^  render() {$/;"	f
+render	modals/ModalSignUp.js	/^  render() {$/;"	f

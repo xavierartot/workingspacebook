@@ -9,7 +9,7 @@ import { Divider, Segment, Label, Icon } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import ModalGallery from './modals/ModalGallery'
 
-class Gallery extends Component {
+class ProductGallery extends Component {
   render() {
     return (
       <div className="column gallery-col">
@@ -76,4 +76,4 @@ class Gallery extends Component {
     )
   }
 }
-export default Gallery
+export default ProductGallery

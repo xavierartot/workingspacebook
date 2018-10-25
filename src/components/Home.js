@@ -2,13 +2,13 @@
  * Home.js
  * Copyright (C) 2018 xav <xav@xavs-Mac-mini>
  *
- * Distributed under terms of the MIT license.
  */
 import React, { Component, Fragment } from 'react'
+import { connect } from 'react-redux'
 
 import { Container } from 'semantic-ui-react'
-import MenuHome from './MenuHome'
-import Gallery from './Gallery'
+import MenuHome from './menus/MenuHome'
+import ProductGallery from './ProductGallery'
 
 class Home extends Component {
   render() {
@@ -17,11 +17,17 @@ class Home extends Component {
         <MenuHome />
         <Container>
           <div className="ui three column grid stackable">
-            { [1, 2, 3, 4, 5, 6, 7].map(item => <Gallery key={item}>{item}</Gallery >)}
+            { [1, 2, 3, 4, 5, 6, 7].map(item => <ProductGallery key={item}>{item}</ProductGallery >)}
           </div>
         </Container>
       </Fragment>
     )
   }
 }
-export default Home
+function mapStateToProps({ state }, props) {
+  // 3 differentes gallery, from <MenuHome/>
+  return {
+    state,
+  }
+}
+export default connect(mapStateToProps)(Home)

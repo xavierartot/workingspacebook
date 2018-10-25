@@ -28,6 +28,7 @@
   flex-direction: row;
 }
 .center-columns,
+.ShopGallery .centerShopGallery,
 .Profil .segment.jumbotron .titleBox {
   display: flex;
   justify-content: center;
@@ -86,7 +87,12 @@ body a:hover {
 }
 @media only screen and (min-width: 1200px) {
   div.ui.container {
-    width: 1240px;
+    width: 1240px !important;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  div.ui.grid.container {
+    width: 1240px !important;
   }
 }
 div.ui.secondary.menu > .item {
@@ -212,6 +218,38 @@ div.ui.secondary.menu.greyb-home > .item {
 }
 div.ui.secondary.menu.greyb-home > .left.item {
   padding-left: 0.3rem;
+}
+.ShopGallery div.ui.segment.galleryShop {
+  padding: 0;
+  box-shadow: 0px 3px 8px -4px rgba(0,0,0,0.15);
+  display: block;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #adadad;
+  border-radius: 0;
+  border: 0 solid #525252;
+  font-weight: 300;
+  letter-spacing: 0.8px;
+}
+.ShopGallery .ui.grid>.column:not(.row) {
+  padding: 0;
+}
+.ShopGallery .ui.segment {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+.ShopGallery .ui.label {
+  margin: 1rem 0;
+}
+.ShopGallery .ui.image {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.Shop .ui.menu {
+  margin-bottom: 1.7rem;
 }
 div.ui.segment.gallery {
   padding: 0;

@@ -1,0 +1,28 @@
+.ShopGallery
+  div.ui.segment.galleryShop
+    padding: 0;
+    box-shadow: 0px 3px 8px -4px rgba(0,0,0,0.15);
+    display: block;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    color: #adadad;
+    border-radius: 0;
+    border: 0 solid #525252;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+  //remove the padding
+  .ui.grid>.column:not(.row)
+    padding: 0
+  .ui.segment
+    padding: 0
+    height: 100%;
+    width: 100%;
+  .centerShopGallery
+    @extend .center-columns
+  .ui.label
+    margin: 1rem 0
+  .ui.image
+    margin-top: 2rem;
+    margin-bottom: 2rem;
