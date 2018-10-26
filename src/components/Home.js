@@ -9,8 +9,12 @@ import { connect } from 'react-redux'
 import { Container } from 'semantic-ui-react'
 import MenuHome from './menus/MenuHome'
 import ProductGallery from './ProductGallery'
+import { handleProduct } from '../actions/shared'
 
 class Home extends Component {
+  componentDidMount() {
+
+  }
   render() {
     return (
       <Fragment>
@@ -24,10 +28,8 @@ class Home extends Component {
     )
   }
 }
-function mapStateToProps({ state }, props) {
-  // 3 differentes gallery, from <MenuHome/>
+function mapStateToProps({ product, auth }, props) {
   return {
-    state,
   }
 }
-export default connect(mapStateToProps)(Home)
+export default connect(null, null)(Home)

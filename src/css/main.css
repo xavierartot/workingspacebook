@@ -62,8 +62,19 @@
 .mb1 {
   margin-bottom: 1rem;
 }
+.mb2,
+.ShopGallery .ui.image {
+  margin-bottom: 2rem;
+}
 .mt1 {
   margin-top: 1rem;
+}
+.mt2 {
+  margin-top: 2rem;
+}
+.p0,
+.ShopGallery .ui.segment {
+  padding: 0;
 }
 .bgc-n {
   background-color: #008000;
@@ -229,24 +240,30 @@ div.ui.secondary.menu.greyb-home > .left.item {
   transition: 0.3s;
   color: #adadad;
   border-radius: 0;
-  border: 0 solid #525252;
+  border: 0;
   font-weight: 300;
   letter-spacing: 0.8px;
 }
 .ShopGallery .ui.grid>.column:not(.row) {
   padding: 0;
+  padding: 1px;
 }
 .ShopGallery .ui.segment {
-  padding: 0;
   height: 100%;
   width: 100%;
+  border-radius: 0;
+  box-shadow: none;
+  border: 0;
+  transition: background-color 0.3s;
+}
+.ShopGallery .ui.segment:hover {
+  background-color: #eaeaea;
 }
 .ShopGallery .ui.label {
-  margin: 1rem 0;
+  margin: 1rem 0 1.5rem 0;
 }
 .ShopGallery .ui.image {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
 }
 .Shop .ui.menu {
   margin-bottom: 1.7rem;

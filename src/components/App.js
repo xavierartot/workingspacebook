@@ -51,10 +51,13 @@ class App extends Component {
   }
 }
 
-function mapStateToProps({ categories, posts }) {
-  // console.log(categories, posts)
+function mapStateToProps(state, props) {
+  console.log(state)
+  console.log(state.products)
+  const productsAll = Object.values(state.products)
+  console.log(productsAll)
   return {
-    categories: categories.categories,
+    products: productsAll,
   }
 }
 export default connect(mapStateToProps)(App)

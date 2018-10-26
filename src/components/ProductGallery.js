@@ -68,7 +68,9 @@ class ProductGallery extends Component {
                 <Icon as="i" link name="heart" />
                 <span className="number-like">5</span>
               </Link>
-              <Icon as="i" link name="plus circle" />
+              <Link className="" to="/">
+                <Icon as="i" link name="plus circle" />
+              </Link>
             </div>
           </footer>
         </Segment>

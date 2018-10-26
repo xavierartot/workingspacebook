@@ -1,7 +1,13 @@
 import { combineReducers } from 'redux'
-import categories from './categories'
+import auth from './auth'
+import products from './products'
+import comments from './comments'
+import collections from './collections'
 
 export default combineReducers({
-  categories,
+  products,
+  auth,
+  comments,
+  collections,
   // loadingBar: loadingBarReducer, // react-redux-loading
 })

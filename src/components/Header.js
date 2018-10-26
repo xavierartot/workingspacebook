@@ -130,10 +130,5 @@ class Header extends Component {
     )
   }
 }
-function mapStateToProps({ categories }, props) {
-  return {
-    categories: categories.categories,
-  }
-}
-export default withRouter(connect(mapStateToProps)(Header))
+export default withRouter(connect()(Header))
 
