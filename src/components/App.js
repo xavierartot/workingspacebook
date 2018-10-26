@@ -52,12 +52,8 @@ class App extends Component {
 }
 
 function mapStateToProps(state, props) {
-  console.log(state)
-  console.log(state.products)
-  const productsAll = Object.values(state.products)
-  console.log(productsAll)
   return {
-    products: productsAll,
+    state,
   }
 }
-export default connect(mapStateToProps)(App)
+export default connect(null)(App)

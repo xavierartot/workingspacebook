@@ -3734,7 +3734,7 @@ hmac-drbg@^1.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hoist-non-react-statics@^2.5.0:
+hoist-non-react-statics@^2.3.1, hoist-non-react-statics@^2.5.0:
   version "2.5.5"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
 
@@ -6369,6 +6369,14 @@ react-radio-buttons@^1.2.2:
     react "^15.6.1"
     react-dom "^15.3.2"
 
+react-redux-firebase@^2.1.9:
+  version "2.1.9"
+  resolved "https://registry.yarnpkg.com/react-redux-firebase/-/react-redux-firebase-2.1.9.tgz#c74db6ec1a5e4e1c1aae8aa2cda840b71a9308eb"
+  dependencies:
+    hoist-non-react-statics "^2.3.1"
+    lodash "^4.17.10"
+    prop-types "^15.6.1"
+
 react-redux-loading-bar@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/react-redux-loading-bar/-/react-redux-loading-bar-4.1.0.tgz#3ca460569d979450d9d1dc992328efa449c10a7a"
@@ -6573,6 +6581,13 @@ reduce-function-call@^1.0.1:
   resolved "https://registry.yarnpkg.com/reduce-function-call/-/reduce-function-call-1.0.2.tgz#5a200bf92e0e37751752fe45b0ab330fd4b6be99"
   dependencies:
     balanced-match "^0.4.2"
+
+redux-firestore@^0.5.8:
+  version "0.5.8"
+  resolved "https://registry.yarnpkg.com/redux-firestore/-/redux-firestore-0.5.8.tgz#fb73777a629350896f0e0ef7a3a4c8fa0a8b04aa"
+  dependencies:
+    lodash "^4.17.10"
+    prop-types "^15.6.1"
 
 redux-logger@^3.0.6:
   version "3.0.6"

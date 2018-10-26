@@ -6,7 +6,7 @@
  */
 import React, { Component } from 'react'
 
-import { Label, Segment, Image, Divider, Search, Header, Grid, Icon, Menu, Button, Input } from 'semantic-ui-react'
+import { Label, Segment, Menu, Input } from 'semantic-ui-react'
 
 class Footer extends Component {
   state = { activeItem: 'inbox' }

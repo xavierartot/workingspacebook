@@ -1,6 +1,5 @@
 export const initStateProducts = {
   '894tuq4ut84ut8v4t8wun89g': {
-    id: '894tuq4ut84ut8v4t8wun89g',
     author: '0Now Designs',
     email: '0@gmail.com',
     bio: '0help me find peach',
@@ -9,8 +8,8 @@ export const initStateProducts = {
     picture: '0moi.jpg',
     deleted: false,
     likeNumber: false,
-    likeAuthor: { id: '8tu4bsun805n8un48ve89', id: '8tu4bsun805n8un48ve00' },
-    followerId: { id: '8tu4bsun805n8un48ve89' },
+    likeAuthor: ['8tu4bsun805n8un48ve89', '8tu4bsun805n8un48ve00'],
+    followerId: ['8tu4bsun805n8un48ve89'],
     followingId: {},
     likesiDProduct: {},
     twitter: { link: 'https://twitter.com/idTwitter' },
@@ -18,7 +17,6 @@ export const initStateProducts = {
     amazonStore: 'amazon.com/stores/node/14511840011',
   },
   '8tu4bsun805n8un48ve89': {
-    id: '8tu4bsun805n8un48ve89',
     author: '1Now Designs',
     email: '1@gmail.com',
     bio: '1help me find peach',
@@ -36,7 +34,6 @@ export const initStateProducts = {
     amazonStore: 'amazon.com/stores/node/14511840011',
   },
   '8tu4bsun805n8un48ve00': {
-    id: '8tu4bsun805n8un48ve00',
     author: '2Now Designs',
     email: '2@gmail.com',
     bio: '2help me find peach',
