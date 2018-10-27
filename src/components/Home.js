@@ -9,7 +9,7 @@ import { connect } from 'react-redux'
 import { Container } from 'semantic-ui-react'
 import MenuHome from './menus/MenuHome'
 import ProductGallery from './ProductGallery'
-import { handleProduct } from '../actions/shared'
+import { handleAddProduct } from '../store/actions/shared'
 
 class Home extends Component {
   componentDidMount() {

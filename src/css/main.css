@@ -100,11 +100,13 @@ body a:hover {
   div.ui.container {
     width: 1240px !important;
   }
-}
-@media only screen and (min-width: 1200px) {
   div.ui.grid.container {
     width: 1240px !important;
   }
+}
+input[type=file],
+input[type=file]::-webkit-file-upload-button {
+  cursor: pointer;
 }
 div.ui.secondary.menu > .item {
   margin: 0;

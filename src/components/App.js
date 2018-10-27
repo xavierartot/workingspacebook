@@ -5,7 +5,7 @@ import {
   Switch,
 } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { handleInitialData } from '../actions/shared'
+import { handleInitialData } from '../store/actions/shared'
 // conpoments
 import Home from './Home'
 import Header from './Header'

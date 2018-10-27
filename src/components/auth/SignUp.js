@@ -1,12 +1,9 @@
 /*
- * Login.js
- *
  * Copyright (C) 2018 xav <xav@xavs-Mac-mini>
- *
- * Distributed under terms of the MIT license.
  */
 import React, { Component } from 'react'
 import { Message, Form, Input, Button, Segment, Label, Image, Icon } from 'semantic-ui-react'
+import ImageUploader from 'react-images-upload'
 
 class Login extends Component {
   state = {
@@ -17,6 +14,17 @@ class Login extends Component {
     firstName: '',
     errorForm: false,
     errorField: false,
+    pictures: [],
+    selectedFile: null,
+  }
+  fileSelectHandle = (event) => {
+    console.log(event.target.files[0])
+    this.setState(() => ({
+      selectedFile: event.target.files[0],
+    }))
+  }
+  fileUploadHandler = (event) => {
+
   }
   handleChange = (e) => {
     this.setState({
@@ -27,6 +35,12 @@ class Login extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
     console.log(this.state)
+  }
+  onDrop(picture) {
+    console.log(picture)
+    // this.setState({
+    // pictures: this.state.pictures.concat(picture),
+    // })
   }
   render() {
     const { handleChange } = this.props
@@ -97,6 +111,16 @@ class Login extends Component {
           required
           type="password"
           value={this.state.password}
+        />
+        <input onChange={this.fileSelectHandle} type="file" />
+        <Button onClick={this.fileUploadHandler}>upload</Button>
+
+        <ImageUploader
+          buttonText="Choose images"
+          imgExtension={['.jpg', '.gif', '.png', '.gif']}
+          maxFileSize={5242880}
+          onChange={this.onDrop}
+          withIcon
         />
         <Button
           active={false}
