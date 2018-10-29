@@ -11,8 +11,8 @@ class ModuleFilter extends Component {
   render() {
     return (
       <div className="ModuleFilter">
-        <Button.Group positive size="medium">
-          <Button compact>
+        <Button.Group className="btn-group" color="grey" size="medium">
+          <Button className=""compact>
             Trending
           </Button>
           <Button.Or />

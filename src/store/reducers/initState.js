@@ -10,11 +10,7 @@ export const initStateProducts = {
     likeNumber: false,
     likeAuthor: ['8tu4bsun805n8un48ve89', '8tu4bsun805n8un48ve00'],
     followerId: ['8tu4bsun805n8un48ve89'],
-    followingId: {},
     likesiDProduct: {},
-    twitter: { link: 'https://twitter.com/idTwitter' },
-    facebook: { link: 'https://facebook.com/idTwitter' },
-    amazonStore: 'amazon.com/stores/node/14511840011',
   },
   '8tu4bsun805n8un48ve89': {
     author: '1Now Designs',

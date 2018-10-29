@@ -2,22 +2,33 @@
  * Modal.js
  * Copyright (C) 2018 xav <xav@xavs-Mac-mini>
  *
- * Distributed under terms of the MIT license.
  */
 import React, { Component } from 'react'
-import { Modal, Column, Grid, Button, Segment, Divider } from 'semantic-ui-react'
+import { Modal, Button, Divider } from 'semantic-ui-react'
 import SignUp from '../auth/SignUp'
 
 class ModalSignIn extends Component {
+  state = { isOpen: false }
+
+  handleOpen = () => {
+    this.setState({ isOpen: true })
+  }
+
+  handleClose = () => {
+    this.setState({ isOpen: false })
+  }
   render() {
     const {
-      login,
       contentLogin,
     } = this.props
     return (
       <div>
+
         <Modal
           closeIcon
+          onClose={this.handleClose}
+          onOpen={this.handleOpen}
+          open={this.state.isOpen}
           size="large"
           trigger={<Button circular className="headerButtonCircle">{contentLogin}</Button>}
         >
@@ -28,7 +39,7 @@ class ModalSignIn extends Component {
               <Button circular >Log in with Facebook</Button>
             </div>
             <Divider />
-            <SignUp />
+            <SignUp onClosePopup={this.handleClose} />
           </Modal.Content>
         </Modal>
       </div>

@@ -9,7 +9,7 @@ import { connect } from 'react-redux'
 import { Container } from 'semantic-ui-react'
 import MenuHome from './menus/MenuHome'
 import ProductGallery from './ProductGallery'
-import { handleAddProduct } from '../store/actions/shared'
+// import { handleAddProduct } from '../store/actions/shared'
 
 class Home extends Component {
   componentDidMount() {
@@ -28,8 +28,8 @@ class Home extends Component {
     )
   }
 }
-function mapStateToProps({ product, auth }, props) {
-  return {
-  }
-}
+// function mapStateToProps({ product, auth }, props) {
+// return {
+// }
+// }
 export default connect(null, null)(Home)

@@ -4,21 +4,11 @@
  */
 import React, { Component } from 'react'
 import { Label, Dropdown, Icon, Menu, Button, Input } from 'semantic-ui-react'
-import ModalSignIn from '../modals/ModalSignIn'
-import ModalSignUp from '../modals/ModalSignUp'
+// import ModalSignIn from '../modals/ModalSignIn'
+// import ModalSignUp from '../modals/ModalSignUp'
 import { Link } from 'react-router-dom'
 
 
-const Test = ({ props }) => (
-  <div>
-    <Button as="div" labelPosition="right">
-      <Button color="red">
-        <Icon name="heart" />
-        Like
-      </Button>
-    </Button>
-  </div>
-)
 class SignedInLinks extends Component {
   render() {
     return (

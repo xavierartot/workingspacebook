@@ -21,29 +21,29 @@ class MenuShop extends Component {
           <div className="ui secondary menu huge greyb-home font-europa-normal ">
             <div className="left item">
               <Menu.Item
-                active={activeItem === 'trending'}
+                active={activeItem === 'Trending'}
                 as={Link}
-                name="categories"
+                name="trending"
                 onClick={this.handleItemClick}
-                to="/shop/categories"
+                to="/shop/trending"
               >
               Trending
               </Menu.Item>
               <Menu.Item
                 active={activeItem === 'New'}
                 as={Link}
-                name="Gifts"
+                name="new"
                 onClick={this.handleItemClick}
-                to="/shop/gifts"
+                to="/shop/new"
               >
               New
               </Menu.Item>
               <Menu.Item
                 active={activeItem === 'popular'}
                 as={Link}
-                name="Brands"
+                name="popular"
                 onClick={this.handleItemClick}
-                to="/shop/brands"
+                to="/shop/popular"
               >
               Popular
               </Menu.Item>

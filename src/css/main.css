@@ -29,17 +29,18 @@
 }
 .center-columns,
 .ShopGallery .centerShopGallery,
-.Profil .segment.jumbotron .titleBox {
+.Profil .segment.jumbotron .titleBox,
+.shopBoxGallery {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 .orange {
-  background-color: #ffa500;
+  background-color: #f26202;
 }
 .red {
-  background-color: #f00;
+  background-color: #db2828;
 }
 .gris {
   background-color: #eee;
@@ -56,7 +57,8 @@
 .mr1 {
   margin-right: 1rem;
 }
-.ml1 {
+.ml1,
+.ShopHeader .btn-radius {
   margin-left: 1rem;
 }
 .mb1 {
@@ -77,7 +79,10 @@
   padding: 0;
 }
 .bgc-n {
-  background-color: #008000;
+  background-color: #21ba45;
+}
+body {
+  text-rendering: optimizeLegibility;
 }
 body a {
   color: #adadad;
@@ -92,6 +97,10 @@ body a:hover {
   font-family: europa, sans-serif;
   font-style: normal;
   font-weight: 400;
+}
+.btn-radius,
+.ShopHeader .btn-radius {
+  border-radius: 50px;
 }
 .border {
   border: 1px solid #525252;
@@ -156,10 +165,12 @@ div.ui.menu .left.item {
   background-color: #39ac95;
 }
 div.ui.menu .left.item a.active {
-  background-color: transparent;
+  background-color: #fbc02d;
+  color: #616161;
 }
-div.ui.menu .left.item a:hover {
-  background-color: #008000;
+div.ui.secondary.menu a.item:hover {
+  background-color: #f26202;
+  color: #fff;
 }
 div.ui.menu .left.item i {
   margin-top: -5px;
@@ -402,7 +413,8 @@ div.basic.doubleButtons {
   transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
 }
 .center-columns,
-.Profil .segment.jumbotron .titleBox {
+.Profil .segment.jumbotron .titleBox,
+.shopBoxGallery {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -450,7 +462,8 @@ div.basic.doubleButtons {
   align-items: center;
   flex-direction: row;
 }
-.center-columns {
+.center-columns,
+.shopBoxGallery {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -469,15 +482,84 @@ div.basic.doubleButtons {
 }
 .Footer .box div:first-child {
   width: 50%;
-  background-color: #f00;
+  background-color: #db2828;
 }
 .Footer .box div:last-child {
   width: 50%;
-  background-color: #ffa500;
+  background-color: #f26202;
 }
 @media screen and (max-width: 768px) {
   .Footer .box div:first-child,
   .Footer .box div:last-child {
     width: 100%;
   }
+}
+.ShopHeader .ui.container {
+  position: relative;
+}
+.ShopHeader .wrapperShopHeader {
+  position: relative;
+  padding: 84px 0;
+  margin-bottom: 0;
+  z-index: 2;
+  width: 100%;
+}
+.ShopHeader div.tac {
+  margin-bottom: 0;
+}
+.ShopHeader .btn-radius {
+  border-radius: 50px;
+  padding: 1.2rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.ShopHeader .box-btn {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ShopHeader .navigationContainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+}
+.ShopHeader .ui.header {
+  font-size: 4rem;
+  font-weight: 300;
+}
+.ShopHeader .ui.basic.label {
+  margin-top: 2rem;
+  margin-left: 1.8em;
+}
+.shopBoxGallery {
+  padding: 2rem 0;
+  background-color: #e0e1e2;
+}
+.shopBoxGallery .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.shopBoxGallery .ModuleFilter {
+  margin-bottom: 3.3rem;
+}
+.shopBoxGallery .ModuleFilter .button:first-child {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.shopBoxGallery .ModuleFilter .button:last-child {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.shopBoxGallery .ModuleFilter .ui.button,
+.shopBoxGallery .ModuleFilter .or {
+  font-size: 1.1rem;
+  font-weight: 300;
+  letter-spacing: 0.9px;
 }

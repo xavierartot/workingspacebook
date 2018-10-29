@@ -51,9 +51,9 @@ class App extends Component {
   }
 }
 
-function mapStateToProps(state, props) {
-  return {
-    state,
-  }
-}
+// function mapStateToProps(state, props) {
+// return {
+// state,
+// }
+// }
 export default connect(null)(App)

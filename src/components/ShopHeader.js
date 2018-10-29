@@ -13,13 +13,17 @@ class ShopHeader extends Component {
     return (
       <div className="ShopHeader">
         <Container>
-          <Label as="Link">
-            <Icon name="arrow left" />
-            Back
-          </Label>
-          <Header as="h1">Category Nave</Header>
-          <Button>Share</Button>
-          <Button>Follow</Button>
+          <div className="wrapperShopHeader">
+            <Header as="h1" className="tac">Category</Header>
+            <div className="box-btn">
+              <Button className="btn-radius">Share</Button>
+              <Button className="btn-radius ml1">Follow</Button>
+            </div>
+            <Label as={Link} basic className="navigationContainer" to="shop/categories">
+              <Icon name="arrow left" />
+              Back
+            </Label>
+          </div>
         </Container>
       </div>
     )

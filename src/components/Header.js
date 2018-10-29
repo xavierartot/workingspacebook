@@ -6,7 +6,7 @@
 import React, { Component, Fragment } from 'react'
 import { withRouter, NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { Dropdown, Responsive, Segment, Icon, Input, Menu, Button } from 'semantic-ui-react'
+import { Dropdown, Responsive, Segment, Icon, Menu } from 'semantic-ui-react'
 // import '../css/helpers.css'
 
 
@@ -19,8 +19,8 @@ import SignedInLinks from './layouts/SignedInLinks'
 class Header extends Component {
   state = {
     isActive: false,
+    activeItem: '',
   }
-  state = { activeItem: 'gamepad' }
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
   render() {
@@ -38,15 +38,15 @@ class Header extends Component {
             <div className="ui container">
               <div className="ui secondary menu huge greyb font-europa-normal ">
                 <div className="left item">
+                  {/* activeClassName works with NavLink, I don't use active from UI Semantic React */}
                   <Menu.Item
-                    active={activeItem === 'home'}
+                    activeClassName={activeItem === 'home' ? 'active' : ''}
                     as={NavLink}
                     name="home"
                     onClick={this.handleItemClick}
                     to="/"
                   >
-                    <Icon name="home" />
-                    Home
+                    <Icon name="home" />Home
                   </Menu.Item>
                   <Menu.Item
                     active={activeItem === 'shop'}
@@ -55,8 +55,7 @@ class Header extends Component {
                     onClick={this.handleItemClick}
                     to="/shop/categories"
                   >
-                    <Icon name="shop" />
-                    Shop
+                    <Icon name="shop" />Shop
                   </Menu.Item>
                   <Menu.Item
                     active={activeItem === 'featured'}
@@ -65,8 +64,7 @@ class Header extends Component {
                     onClick={this.handleItemClick}
                     to="/featured"
                   >
-                    <Icon name="certificate" />
-                    Featured
+                    <Icon name="certificate" />Featured
                   </Menu.Item>
                 </div>
                 <Responsive as={Segment} minWidth={1000}>

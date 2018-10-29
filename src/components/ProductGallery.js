@@ -19,7 +19,7 @@ class ProductGallery extends Component {
           <Label
             as="a"
             className="gallery-ribbon"
-            color="teal"
+            color="orange"
             href="http://amazon..."
             ribbon="right"
             size="big"

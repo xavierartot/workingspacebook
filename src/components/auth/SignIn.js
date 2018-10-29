@@ -3,7 +3,7 @@
  * Copyright (C) 2018 xav <xav@xavs-Mac-mini>
  */
 import React, { Component } from 'react'
-import { Message, Form, Input, Button, Segment, Label, Image, Icon } from 'semantic-ui-react'
+import { Message, Form, Input, Button, Segment } from 'semantic-ui-react'
 import ModalForgetEmail from '../modals/ModalForgetEmail'
 
 class SignIn extends Component {

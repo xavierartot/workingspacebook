@@ -4,19 +4,17 @@ import { showLoading, hideLoading } from 'react-redux-loading-bar'
 export function handleAddProduct(product) { // middleware thunk
   return (dispatch, getState, { getFirebase, getFirestore }) => {
     const firestore = getFirestore()
-    dispatch(showLoading()) // show the loading bar
-    dispatch.addProduct(product)
+    // dispatch(showLoading()) // show the loading bar
+    dispatch(addProduct(product))
     firestore.collection('projects').add({
       ...product,
       // authorFirstName: profile.firstName,
       // authorLastName: profile.lastName,
-      authorFirstName: 'Xavier',
-      authorLastName: 'Artot',
       // authorId,
       createdAt: new Date(),
     })
       .then(() => {
-        dispatch(hideLoading()) // hide the loading bar
+        // dispatch(hideLoading()) // hide the loading bar
         console.log('Yeah, firestore you can dispatch')
       }).catch((error) => {
         console.log(error)
