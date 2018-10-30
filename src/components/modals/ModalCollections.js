@@ -5,7 +5,7 @@
  * Distributed under terms of the MIT license.
  */
 import React, { Component } from 'react'
-import { Input, Icon, Modal, Header, Image, Transition } from 'semantic-ui-react'
+import { Grid, Segment, Input, Icon, Modal, Header, Image, Transition } from 'semantic-ui-react'
 import InputCreate from '../InputCreate'
 
 class ModalCollections extends Component {
@@ -33,6 +33,7 @@ class ModalCollections extends Component {
         <Modal
           className="ModalCollections "
           closeIcon
+          open
           size="large"
           trigger={
             <Icon as="i" link name="plus circle" />
@@ -45,21 +46,74 @@ class ModalCollections extends Component {
                 <span>Add this to a Library</span>
                 <img src="https://react.semantic-ui.com/images/avatar/large/rachel.png" />
               </h1>
+              <div className={visible ? 'containerInput container-both' : 'containerText container-both'} >
+                <Header
+                  as="h1"
+                  className={`box-ui-library-new ${bgc}`}
+                  onClick={bgc && this.handleCreateLibrary || null}
+                >
+                  {
+                  visible
+                  ? <InputCreate eventCreateLibrary={this.handleCreateLibrary} />
+                  : <span>Create a new Library</span>
+                  }
+                </Header>
+              </div>
               <Header
                 as="h1"
-                className={`box-ui-library-new ${bgc}`}
-                onClick={bgc && this.handleCreateLibrary || null}
+                className="box-ui-collection"
+                onClick={null}
               >
-                {
-                visible
-                ? <InputCreate eventCreateLibrary={this.handleCreateLibrary} />
-                : <span>Create a new Library</span>
-                }
+                <Grid columns="equal">
+                  <Grid.Column verticalAlign="middle" width={5}>
+                    <div className="center box-cat-name">
+                      <Icon as="i" link name="plus circle" />
+                      <div className="cat-name">name</div>
+                    </div>
+                  </Grid.Column>
+                  <Grid.Column className="pic-sizes" width={2}>
+                    <div>2</div>
+                    <div>2</div>
+                  </Grid.Column>
+                  <Grid.Column className="pic-sizes" width={2}>
+                    <div>2</div>
+                  </Grid.Column>
+                </Grid>
               </Header>
-              <div>
-                <Icon as="i" link name="plus circle" />
-              </div>
-              <p>Is it okay to use this photo?</p>
+              <Header
+                as="h1"
+                className="box-ui-collection"
+                onClick={null}
+              >
+                <Grid columns="equal">
+                  <Grid.Column verticalAlign="middle" width={5}>
+                    <div className="center box-cat-name">
+                      <Icon as="i" link name="plus circle" />
+                      <div className="cat-name">name</div>
+                    </div>
+                  </Grid.Column>
+                  <Grid.Column className="pic-sizes" width={2}>
+                    <div>2</div>
+                  </Grid.Column>
+                </Grid>
+              </Header>
+              <Header
+                as="h1"
+                className="box-ui-collection"
+                onClick={null}
+              >
+                <Grid columns="equal">
+                  <Grid.Column verticalAlign="middle" width={5}>
+                    <div className="center box-cat-name">
+                      <Icon as="i" link name="plus circle" />
+                      <div className="cat-name">name</div>
+                    </div>
+                  </Grid.Column>
+                  <Grid.Column className="pic-sizes" width={2}>
+                    <div>2</div>
+                  </Grid.Column>
+                </Grid>
+              </Header>
             </Modal.Description>
           </Modal.Content>
         </Modal>

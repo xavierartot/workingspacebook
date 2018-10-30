@@ -24,6 +24,7 @@
 .Footer .menuFooter,
 .InputCreate,
 .ModalCollections .box-ui-library-new,
+.ModalCollections .box-ui-collection,
 .ModalCollections .ui.text-create-library {
   display: flex;
   justify-content: center;
@@ -91,7 +92,7 @@ body {
 body a {
   color: #adadad;
 }
-body a:hover {
+body ahover {
   color: #525252;
 }
 .fz-normal {
@@ -114,11 +115,11 @@ body a:hover {
     width: 1240px !important;
   }
   div.ui.grid.container {
-    width: 1240px !important;
+    width1240px: !important;
   }
 }
 input[type=file],
-input[type=file]::-webkit-file-upload-button {
+input[type=file]-webkit-file-upload-button {
   cursor: pointer;
 }
 div.ui.secondary.menu > .item {
@@ -464,6 +465,7 @@ div.basic.doubleButtons {
 .Footer .menuFooter,
 .InputCreate,
 .ModalCollections .box-ui-library-new,
+.ModalCollections .box-ui-collection,
 .ModalCollections .ui.text-create-library {
   display: flex;
   justify-content: center;
@@ -596,9 +598,6 @@ div.basic.doubleButtons {
   font-weight: 300;
   margin: 1rem 0 2rem 0;
 }
-.ModalCollections .headerContent img {
-  width: 234px;
-}
 .ModalCollections >.header {
   font-size: 2.6em;
   font-weight: 300;
@@ -606,18 +605,76 @@ div.basic.doubleButtons {
 .ModalCollections .modal-content.content {
   padding: 0;
 }
-.ModalCollections .box-ui-library-new {
-  margin: 3rem;
+.ModalCollections .headerContent {
+  margin-bottom: 4rem;
 }
-.ModalCollections .box-ui-library-new span {
-  margin: 0;
+.ModalCollections .headerContent img {
+  width: 234px;
+}
+.ModalCollections .box-ui-library-new,
+.ModalCollections .box-ui-collection {
+  margin-top: 0 !important;
+  padding: 0;
+  transition: opacity 0.8s ease-in-out;
+  height: 110px;
+}
+.ModalCollections .box-ui-library-new span,
+.ModalCollections .box-ui-collection span {
+  margin: 0 0 -0.8rem 0;
 }
 .ModalCollections .ui.text-create-library {
-  background-color: rgba(189,189,189,0.55);
   cursor: pointer;
   font-size: 2rem;
   transition: opacity 0.8s ease-in-out;
-  height: 48px;
-  padding: 48px 0;
-  margin: 2.2rem 0;
+  height: 110px;
+  padding: 0;
+  margin: 0;
+}
+.ModalCollections .container-both {
+  border-bottom: 1px solid rgba(189,189,189,0.55);
+}
+.ModalCollections .containerInput {
+  background-color: #fff;
+  padding-bottom: 1rem;
+}
+.ModalCollections .containerText {
+  background-color: rgba(189,189,189,0.55);
+  padding-bottom: 1rem;
+}
+.ModalCollections .ui.box-ui-collection {
+  margin: 0;
+  border-bottom: 1px solid rgba(189,189,189,0.55);
+  font-size: 1.1rem;
+  margin: 0;
+  border-bottom: 1px solid rgba(189,189,189,0.55);
+  display: block;
+  margin-top: 1rem !important;
+  height: 108px;
+}
+.ModalCollections .ui.box-ui-collection .grid {
+  height: 108px;
+}
+.ModalCollections .ui.box-ui-collection .grid .pic-sizes {
+  margin-top: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.ModalCollections .box-cat-name {
+  justify-content: flex-start;
+  padding-left: 3rem;
+  height: 100%;
+/* line-height: 0rem; */
+/* background: aqua; */
+/* display: block; */
+  padding-top: 0rem;
+}
+.ModalCollections .box-cat-name .cat-name {
+  margin-left: 1rem;
+  text-transform: uppercase;
+}
+.ModalCollections .box-cat-name .plus.circle {
+  font-size: 1.3em;
 }

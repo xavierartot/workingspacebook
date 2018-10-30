@@ -2,28 +2,78 @@
   span
     font-weight: 300;
     margin: 1rem 0 2rem 0;
-  .headerContent
-    @extend .center-columns
-    img
-      width: 234px;
   >.header
     font-size: 2.6em;
     font-weight: 300;
   .modal-content.content
     padding: 0
 
+  .headerContent
+    @extend .center-columns
+    margin-bottom: 4rem
+    img
+      width: 234px;
+
   //create library
-  .box-ui-library-new
+  .box-ui-library-new, .box-ui-collection
     @extend .center
-    margin: 3rem;
+    margin-top: 0 !important
+    padding: 0;
+    transition: opacity 0.8s ease-in-out;
+    height: 110px;
     span
-      margin: 0
+      margin: 0 0 -0.8rem 0
+
   .ui.text-create-library
     @extend .center
-    background-color rgba(189, 189, 189, 0.55)
+    //background-color rgba(189, 189, 189, 0.55)
     cursor: pointer
     font-size 2rem
     transition: opacity 0.8s ease-in-out;
-    height: 48px;
-    padding: 48px 0;
-    margin: 2.2rem 0;
+    height: 110px;
+    padding: 0;
+    margin: 0;
+  //manage the padding on the container
+  .container-both
+    border-bottom 1px solid rgba(189, 189, 189, 0.55)
+  .containerInput
+    background-color white
+    padding-bottom: 1rem
+  .containerText
+    background-color rgba(189, 189, 189, 0.55)
+    padding-bottom: 1rem
+
+  //collections vue
+  .ui.box-ui-collection
+    margin: 0;
+    border-bottom 1px solid rgba(189, 189, 189, 0.55)
+    font-size: 1.1rem;
+    margin: 0;
+    border-bottom: 1px solid rgba(189,189,189,0.55);
+    display: block;
+    margin-top: 1rem !important;
+    height: 108px;
+    .grid
+      height: 108px;
+      .pic-sizes
+        //background-color: red
+        margin-top: 0
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0
+  .box-cat-name
+    justify-content: flex-start;
+    padding-left: 3rem;
+    height: 100%;
+    //background: orange;
+    .cat-name
+      margin-left: 1rem;
+      text-transform: uppercase;
+    /* line-height: 0rem; */
+    /* background: aqua; */
+    /* display: block; */
+    padding-top: 0rem;
+    .plus.circle
+      font-size 1.3em

@@ -25,7 +25,7 @@ class InputCreate extends Component {
     const { eventCreateLibrary } = this.props
     return (
       <div className="InputCreate">
-        <Input size="small">
+        <Input>
           <input
             id="createContent"
             onChange={this.handleChange}
@@ -33,12 +33,20 @@ class InputCreate extends Component {
             type="text"
             value={this.state.createContent}
           />
-          <Button onClick={this.handleCreate} type="submit">Create</Button>
+          <Button
+            onClick={this.handleCreate}
+            type="submit"
+          >Create
+          </Button>
         </Input>
-        <Icon.Group className="icon-close" size="large">
-          <Icon name="circle outline" size="large" />
-          <Icon name="close" onClick={eventCreateLibrary} />
-        </Icon.Group>
+        <Icon
+          circular
+          className="icon-close"
+          color="gray"
+          name="close"
+          onClick={eventCreateLibrary}
+          size="small"
+        />
       </div>
     )
   }
