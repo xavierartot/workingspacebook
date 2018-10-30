@@ -158,19 +158,24 @@ export const initStateUsers = {
 
 
 export const initStateCollections = {
-  '894toq4zt84uz8v4t8wunxav': {
-    id: '894toq4zt84uz8v4t8wunxav',
-    title: 'FUNNYGIRL WOMEN\'S ONE PIECE',
-    idProducts: {
-      id: '8tu4bsun805n8un48ve89',
-    },
+  '894toq4zt84uz8v4t8wunvox': {
+    id: '894toq4zt84uz8v4t8wunvox',
+    name: 'French Novel',
+    path: 'french-novel',
   },
-  '894toq4zt84uz8v4t8wunxav': {
-    id: '894toq4zt84uz8v4t8wunxav',
-    title: 'lorem ipsum',
-    idProducts: {
-      id: '894tuq4ut84ut8v4t8wun89g',
-      id: '8tu4bsun805n8un48ve00',
-    },
+  '894toq4zt84uz8v4t8wunvox': {
+    id: '894toq4zt84uz8v4t8wunvox',
+    name: 'Paris novel',
+    path: 'paris-novel',
+  },
+  '894toq4zt84uz8v4t8wuntro': {
+    id: '894toq4zt84uz8v4t8wuntro',
+    name: 'Paris Suspens',
+    path: 'paris-suspens',
+  },
+  '894toq4zt84uz8v4t8wuntro': {
+    id: '894toq4zt84uz8v4t8wuntro',
+    name: 'Paris Mistery',
+    path: 'paris-mystery',
   },
 }

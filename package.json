@@ -41,6 +41,7 @@
     "build": "npm-run-all build-css build-js"
   },
   "devDependencies": {
+    "awesome-typescript-loader": "^5.2.1",
     "babel-eslint": "^8.2.6",
     "eslint": "^5.4.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -50,6 +51,8 @@
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.11.1",
     "gh-pages": "^1.2.0",
-    "prettier": "^1.14.2"
+    "prettier": "^1.14.2",
+    "source-map-loader": "^0.2.4",
+    "typescript": "^3.1.3"
   }
 }

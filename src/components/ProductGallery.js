@@ -8,6 +8,7 @@ import React, { Component } from 'react'
 import { Divider, Segment, Label, Icon } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import ModalGallery from './modals/ModalGallery'
+import ModalCollections from './modals/ModalCollections'
 
 class ProductGallery extends Component {
   render() {
@@ -69,7 +70,7 @@ class ProductGallery extends Component {
                 <span className="number-like">5</span>
               </Link>
               <Link className="" to="/">
-                <Icon as="i" link name="plus circle" />
+                <ModalCollections />
               </Link>
             </div>
           </footer>

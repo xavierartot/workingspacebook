@@ -37,7 +37,10 @@ class Shop extends Component {
 
           <Container>
             <div className="ui three column grid stackable">
-              { [1, 2, 3, 4, 5, 6, 7].map(item => <ProductGallery key={item}>{item}</ProductGallery >)}
+              {
+              [1, 2, 3, 4, 5, 6, 7]
+              .map(item =>
+                <ProductGallery key={item}>{item}</ProductGallery>)}
             </div>
           </Container>
         </div>
