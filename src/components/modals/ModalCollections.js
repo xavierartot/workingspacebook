@@ -33,9 +33,7 @@ class ModalCollections extends Component {
           className="ModalCollections "
           closeIcon
           size="large"
-          trigger={
-            <Icon as="i" link name="plus circle" />
-          }
+          trigger={<Icon as="i" name="plus circle" />}
         >
           <Modal.Header>Your Library</Modal.Header>
           <Modal.Content className="modal-content">

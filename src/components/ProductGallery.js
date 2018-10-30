@@ -10,6 +10,8 @@ import ModalGallery from './modals/ModalGallery'
 import ModalCollections from './modals/ModalCollections'
 
 class ProductGallery extends Component {
+  heartLike = (event) => {
+  }
   render() {
     return (
       <div className="column gallery-col">
@@ -64,13 +66,11 @@ class ProductGallery extends Component {
               </Link>
             </div>
             <div className="column tar footer-second-second">
-              <Link className="heart-link" to="/">
+              <div className="heart-link">
                 <Icon as="i" link name="heart" />
                 <span className="number-like">5</span>
-              </Link>
-              <Link className="" to="/">
-                <ModalCollections />
-              </Link>
+              </div>
+              <ModalCollections />
             </div>
           </footer>
         </Segment>

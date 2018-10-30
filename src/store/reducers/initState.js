@@ -4,29 +4,25 @@ export const initStateProducts = {
     email: '0@gmail.com',
     bio: '0help me find peach',
     timestamp: 1468166872634,
-    personalLink: 'http://0.com',
+    productLink: 'http://0.com',
     picture: '0moi.jpg',
     deleted: false,
-    likeNumber: false,
-    likeAuthor: ['8tu4bsun805n8un48ve89', '8tu4bsun805n8un48ve00'],
-    followerId: ['8tu4bsun805n8un48ve89'],
-    likesiDProduct: {},
+    likeAuthorProduct: ['8tu4bsun805n8un48ve89', '8tu4bsun805n8un48ve00'], // collections of product liked  by author
+    followerIdUser: ['8tu4bsun805n8un48ve89'],
+    followingIdUser: [],
+    amazonStore: 'amazon.com/stores/node/14511840011',
   },
   '8tu4bsun805n8un48ve89': {
     author: '1Now Designs',
     email: '1@gmail.com',
     bio: '1help me find peach',
     timestamp: 1468166872634,
-    personalLink: 'http://1.com',
+    productLink: 'http://1.com',
     picture: '1moi.jpg',
     deleted: false,
-    likeNumber: {}, // collections of product you liked
-    likeAuthor: { id: '8tu4bsun805n8un48ve00' }, // collections of authors you liked
-    followerId: {},
-    followingId: {},
-    likesiDProduct: {},
-    twitter: { link: 'https://twitter.com/idTwitter' },
-    facebook: { link: 'https://facebook.com/idTwitter' },
+    likeAuthorProduct: ['8tu4bsun805n8un48ve00'], // collections of product liked  by author
+    followerIdUser: [],
+    followingIdUser: [],
     amazonStore: 'amazon.com/stores/node/14511840011',
   },
   '8tu4bsun805n8un48ve00': {
@@ -34,16 +30,14 @@ export const initStateProducts = {
     email: '2@gmail.com',
     bio: '2help me find peach',
     timestamp: 1468166872635,
-    personalLink: 'http://2.com',
+    productLink: 'http://2.com',
     picture: '2moi.jpg',
     deleted: false,
-    likeNumber: {}, // collections of product you liked
-    likeAuthor: {}, // collections of authors you liked
-    followerId: {},
-    followingId: {},
-    likesiDProduct: {},
-    twitter: { link: 'https://twitter.com/idTwitter' },
-    facebook: { link: 'https://facebook.com/idTwitter' },
+    likeAuthorProduct: ['8tu4bsun805n8un48ve00'], // collections of product liked  by author
+    followerIdUser: [],
+    followingIdUser: [],
+    twitter: 'https://twitter.com/idTwitter',
+    facebook: 'https://facebook.com/idTwitter',
     amazonStore: 'amazon.com/stores/node/14511840011',
   },
 }
@@ -107,13 +101,16 @@ export const initStateUsers = {
     author: '0Now Designs',
     email: '0@gmail.com',
     bio: '0help me find peach',
-    timestamp: 1468166872634,
-    personalLink: 'http://0.com',
-    picture: '0moi.jpg',
+    timestamp: 1468166872634, // create
+    personalSite: 'http://0.com',
+    amazonStore: 'http://amazon.com',
+    picture: '0moi.jpg', // your picture
     deleted: false,
-    likeNumber: {}, // collections of product you liked
-    likeAuthor: {}, // collections of authors you liked
-    collection: { id: '894toq4zt84uz8v4t8wunxav' },
+    likeProductId: [], // collections of product you liked
+    likeAuthorId: [], // collections of authors you liked
+    collection: ['894toq4zt84uz8v4t8wunxav'],
+    twitter: 'https://twitter.com/idTwitter',
+    facebook: 'https://facebook.com/idTwitter',
   },
   '894toq4zt84uz8v4t8wunz28': {
     id: '894toq4zt84uz8v4t8wunz28',
@@ -121,12 +118,15 @@ export const initStateUsers = {
     email: '1@gmail.com',
     bio: '1help me find peach',
     timestamp: 1468166872634,
-    personalLink: 'http://1.com',
+    personalSite: 'http://1.com',
+    amazonStore: 'http://amazon.com/1',
     picture: '1moi.jpg',
     deleted: false,
-    likeNumber: {}, // collections of product you liked
-    likeAuthor: {}, // collections of authors you liked
-    collection: {},
+    likeProduct: [], // collections of product you liked
+    likeAuthor: [], // collections of authors you liked
+    collection: [],
+    twitter: 'https://twitter.com/idTwitter',
+    facebook: 'https://facebook.com/idTwitter',
   },
   '894toq4zt84uz8v4t8wunzdd': {
     id: '894toq4zt84uz8v4t8wunzdd',
@@ -134,12 +134,15 @@ export const initStateUsers = {
     email: '2@gmail.com',
     bio: '2help me find peach',
     timestamp: 1468166872635,
-    personalLink: 'http://2.com',
+    personalSite: 'http://2.com',
+    amazonStore: 'http://amazon.com/2',
     picture: '2moi.jpg',
     deleted: false,
-    likeNumber: {}, // collections of product you liked
-    likeAuthor: {}, // collections of authors you liked
-    collection: {},
+    likeProduct: [], // collections of product you liked
+    likeAuthor: [], // collections of authors you liked
+    collection: [],
+    twitter: 'https://twitter.com/idTwitter',
+    facebook: 'https://facebook.com/idTwitter',
   },
   '894toq4zt84uz8v4t8wunxav': {
     id: '894toq4zt84uz8v4t8wunxav',
@@ -147,35 +150,50 @@ export const initStateUsers = {
     email: 'xavierartot@gmail.com',
     bio: 'Write something about yourself',
     timestamp: 1468166872635,
-    personalLink: 'https://artot.net',
+    personalSite: 'http://3.com',
+    amazonStore: 'http://amazon.com/3',
     picture: 'images/picture.jpg',
     deleted: false,
-    likeNumber: {}, // collections of product you liked
-    likeAuthor: {}, // collections of authors you liked
-    collection: {},
+    likeProduct: [], // collections of product you liked
+    likeAuthor: [], // collections of authors you liked
+    collection: [],
+    twitter: 'https://twitter.com/idTwitter',
+    facebook: 'https://facebook.com/idTwitter',
   },
 }
 
 
-export const initStateCollections = {
+export const initStateCategories = {
   '894toq4zt84uz8v4t8wunvox': {
     id: '894toq4zt84uz8v4t8wunvox',
     name: 'French Novel',
     path: 'french-novel',
+    deleted: false,
   },
   '894toq4zt84uz8v4t8wunvox': {
     id: '894toq4zt84uz8v4t8wunvox',
     name: 'Paris novel',
     path: 'paris-novel',
+    deleted: false,
   },
   '894toq4zt84uz8v4t8wuntro': {
     id: '894toq4zt84uz8v4t8wuntro',
     name: 'Paris Suspens',
     path: 'paris-suspens',
+    deleted: false,
   },
   '894toq4zt84uz8v4t8wuntro': {
     id: '894toq4zt84uz8v4t8wuntro',
     name: 'Paris Mistery',
     path: 'paris-mystery',
+    deleted: false,
   },
 }
+export const initStateAuthentification = [
+  {
+    id: '6810zq4zt84uz8v4t8wuntao',
+    idUser: '6810zq4zt84uz8v4t8wuntao',
+    connectTime: 6546464,
+    deconnectTime: 9999999,
+  },
+]

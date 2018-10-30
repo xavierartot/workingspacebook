@@ -1,4 +1,4 @@
-import { ADD_PRODUCT_ERROR, ADD_PRODUCT, RECEIVES_PRODUCTS } from '../actions/product'
+import { REMOVE_PRODUCT, UPDATE_PRODUCT, LIKE_PRODUCT, ADD_PRODUCT_ERROR, ADD_PRODUCT, RECEIVES_PRODUCTS } from '../actions/product'
 import { initStateProducts } from './initState'
 
 export default function product(state = initStateProducts, action) {
@@ -15,8 +15,21 @@ export default function product(state = initStateProducts, action) {
         ...state,
         products: action.product,
       }
+    case UPDATE_PRODUCT:
+      console.log('update Product', action.product)
+      return {
+        ...state,
+      }
+    case REMOVE_PRODUCT:
+      console.log('remove Product - turn to true delete field', action.product)
+      return {
+        ...state,
+      }
     case ADD_PRODUCT_ERROR:
-      console.log('add product Error', action.error)
+      console.log('add Error', action.error)
+      return state
+    case LIKE_PRODUCT:
+      console.log('like product', action.id)
       return state
     default: return state
   }

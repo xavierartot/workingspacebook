@@ -1,12 +1,18 @@
-import { RECEIVE_CATEGORIES } from '../actions/categories'
+import { UNCONNECT, CONNECTED } from '../actions/auth'
 
-export default function auth(state = {}, action) {
+export default function comment(state, action) {
   switch (action.type) {
-    case RECEIVE_CATEGORIES:
-      // console.log(action.categories)
+    case UNCONNECT:
+      console.log('unconnect', action.unconnect)
       return {
         ...state,
-        ...action.categories,
+        ...action.unconnect,
+      }
+    case CONNECTED:
+      console.log('connect', action.connect)
+      return {
+        ...state,
+        connect: action.connect,
       }
     default: return state
   }
