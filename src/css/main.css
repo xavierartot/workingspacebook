@@ -574,6 +574,11 @@ div.basic.doubleButtons {
   font-weight: 300;
   letter-spacing: 0.9px;
 }
+@media only screen and (max-width: 768px) {
+  .InputCreate {
+    width: 100%;
+  }
+}
 .InputCreate input[type='text'],
 .InputCreate .ui.button {
   border-radius: 0;
@@ -583,8 +588,18 @@ div.basic.doubleButtons {
 .InputCreate input[type='text'] {
   width: 381px;
 }
+@media only screen and (max-width: 768px) {
+  .InputCreate input[type='text'] {
+    width: 70%;
+  }
+}
 .InputCreate .ui.button {
   padding: 2rem 3.5rem;
+}
+@media only screen and (max-width: 768px) {
+  .InputCreate .ui.button {
+    padding: 0.78571429em 1.5em 0.78571429em;
+  }
 }
 .InputCreate .icon-close {
   margin-left: 3rem;
@@ -593,6 +608,11 @@ div.basic.doubleButtons {
 }
 .InputCreate .ui.input>input:focus {
   border-color: rgba(242,98,2,0.29);
+}
+@media only screen and (max-width: 768px) and (max-width: 768px) {
+  .InputCreate {
+    width: 100%;
+  }
 }
 .ModalCollections span {
   font-weight: 300;
@@ -655,6 +675,7 @@ div.basic.doubleButtons {
   height: 108px;
 }
 .ModalCollections .ui.box-ui-collection .grid .pic-sizes {
+  background-color: #db2828;
   margin-top: 0;
   height: 100%;
   display: flex;
@@ -677,4 +698,14 @@ div.basic.doubleButtons {
 }
 .ModalCollections .box-cat-name .plus.circle {
   font-size: 1.3em;
+}
+@media only screen and (max-width: 768px) {
+  .ModalCollections .ui.box-ui-collection,
+  .ModalCollections .ui.box-ui-collection .grid,
+  .ModalCollections .ui.stackable.grid>.wide.column {
+    height: 100%;
+  }
+  .ModalCollections .box-cat-name {
+    justify-content: center;
+  }
 }

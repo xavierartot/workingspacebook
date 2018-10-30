@@ -42,7 +42,7 @@ class InputCreate extends Component {
         <Icon
           circular
           className="icon-close"
-          color="gray"
+          color="grey"
           name="close"
           onClick={eventCreateLibrary}
           size="small"

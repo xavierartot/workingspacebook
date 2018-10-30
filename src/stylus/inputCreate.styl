@@ -1,13 +1,22 @@
 .InputCreate
   @extend .center
+  @media only screen and (max-width 768px)
+    width: 100%;
+    @media only screen and (max-width 768px)
+      width: 100%;
   input[type='text'],.ui.button
     border-radius 0
     font-size: 0.7em;
     font-weight: 300;
+
   input[type='text']
     width: 381px;
+    @media only screen and (max-width 768px)
+      width: 70%;
   .ui.button
     padding: 2rem 3.5rem
+    @media only screen and (max-width 768px)
+      padding: .78571429em 1.5em .78571429em;
   .icon-close
     margin-left: 3rem;
     cursor: pointer
