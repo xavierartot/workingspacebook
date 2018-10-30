@@ -20,6 +20,8 @@
   justify-content: center;
 }
 .center,
+.gallery div.column.tal.footer-first-element .trending-link,
+.gallery div.column.tar.footer-second-second,
 .Footer .box,
 .Footer .menuFooter,
 .InputCreate,
@@ -88,6 +90,7 @@
 }
 body {
   text-rendering: optimizeLegibility;
+  color: #4e4e4e;
 }
 body a {
   color: #adadad;
@@ -309,7 +312,9 @@ div.ui.segment.gallery:hover {
 .ui.grid>.gallery-col.column:not(.row) {
   padding: 1.8rem;
 }
-a.gallery-ribbon.label {
+.gallery-col a.gallery-ribbon.label {
+  padding-top: 1rem;
+  z-index: 2;
   left: calc(100% + 1rem + 0.42em) !important;
 /*big*/
 /*transform: translateX(-91%);*/
@@ -318,39 +323,30 @@ a.gallery-ribbon.label {
   margin-top: 1rem;
 }
 .gallery-image-container {
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (min-width: 992px) {
+  .gallery-image-container {
+    padding: 0;
+  }
 }
 .gallery-image {
   cursor: pointer;
 }
 .gallery-col .ui.divider {
-/*margin-left: 1rem;*/
-/*margin-right: 1rem;*/
   opacity: 0.4;
 }
 .gallery-col .product-gallery-details {
-  margin: 1.3rem;
-  margin-top: 2rem;
+  padding: 1rem;
 }
 .gallery-col .footer {
-  margin: 1.3rem;
+  padding: 1rem;
 }
 .gallery-col .footer i {
   font-size: 1.3rem;
-}
-.gallery-col .footer>div.column:first-child {
-  padding-left: 2.5rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
-}
-.gallery-col .footer>div.column:last-child {
-  padding-right: 2rem;
-  display: flex;
-  justify-content: flex-end;
-  align-items: stretch;
 }
 div.gallery-col .footer>div .number-like {
   line-height: 1.5;
@@ -376,6 +372,30 @@ div.gallery-col .footer .heart:hover {
   text-overflow: ellipsis;
   width: 90%;
   cursor: pointer;
+}
+.gallery div.column.tal.footer-first-element {
+  padding: 0;
+}
+@media only screen and (min-width: 992px) {
+  .gallery div.column.tal.footer-first-element .trending-link {
+    padding-left: 1rem;
+    justify-content: flex-start;
+  }
+}
+.gallery div.column.tar.footer-second-second {
+  padding: 0;
+  justify-content: space-evenly;
+}
+@media only screen and (min-width: 992px) {
+  .gallery div.column.tar.footer-second-second {
+    justify-content: flex-end;
+    padding-right: 1rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .gallery div.column.tar.footer-second-second .heart-link {
+    margin-right: 1rem;
+  }
 }
 .form {
   border: 0;
@@ -641,6 +661,9 @@ div.basic.doubleButtons {
 .ModalCollections .box-ui-library-new span,
 .ModalCollections .box-ui-collection span {
   margin: 0 0 -0.8rem 0;
+  color: #e0e1e2;
+  color: #4e4e4e;
+  letter-spacing: 0.8px;
 }
 .ModalCollections .ui.text-create-library {
   cursor: pointer;
@@ -651,31 +674,38 @@ div.basic.doubleButtons {
   margin: 0;
 }
 .ModalCollections .container-both {
-  border-bottom: 1px solid rgba(189,189,189,0.55);
+  border-bottom: 1px solid #e0e1e2;
 }
 .ModalCollections .containerInput {
   background-color: #fff;
   padding-bottom: 1rem;
 }
 .ModalCollections .containerText {
-  background-color: rgba(189,189,189,0.55);
+  background-color: #b7b7b7;
+  background-color: #f1f1f1;
   padding-bottom: 1rem;
 }
 .ModalCollections .ui.box-ui-collection {
   margin: 0;
-  border-bottom: 1px solid rgba(189,189,189,0.55);
+  border-bottom: 1px solid #e0e1e2;
   font-size: 1.1rem;
   margin: 0;
-  border-bottom: 1px solid rgba(189,189,189,0.55);
+  border-bottom: 1px solid #e0e1e2;
   display: block;
   margin-top: 1rem !important;
   height: 108px;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: backgroud-color 0.8s ease-in-out;
+}
+.ModalCollections .ui.box-ui-collection:hover {
+  background-color: #e0e1e2;
+  opacity: 1;
 }
 .ModalCollections .ui.box-ui-collection .grid {
   height: 108px;
 }
 .ModalCollections .ui.box-ui-collection .grid .pic-sizes {
-  background-color: #db2828;
   margin-top: 0;
   height: 100%;
   display: flex;
@@ -683,18 +713,25 @@ div.basic.doubleButtons {
   align-items: center;
   padding: 0;
 }
+@media only screen and (max-width: 768px) {
+  .ModalCollections .ui.box-ui-collection .grid .pic-sizes:last-child {
+    margin-bottom: 1rem !important;
+  }
+}
 .ModalCollections .box-cat-name {
   justify-content: flex-start;
   padding-left: 3rem;
   height: 100%;
-/* line-height: 0rem; */
-/* background: aqua; */
-/* display: block; */
   padding-top: 0rem;
 }
 .ModalCollections .box-cat-name .cat-name {
   margin-left: 1rem;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 768px) {
+  .ModalCollections .box-cat-name .cat-name .label {
+    margin-left: 1.4rem;
+  }
 }
 .ModalCollections .box-cat-name .plus.circle {
   font-size: 1.3em;

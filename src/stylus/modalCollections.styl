@@ -23,10 +23,12 @@
     height: 110px;
     span
       margin: 0 0 -0.8rem 0
+      color greyLight
+      color: #4e4e4e;
+      letter-spacing: 0.8px;
 
   .ui.text-create-library
     @extend .center
-    //background-color rgba(189, 189, 189, 0.55)
     cursor: pointer
     font-size 2rem
     transition: opacity 0.8s ease-in-out;
@@ -35,46 +37,54 @@
     margin: 0;
   //manage the padding on the container
   .container-both
-    border-bottom 1px solid rgba(189, 189, 189, 0.55)
+    border-bottom 1px solid greyLight
   .containerInput
     background-color white
     padding-bottom: 1rem
   .containerText
-    background-color rgba(189, 189, 189, 0.55)
+    background-color #b7b7b7
+    background-color #f1f1f1
     padding-bottom: 1rem
 
   //collections vue
   .ui.box-ui-collection
     margin: 0;
-    border-bottom 1px solid rgba(189, 189, 189, 0.55)
+    border-bottom 1px solid greyLight
     font-size: 1.1rem;
     margin: 0;
-    border-bottom: 1px solid rgba(189,189,189,0.55);
+    border-bottom: 1px solid greyLight
     display: block;
     margin-top: 1rem !important;
     height: 108px;
+    cursor: pointer
+    opacity:.9
+    transition: backgroud-color 0.8s ease-in-out;
+    &:hover
+      background-color: greyLight
+      opacity:1
     .grid
       height: 108px;
       .pic-sizes
-        background-color: red
         margin-top: 0
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 0
+      .pic-sizes:last-child
+        @media only screen and (max-width 768px)
+          margin-bottom: 1rem !important
   .box-cat-name
     justify-content: flex-start;
     padding-left: 3rem;
     height: 100%;
-    //background: orange;
+    padding-top: 0rem;
     .cat-name
       margin-left: 1rem;
       text-transform: uppercase;
-    /* line-height: 0rem; */
-    /* background: aqua; */
-    /* display: block; */
-    padding-top: 0rem;
+      .label
+        @media only screen and (max-width 768px)
+          margin-left: 1.4rem
     .plus.circle
       font-size 1.3em
 

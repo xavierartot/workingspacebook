@@ -1,8 +1,7 @@
 /*
  * Gallery.js
  * Copyright (C) 2018 xav <xav@xavs-Mac-mini>
- *
- * Distributed under terms of the MIT license.
+ * Parent: Home, shop
  */
 import React, { Component } from 'react'
 import { Divider, Segment, Label, Icon } from 'semantic-ui-react'
@@ -58,14 +57,14 @@ class ProductGallery extends Component {
           <Divider className="divider" fitted={false} />
 
           <footer className="footer ui double two column grid">
-            <div className="column tal">
+            <div className="column tal footer-first-element">
               <Link className="trending-link" to="/">
                 <Icon as="i" link name="bullhorn" />
                 <span className="trending">Trending</span>
               </Link>
             </div>
-            <div className="column tar">
-              <Link className="mr1" to="/">
+            <div className="column tar footer-second-second">
+              <Link className="heart-link" to="/">
                 <Icon as="i" link name="heart" />
                 <span className="number-like">5</span>
               </Link>

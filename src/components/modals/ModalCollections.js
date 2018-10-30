@@ -1,8 +1,7 @@
 /*
  * ModalCollections
  * Copyright (C) 2018 xav <xav@xavs-Mac-mini>
- *
- * Distributed under terms of the MIT license.
+ * Parent ProductGallery, shop
  */
 import React, { Component } from 'react'
 import { Grid, Segment, Label, Input, Icon, Modal, Header, Image, Transition } from 'semantic-ui-react'
@@ -24,7 +23,6 @@ class ModalCollections extends Component {
     const {
       image, contentText,
     } = this.props
-    const src = 'https://react.semantic-ui.com/images/avatar/small/rachel.png'
     let bgc = ''
     if (!visible) {
       bgc = 'text-create-library'
@@ -34,7 +32,6 @@ class ModalCollections extends Component {
         <Modal
           className="ModalCollections "
           closeIcon
-          open
           size="large"
           trigger={
             <Icon as="i" link name="plus circle" />
@@ -70,11 +67,8 @@ class ModalCollections extends Component {
                   <Grid.Column verticalAlign="middle" width={5}>
                     <div className="center box-cat-name">
                       <Icon as="i" link name="plus circle" />
-                      <div className="cat-name">name
-                        <Label basic color="orange">
-                          22
-                        </Label>
-                      </div>
+                      <div className="cat-name">name</div>
+                      <Label basic color="grey" content="1" />
                     </div>
                   </Grid.Column>
                   <Grid.Column className="pic-sizes" width={2}>
@@ -93,6 +87,36 @@ class ModalCollections extends Component {
                   </Grid.Column>
                 </Grid>
               </Header>
+              <Header
+                as="h1"
+                className="box-ui-collection"
+                onClick={null}
+              >
+                <Grid columns="equal" stackable>
+                  <Grid.Column verticalAlign="middle" width={5}>
+                    <div className="center box-cat-name">
+                      <Icon as="i" link name="plus circle" />
+                      <div className="cat-name">name</div>
+                      <Label basic color="grey" content="1" />
+                    </div>
+                  </Grid.Column>
+                  <Grid.Column className="pic-sizes" width={2}>
+                    <Image
+                      bordered
+                      circular
+                      size="tiny"
+                      src="https://react.semantic-ui.com/images/avatar/small/rachel.png"
+                    />
+                  </Grid.Column>
+                  <Grid.Column className="pic-sizes" width={2}>
+                    <Image circular size="tiny" src="https://react.semantic-ui.com/images/avatar/large/matthew.png" />
+                  </Grid.Column>
+                  <Grid.Column className="pic-sizes" width={2}>
+                    <Image circular size="tiny" src="https://react.semantic-ui.com/images/avatar/large/molly.png" />
+                  </Grid.Column>
+                </Grid>
+              </Header>
+
 
             </Modal.Description>
           </Modal.Content>
