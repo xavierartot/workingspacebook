@@ -5,9 +5,16 @@
  * Distributed under terms of the MIT license.
  */
 import React, { Component } from 'react'
-import { Modal, Header, Image } from 'semantic-ui-react'
+import { Label, Button, Icon, Grid, Modal, Header, Image } from 'semantic-ui-react'
+import ModalCollections from './ModalCollections'
 
 class ModalGallery extends Component {
+  handleLike = (event) => {
+    console.log(1)
+  }
+  handleCollectCategorie = (event) => {
+    console.log(2)
+  }
   render() {
     const {
       image, contentText,
@@ -23,17 +30,60 @@ class ModalGallery extends Component {
       <div>
         <Modal
           closeIcon
+          open
           size="large"
           trigger={triggerContent}
         >
-          <Modal.Header>Select a Photo</Modal.Header>
-          <Modal.Content image>
-            <Image size="medium" src="https://react.semantic-ui.com/images/avatar/large/rachel.png" wrapped />
-            <Modal.Description>
-              <Header>Default Profile Image</Header>
-              <p>We've found the following gravatar image associated with your e-mail address.</p>
-              <p>Is it okay to use this photo?</p>
-            </Modal.Description>
+          <Modal.Content className="ModalGallery">
+            <Grid stackable>
+              <Grid.Row columns={2}>
+                <Grid.Column>
+                  <div className="pic-gallery">
+                    <Image
+                      size="medium"
+                      src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
+                    />
+                    <div className="box-link">
+                      <div className="box-like" onClick={this.handleLike} >
+                        <Icon as="i" link name="heart" />
+                        <span className="like-text">LIKE</span>
+                      </div>
+                      <div className="box-collect" onClick={this.handleCollectCategorie} >
+                        <ModalCollections>COLLECT</ModalCollections>
+                      </div>
+                    </div>
+                  </div>
+                </Grid.Column>
+                <Grid.Column>
+                  <Modal.Description>
+                    <Header as="h1">
+                      Name of Product
+                    </Header>
+                    <Header className="author-box">
+                      <span className="by">BY</span>
+                      <span className="author">NOW DESIGNS</span>
+                    </Header>
+                    <Button animated>
+                      <Button.Content visible>$15 on Amazon Prime</Button.Content>
+                      <Button.Content hidden>
+                        <a href="http://amazon.com/1" target="_blank">
+                          <Icon name="arrow right" />
+                        </a>
+                      </Button.Content>
+                    </Button>
+                    <Image.Group size="mini">
+                      <Image
+                        href="http://amazon.com"
+                        src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
+                      />
+                      <Image src="https://react.semantic-ui.com/images/avatar/large/helen.jpg" />
+                      <Image src="https://react.semantic-ui.com/images/avatar/large/molly.png" />
+                      <Image src="https://react.semantic-ui.com/images/avatar/large/matthew.png" />
+                    </Image.Group>
+                  </Modal.Description>
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
           </Modal.Content>
         </Modal>
       </div>

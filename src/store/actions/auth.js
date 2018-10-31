@@ -1,15 +1,15 @@
 export const UNCONNECT = 'UNCONNECT'
-export const CONNECTED = 'CONNECTED'
+export const CONNECT = 'CONNECT'
 
-export function connect(connect) {
+export function unconnectAuth(unconnect) {
   return {
     type: UNCONNECT,
-    connect,
+    unconnect,
   }
 }
-export function connected(unconnect) {
+export function connectAuth(connect) {
   return {
-    type: CONNECTED,
-    unconnect,
+    type: CONNECT,
+    connect,
   }
 }

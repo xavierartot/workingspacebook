@@ -1,129 +1,101 @@
-body {
-  text-rendering: optimizeLegibility;
-  color: #4e4e4e;
-}
-body a {
-  color: #adadad;
-  transition: color 0.4s ease-in-out;
-}
-body a:hover {
-  color: #525252;
-}
-.mr-1 {
-  margin-right: 1rem;
-}
-.fz-1 {
-  font-size: 1rem;
-}
-.m0 {
-  margin: 0;
-}
-.columnColor {
-  background-color: #eee;
-  width: 50%;
-  min-height: 50%;
-  margin: 1em;
-}
-.d-flex {
-  display: flex;
-}
-.justify-content-center {
-  justify-content: center;
-}
-.center,
-.gallery div.column.tal.footer-first-element .trending-link,
-.gallery div.column.tar.footer-second-second,
-.Footer .box,
-.Footer .menuFooter,
-.InputCreate,
-.ModalCollections .box-ui-library-new,
-.ModalCollections .box-ui-collection,
-.ModalCollections .ui.text-create-library {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
 .center-columns,
-.ShopGallery .centerShopGallery,
-.Profil .segment.jumbotron .titleBox,
-.shopBoxGallery,
-.ModalCollections .headerContent {
+.Profil .segment.jumbotron .titleBox {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.orange {
-  background-color: #f26202;
-}
-.red {
-  background-color: #db2828;
-}
-.gris {
-  background-color: #eee;
-}
-.tac {
-  text-align: center;
-}
-.tal {
-  text-align: left;
-}
-.tar {
-  text-align: right;
-}
-.mr1 {
-  margin-right: 1rem;
-}
-.ml1,
-.ShopHeader .btn-radius {
-  margin-left: 1rem;
-}
-.mb1 {
-  margin-bottom: 1rem;
-}
-.mb2,
-.ShopGallery .ui.image {
-  margin-bottom: 2rem;
-}
-.mt1 {
-  margin-top: 1rem;
-}
-.mt2 {
+.Profil .segment.jumbotron {
   margin-top: 2rem;
 }
-.p0,
-.ShopGallery .ui.segment {
-  padding: 0;
+.Profil .segment.jumbotron .titleBox {
+  padding: 1rem;
 }
-.bgc-n {
-  background-color: #21ba45;
+.Profil .segment.jumbotron .titleBox .ui.header {
+  font-family: Europa;
+  font-weight: 300;
+  font-size: 3rem;
+  margin-bottom: 2rem;
 }
-.fz-normal {
-  font-size: 1rem !important;
+.Profil .segment.jumbotron .titleBox .ui.compact.menu {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
 }
-.font-europa-normal {
-  font-family: europa, sans-serif;
-  font-style: normal;
-  font-weight: 400;
+.Profil .segment.jumbotron .editProfil {
+  margin-bottom: 2rem;
+  font-size: 2rem;
 }
-.btn-radius,
-.ShopHeader .btn-radius {
-  border-radius: 50px;
+.Profil .segment.jumbotron .ui.floating.label {
+  z-index: 10;
 }
-.border {
-  border: 1px solid #525252;
+.Profil .segment.jumbotron .profilRibbon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
 }
-@media only screen and (min-width: 1200px) {
-  div.ui.container {
-    width: 1240px !important;
-  }
-  div.ui.grid.container {
-    width1240px: !important;
-  }
+.Profil .segment.jumbotron .profilRibbon span {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-left: 1rem;
 }
-input[type=file],
-input[type=file]-webkit-file-upload-button {
+order-box;
+  background-color: #39ac95;
+}
+div.ui.menu .left.item a.active {
+  background-color: #fbc02d;
+  color: #616161;
+}
+div.ui.secondary.menu a.item:hover {
+  background-color: #ffa500;
+  color: #fff;
+}
+div.ui.menu .left.item i {
+  margin-top: -5px;
+}
+div.ui.menu .right.item >.item {
+  margin: 0;
+}
+div.ui.header.ui.segment {
+  padding: 0.5rem 0;
+  background-color: #fff;
+}
+.menu-mobile .ui.menu .item:before {
+  background: transparent;
+}
+.fz-normal.ui.menu .item:before {
+  background: transparent;
+}
+.fz-normal.item .buttons > button,
+.fz-normal.item .buttons div:last-child {
+  margin-left: 1rem;
+}
+.ui.menu .right.item.signedIn .label,
+.right.item.signedIn .dropdown {
+  margin-left: 0;
+  font-weight: 300;
+  font-size: 1rem;
+}
+.right.item.signedIn .dropdown {
+  margin-left: 2rem;
+}
+.right.item.signedIn .dropdown i {
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+.signedIn .ui.dropdown .menu>.divider {
+  margin: 0;
+}
+div.right.item.signedIn .dropdownImage .ui.image {
+  border-radius: 50%;
+}
+.ui.top.right.pointing.dropdown>.menu.dropdownSize {
+  font-size: 1.1rem !important;
+}
+.ui.top.right.pointing.dropdown>.menu.dropdownSize .item {
+  padding: 1em 1.14285714em !important;
+}
+button {
   cursor: pointer;
 }
 div.ui.secondary.menu > .item {
@@ -441,7 +413,8 @@ div.basic.doubleButtons {
 .center-columns,
 .Profil .segment.jumbotron .titleBox,
 .shopBoxGallery,
-.ModalCollections .headerContent {
+.ModalCollections .headerContent,
+.ModalGallery .pic-gallery {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -487,7 +460,8 @@ div.basic.doubleButtons {
 .InputCreate,
 .ModalCollections .box-ui-library-new,
 .ModalCollections .box-ui-collection,
-.ModalCollections .ui.text-create-library {
+.ModalCollections .ui.text-create-library,
+.ModalGallery .box-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -495,7 +469,8 @@ div.basic.doubleButtons {
 }
 .center-columns,
 .shopBoxGallery,
-.ModalCollections .headerContent {
+.ModalCollections .headerContent,
+.ModalGallery .pic-gallery {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -746,4 +721,66 @@ div.basic.doubleButtons {
   .ModalCollections .box-cat-name {
     justify-content: center;
   }
+}
+.ModalGallery .box-link {
+  justify-content: space-evenly;
+  margin-top: 3.5rem;
+  width: 100%;
+  font-size: 1.1rem;
+  color: #757575;
+  font-weight: 300;
+  letter-spacing: 0.8px;
+}
+.ModalGallery .two.column.row {
+  padding: 6rem 3rem;
+}
+.ModalGallery .box-collect {
+  display: flex;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+.ModalGallery .box-collect:hover {
+  color: rgba(0,0,0,0.949);
+}
+.ModalGallery .box-like .heart.link.icon {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+.ModalGallery .box-like .heart.link.icon:hover {
+  color: #db2828;
+}
+.ModalGallery .description .ui.header {
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+.ModalGallery .ui.animated.button {
+  font-size: 1.4rem;
+  border-radius: 0;
+  background-color: #f26202;
+  color: #fff;
+  margin-bottom: 4rem;
+}
+.ModalGallery .ui.animated.button .visible.content {
+  padding: 0.9rem 0.3rem;
+  font-size: 1.7rem;
+  border-radius: 0;
+  font-weight: 300;
+}
+.ModalGallery .ui.animated.button .hidden.content i.icon {
+  color: #fff;
+}
+.ModalGallery .ui.header.author-box {
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 3rem;
+}
+.ModalGallery .ui.header.author-box .by {
+  font-weight: 300;
+  margin-right: 0.5rem;
+}
+.ModalGallery .ui.header.author-box .author {
+  font-weight: 400;
+}
+.ModalGallery .ui.mini.images img:not(:first-child) {
+  margin-left: 0;
 }

@@ -1,6 +1,6 @@
-import { UNCONNECT, CONNECTED } from '../actions/auth'
+import { UNCONNECT, CONNECT } from '../actions/auth'
 
-export default function comment(state, action) {
+export default function auth(state = true, action) {
   switch (action.type) {
     case UNCONNECT:
       console.log('unconnect', action.unconnect)
@@ -8,7 +8,7 @@ export default function comment(state, action) {
         ...state,
         ...action.unconnect,
       }
-    case CONNECTED:
+    case CONNECT:
       console.log('connect', action.connect)
       return {
         ...state,

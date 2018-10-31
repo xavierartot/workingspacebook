@@ -21,19 +21,27 @@ class ModalCollections extends Component {
   render() {
     const { visible, addProduct } = this.state
     const {
-      image, contentText,
+      image, contentText, children,
     } = this.props
     let bgc = ''
     if (!visible) {
       bgc = 'text-create-library'
     }
+    console.log(children)
+    let child
+    if (children && children !== '') { child = <span className="collect-text">{children}</span> }
     return (
       <div className="">
         <Modal
           className="ModalCollections "
           closeIcon
           size="large"
-          trigger={<Icon as="i" name="plus circle" />}
+          trigger={
+            <div>
+              <Icon as="i" name="plus circle" />
+              { child }
+            </div>
+          }
         >
           <Modal.Header>Your Library</Modal.Header>
           <Modal.Content className="modal-content">

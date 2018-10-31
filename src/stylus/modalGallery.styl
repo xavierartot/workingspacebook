@@ -1,0 +1,57 @@
+.ModalGallery
+  .box-link
+    @extend .center
+    justify-content: space-evenly
+    margin-top: 3.5rem
+    width: 100%
+    font-size: 1.1rem
+    color greyDarkest
+    font-weight 300
+    letter-spacing: 0.8px
+  .pic-gallery
+    @extend .center-columns
+  .two.column.row
+    padding: 6rem 3rem
+  .box-collect
+    display: flex
+    cursor: pointer
+    transition: color 0.3s ease-in-out
+    &:hover
+      color black
+  .box-like
+    .heart.link.icon
+      cursor: pointer
+      transition: color 0.3s ease-in-out
+      &:hover
+        color red
+
+  .description
+    .ui.header
+      font-weight: 300
+      margin-bottom: 1rem
+  .ui.animated.button
+    font-size: 1.4rem
+    border-radius: 0
+    background-color: orange
+    color white
+    margin-bottom: 4rem;
+    .visible.content
+      padding 0.9rem 0.3rem
+      font-size: 1.7rem
+      border-radius: 0
+      font-weight: 300
+    .hidden.content
+      i.icon
+        color white
+  .ui.header.author-box
+    font-size: 1.2rem
+    margin-top: 0
+    margin-bottom: 3rem
+    .by
+      font-weight: 300
+      margin-right: 0.5rem
+    .author
+      font-weight: 400
+  .ui.mini.images
+    img:not(:first-child)
+      margin-left: 0
