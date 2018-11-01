@@ -4,6 +4,7 @@
  * Parent: Home, shop
  */
 import React, { Component } from 'react'
+import { truncate } from '../utils/helpers'
 import { Divider, Segment, Label, Icon } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import ModalGallery from './modals/ModalGallery'
@@ -41,7 +42,7 @@ class ProductGallery extends Component {
             <div className="product-details-name">
               <span className="text-underline">
                 <ModalGallery
-                  contentText="Book"
+                  contentText={truncate('Book', 19)}
                   description
                   header
                   productId

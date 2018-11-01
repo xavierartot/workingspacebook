@@ -12,3 +12,4 @@ export function generateUID() {
 export function truncate(source, size) {
   return source.length > size ? `${source.slice(0, size - 1)}…` : source
 }
+// truncate('Truncate text to fit in 3 lines', 14);
