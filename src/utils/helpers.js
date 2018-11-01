@@ -7,3 +7,8 @@ export function formatDate(timestamp) {
 export function generateUID() {
   return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
 }
+
+// https://stackoverflow.com/questions/25972904/truncate-text-to-fit-in-3-lines-and-show-three-dots-in-end-in-html
+export function truncate(source, size) {
+  return source.length > size ? `${source.slice(0, size - 1)}…` : source
+}

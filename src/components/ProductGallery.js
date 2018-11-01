@@ -41,7 +41,7 @@ class ProductGallery extends Component {
             <div className="product-details-name">
               <span className="text-underline">
                 <ModalGallery
-                  contentText="Skull Tidy, Jewellery Box &amp; Accessories Container in White"
+                  contentText="Book"
                   description
                   header
                   productId
@@ -51,7 +51,7 @@ class ProductGallery extends Component {
             </div>
             <div className="product-details-brand">
               <span>
-                <span>by </span> Artot
+                <span>by </span> Accessories
               </span>
             </div>
           </div>

@@ -6,7 +6,8 @@
  */
 import React, { Component } from 'react'
 
-import { Label, Segment, Menu, Input } from 'semantic-ui-react'
+import { Icon, Image, Grid, Label, Segment, Menu, Input } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
 class Footer extends Component {
   state = { activeItem: 'inbox' }
@@ -16,36 +17,29 @@ class Footer extends Component {
     const { activeItem } = this.state
     return (
       <div className="Footer">
-        <div className="box">
-          <div>
-            <div className="menuFooter">
-              <Menu vertical>
-                <Menu.Item active={activeItem === 'inbox'} name="inbox" onClick={this.handleItemClick}>
-                  <Label color="teal">1</Label>
-          Inbox
-                </Menu.Item>
-
-                <Menu.Item active={activeItem === 'spam'} name="spam" onClick={this.handleItemClick}>
-                  <Label>51</Label>
-          Spam
-                </Menu.Item>
-
-                <Menu.Item active={activeItem === 'updates'} name="updates" onClick={this.handleItemClick}>
-                  <Label>1</Label>
-          Updates
-                </Menu.Item>
-                <Menu.Item>
-                  <Input icon="search" placeholder="Search mail..." />
-                </Menu.Item>
-              </Menu>
-            </div>
-          </div>
-          <div>
-            <Segment className="infos">
-              sdfsalfdjasldfjsdlf
-            </Segment>
-          </div>
-        </div>
+        <Grid stackable>
+          <Grid.Row columns={3}>
+            <Grid.Column className="tac">
+              <div className="navigation" />
+              <span > @copyright Frenchbooks All Rights Reserved</span>
+            </Grid.Column>
+            <Grid.Column className="tac">
+              <span className="tac">
+                <Icon name="heart outline" />
+                made with love and passion
+              </span>
+            </Grid.Column>
+            <Grid.Column className="box-social">
+              <div className="box-social">
+                <Icon className="social" link name="facebook f" />
+                <Icon className="social" link name="twitter" />
+                <Icon className="social" link name="instagram" />
+                <Icon className="social" link name="pinterest" />
+                <Icon className="social" link name="mail" />
+              </div>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       </div>
     )
   }

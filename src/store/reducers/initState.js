@@ -164,8 +164,8 @@ export const initStateUsers = {
 
 
 export const initStateCategories = {
-  '894toq4zt84uz8v4t8wunvox': {
-    id: '894toq4zt84uz8v4t8wunvox',
+  '894toq4at84uz8v4t8wunvox': {
+    id: '894toq4at84uz8v4t8wunvox',
     name: 'French Novel',
     path: 'french-novel',
     deleted: false,
@@ -182,8 +182,8 @@ export const initStateCategories = {
     path: 'paris-suspens',
     deleted: false,
   },
-  '894toq4zt84uz8v4t8wuntro': {
-    id: '894toq4zt84uz8v4t8wuntro',
+  '894toq4zt84uz8v4t8wunafe': {
+    id: '894toq4zt84uz8v4t8wunafe',
     name: 'Paris Mistery',
     path: 'paris-mystery',
     deleted: false,

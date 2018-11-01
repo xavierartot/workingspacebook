@@ -1,33 +1,22 @@
 //mixins are in general, in production remove it
-.center
-  display: flex
-  justify-content center
-  align-items center
-  flex-direction row
-.center-columns
-  display: flex
-  justify-content center
-  align-items center
-  flex-direction column
-
 .Footer
-  margin-top: 3rem
-  .ui.padded.segment.vertical.segment.bloc
-    min-height: 20vh
-  //responsive part
-  .box
+  margin-top 6rem
+  padding: 4rem 2rem
+  background-color: white
+
+  .box-social
     @extend .center
-    @media screen and (max-width: 768px)
-      flex-direction column
-    div:first-child
-      width: 50%
-      background-color: red
-    div:last-child
-      width: 50%
-      background-color: orange
-    div:first-child,div:last-child
-      @media screen and (max-width: 768px)
-        width: 100%
-    //segment
-  .menuFooter
-    @extend .center
+    font-size 1.2rem
+    .social
+      margin-right 1rem
+    .comment.social
+      font-weight 300
+      border 1px solid greyDarkLess
+      position relative
+      top 4px
+      padding 0.4rem 1.2rem
+      .link.icon
+        border 0
+        position relative
+        margin-right 0.9rem
+        color greyDarkLess

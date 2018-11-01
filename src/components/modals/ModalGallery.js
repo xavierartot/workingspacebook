@@ -1,8 +1,6 @@
 /*
  * Modal.js
- * Copyright (C) 2018 xav <xav@xavs-Mac-mini>
- *
- * Distributed under terms of the MIT license.
+ * Copyright (C) 2018 Xavier Artot
  */
 import React, { Component } from 'react'
 import { Form, Segment, Divider, Popup, Label, Button, Icon, Grid, Modal, Header, Image } from 'semantic-ui-react'

@@ -37,8 +37,6 @@ h2.ui.header {
 .center,
 .gallery div.column.tal.footer-first-element .trending-link,
 .gallery div.column.tar.footer-second-second,
-.Footer .box,
-.Footer .menuFooter,
 .InputCreate,
 .ModalCollections .box-ui-library-new,
 .ModalCollections .box-ui-collection,
@@ -50,7 +48,8 @@ h2.ui.header {
 .ModalGallery .gallery-related_box,
 .box-comment-form,
 .ui.popup.PopupModalGallery .box-image,
-.ui.popup.PopupModalGallery .box-perso {
+.ui.popup.PopupModalGallery .box-perso,
+.Footer .box-social {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -488,60 +487,6 @@ div.basic.doubleButtons {
   font-size: 1.2rem;
   font-weight: 300;
   margin-left: 1rem;
-}
-.center,
-.Footer .box,
-.Footer .menuFooter,
-.InputCreate,
-.ModalCollections .box-ui-library-new,
-.ModalCollections .box-ui-collection,
-.ModalCollections .ui.text-create-library,
-.ModalGallery .box-link,
-.ModalGallery .box-modal-gallery,
-.ModalGallery .box-social,
-.ModalGallery .label-related,
-.ModalGallery .gallery-related_box,
-.box-comment-form,
-.ui.popup.PopupModalGallery .box-image,
-.ui.popup.PopupModalGallery .box-perso {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-.center-columns,
-.shopBoxGallery,
-.ModalCollections .headerContent,
-.ModalGallery .pic-gallery {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.Footer {
-  margin-top: 3rem;
-}
-.Footer .ui.padded.segment.vertical.segment.bloc {
-  min-height: 20vh;
-}
-@media screen and (max-width: 768px) {
-  .Footer .box {
-    flex-direction: column;
-  }
-}
-.Footer .box div:first-child {
-  width: 50%;
-  background-color: #db2828;
-}
-.Footer .box div:last-child {
-  width: 50%;
-  background-color: #f26202;
-}
-@media screen and (max-width: 768px) {
-  .Footer .box div:first-child,
-  .Footer .box div:last-child {
-    width: 100%;
-  }
 }
 .ShopHeader .ui.container {
   position: relative;
@@ -1015,4 +960,28 @@ div.basic.doubleButtons {
   margin-bottom: 1rem;
   display: inline-block;
   font-size: 1.2rem;
+}
+.Footer {
+  margin-top: 6rem;
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+.Footer .box-social {
+  font-size: 1.2rem;
+}
+.Footer .box-social .social {
+  margin-right: 1rem;
+}
+.Footer .box-social .comment.social {
+  font-weight: 300;
+  border: 1px solid #adadad;
+  position: relative;
+  top: 4px;
+  padding: 0.4rem 1.2rem;
+}
+.Footer .box-social .comment.social .link.icon {
+  border: 0;
+  position: relative;
+  margin-right: 0.9rem;
+  color: #adadad;
 }
