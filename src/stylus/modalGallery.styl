@@ -1,57 +1,171 @@
+
+@media (max-width 767px)
+  .ModalGallery
+    .two.column.row div.column.right-col
+      display flex
+      justify-content center
+      align-items center
+      flex-direction column
+      .description
+        display flex
+        justify-content center
+        align-items center
+        flex-direction column
+
+.ui.modal
+  .ModalGallery.content
+    padding 0
 .ModalGallery
   .box-link
     @extend .center
-    justify-content: space-evenly
-    margin-top: 3.5rem
-    width: 100%
-    font-size: 1.1rem
+    justify-content space-evenly
+    margin-top 6.5rem
+    width 100%
+    font-size 1.1rem
     color greyDarkest
     font-weight 300
-    letter-spacing: 0.8px
+    letter-spacing 0.8px
   .pic-gallery
     @extend .center-columns
   .two.column.row
-    padding: 6rem 3rem
+    padding 6rem 3rem 2rem
   .box-collect
-    display: flex
-    cursor: pointer
-    transition: color 0.3s ease-in-out
-    &:hover
+    display flex
+    cursor pointer
+    transition color 0.3s ease-in-out
+    &hover
       color black
   .box-like
     .heart.link.icon
-      cursor: pointer
-      transition: color 0.3s ease-in-out
-      &:hover
+      cursor pointer
+      transition color 0.3s ease-in-out
+      &hover
         color red
 
   .description
     .ui.header
-      font-weight: 300
-      margin-bottom: 1rem
+      font-weight 300
+      margin-bottom 1rem
+      @media only screen and (max-width 767px)
+        text-align center
   .ui.animated.button
-    font-size: 1.4rem
-    border-radius: 0
-    background-color: orange
+    font-size 1.4rem
+    border-radius 0
+    background-color orange
     color white
-    margin-bottom: 4rem;
+    margin-bottom 3.3rem
     .visible.content
       padding 0.9rem 0.3rem
-      font-size: 1.7rem
-      border-radius: 0
-      font-weight: 300
+      font-size 1.7rem
+      border-radius 0
+      font-weight 300
     .hidden.content
       i.icon
         color white
   .ui.header.author-box
-    font-size: 1.2rem
-    margin-top: 0
-    margin-bottom: 3rem
+    font-size 1.2rem
+    margin-top 0
+    margin-bottom 3rem
     .by
-      font-weight: 300
-      margin-right: 0.5rem
+      font-weight 300
+      margin-right 0.5rem
     .author
-      font-weight: 400
-  .ui.mini.images
-    img:not(:first-child)
-      margin-left: 0
+      font-weight 400
+  .box-modal-gallery
+    @extend .center
+    justify-content flex-start
+    margin-bottom 2rem
+    img.ui.image
+      width 60px
+      margin-left 0
+      //width 50px
+      transition background-color 0.2s ease-in-out
+      filter brightness(100%)
+      cursor pointer
+      &hover
+        filter brightness(80%)
+  .box-founded
+    display flex
+    font-size 1.2rem
+    margin-bottom 2.7rem
+    .by
+      font-weight 300
+      margin-right 0.5rem
+    .author
+      font-weight 400
+  .box-social
+    @extend .center
+    justify-content flex-start
+    font-size 1.2rem
+    .social
+      margin-right 1rem
+    .comment.social
+      font-weight 300
+      border 1px solid greyDarkLess
+      position relative
+      top 4px
+      padding 0.4rem 1.2rem
+      .link.icon
+        border 0
+        position relative
+        margin-right 0.9rem
+        color greyDarkLess
+
+  //Section
+  .column.section-related
+    padding 0 1em
+    padding-bottom 1em
+    margin 1em
+    margin-top 3rem
+    background-color greyLightest
+    color generalFont
+    border 1px solid greyLightest
+    //.header
+      //font-weight 300
+      //font-size 2rem
+    .label-related
+      @extend .center
+      justify-content space-between
+      margin-top 4em
+      margin-bottom 2em
+    .link-brand
+      width 100%
+      text-align center
+    .gallery-related_box
+      @extend .center
+      .pic
+        padding 1em
+    .ui.basic.segment
+      padding 0
+      padding 0 5.2rem
+    .icon.linkify
+      font-size 1.2rem
+      position relative
+      top -12px
+      margin-left 0.6rem
+  .ui.grid .column.comment-section
+    margin-top 0
+    padding 0px 6.6rem 5rem
+    .ui.header
+      margin-top 2rem
+      margin-bottom 3rem
+  .box-comment-form
+    @extend .center
+  .ui.form
+    flex 1 0 0
+    @media only screen and (min-width 991px)
+      margin-right 5rem
+    textarea.comment-textarea
+      background-color greyLight !important
+      height 50px
+      border 0
+      font-size 1.2rem !important
+      line-height 23px !important
+      margin-bottom 1em
+  .pic-author
+    flex 0 0 5rem
+    align-self flex-start
+    @media only screen and (min-width 991px)
+      margin-left 5rem
+    .image
+      width 50px
