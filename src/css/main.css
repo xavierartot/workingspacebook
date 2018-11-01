@@ -6,7 +6,7 @@ body a {
   color: #adadad;
   transition: color 0.4s ease-in-out;
 }
-body a:hover {
+body ahover {
   color: #525252;
 }
 h2.ui.header {
@@ -106,6 +106,8 @@ h2.ui.header {
   margin-top: 2rem;
 }
 .p0,
+.ShopGallery div.ui.segment.galleryShop,
+.ShopGallery .ui.grid>.columnnot(.row),
 .ShopGallery .ui.segment {
   padding: 0;
 }
@@ -204,14 +206,14 @@ div.ui.header.ui.segment {
   padding: 0.5rem 0;
   background-color: #fff;
 }
-.menu-mobile .ui.menu .item:before {
+.menu-mobile .ui.menu .itembefore {
   background: transparent;
 }
-.fz-normal.ui.menu .item:before {
+.fz-normal.ui.menu .itembefore {
   background: transparent;
 }
 .fz-normal.item .buttons > button,
-.fz-normal.item .buttons div:last-child {
+.fz-normal.item .buttons divlast-child {
   margin-left: 1rem;
 }
 .ui.menu .right.item.signedIn .label,
@@ -266,12 +268,9 @@ div.ui.secondary.menu.greyb-home > .left.item {
   padding-left: 0.3rem;
 }
 .ShopGallery div.ui.segment.galleryShop {
-  padding: 0;
   box-shadow: 0px 3px 8px -4px rgba(0,0,0,0.15);
   display: block;
   transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   color: #adadad;
   border-radius: 0;
@@ -279,8 +278,7 @@ div.ui.secondary.menu.greyb-home > .left.item {
   font-weight: 300;
   letter-spacing: 0.8px;
 }
-.ShopGallery .ui.grid>.column:not(.row) {
-  padding: 0;
+.ShopGallery .ui.grid>.columnnot(.row) {
   padding: 1px;
 }
 .ShopGallery .ui.segment {
@@ -315,12 +313,12 @@ div.ui.segment.gallery {
   font-weight: 300;
   letter-spacing: 0.8px;
 }
-div.ui.segment.galleryhover {
+div.ui.segment.gallery:hover {
   box-shadow: 0 22px 43px rgba(0,0,0,0.15);
   transform: translateY(-4px);
 }
-.ui.grid>.gallery-col.columnnot(.row) {
-  padding: 1.8rem;
+.ui.grid>.gallery-col.column:not(.row) {
+  padding: 2.3rem;
 }
 .gallery-col a.gallery-ribbon.label {
   padding-top: 1rem;
@@ -366,13 +364,13 @@ div.gallery-col .footer>div .plus {
   line-height: 1.2;
   font-size: 1.4rem !important;
 }
-div.gallery-col .footer>div .plushover {
+div.gallery-col .footer>div .plus:hover {
   color: #525252;
 }
 .gallery-col .footer>div .trending {
   line-height: 1.5;
 }
-div.gallery-col .footer .hearthover {
+div.gallery-col .footer .heart:hover {
   color: #c53b3b;
 }
 .text-underline {
@@ -600,11 +598,11 @@ div.basic.doubleButtons {
 .shopBoxGallery .ModuleFilter {
   margin-bottom: 3.3rem;
 }
-.shopBoxGallery .ModuleFilter .button:first-child {
+.shopBoxGallery .ModuleFilter .buttonfirst-child {
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
-.shopBoxGallery .ModuleFilter .button:last-child {
+.shopBoxGallery .ModuleFilter .buttonlast-child {
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
 }
@@ -734,7 +732,7 @@ div.basic.doubleButtons {
   padding: 0;
 }
 @media only screen and (max-width: 768px) {
-  .ModalCollections .ui.box-ui-collection .grid .pic-sizes:last-child {
+  .ModalCollections .ui.box-ui-collection .grid .pic-sizeslast-child {
     margin-bottom: 1rem !important;
   }
 }
@@ -982,7 +980,7 @@ div.basic.doubleButtons {
   padding: 1.4rem;
   position: relative;
   z-index: 99;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 .ui.popup.PopupModalGallery .image-square >img {
   width: 80px;

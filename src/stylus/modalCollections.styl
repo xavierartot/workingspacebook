@@ -1,95 +1,95 @@
 .ModalCollections
   span
-    font-weight: 300;
-    margin: 1rem 0 2rem 0;
+    font-weight 300
+    margin 1rem 0 2rem 0
   >.header
-    font-size: 2.6em;
-    font-weight: 300;
+    font-size 2.6em
+    font-weight 300
   .modal-content.content
-    padding: 0
+    padding 0
 
   .headerContent
     @extend .center-columns
-    margin-bottom: 4rem
+    margin-bottom 4rem
     img
-      width: 234px;
+      width 234px
 
   //create library
   .box-ui-library-new, .box-ui-collection
     @extend .center
-    margin-top: 0 !important
-    padding: 0;
-    transition: opacity 0.8s ease-in-out;
-    height: 110px;
+    margin-top 0 !important
+    padding 0
+    transition opacity 0.8s ease-in-out
+    height 110px
     span
-      margin: 0 0 -0.8rem 0
+      margin 0 0 -0.8rem 0
       color greyLight
-      color: #4e4e4e;
-      letter-spacing: 0.8px;
+      color #4e4e4e
+      letter-spacing 0.8px
 
   .ui.text-create-library
     @extend .center
-    cursor: pointer
+    cursor pointer
     font-size 2rem
-    transition: opacity 0.8s ease-in-out;
-    height: 110px;
-    padding: 0;
-    margin: 0;
+    transition opacity 0.8s ease-in-out
+    height 110px
+    padding 0
+    margin 0
   //manage the padding on the container
   .container-both
     border-bottom 1px solid greyLight
   .containerInput
     background-color white
-    padding-bottom: 1rem
+    padding-bottom 1rem
   .containerText
     background-color #b7b7b7
     background-color #f1f1f1
-    padding-bottom: 1rem
+    padding-bottom 1rem
 
   //collections vue
   .ui.box-ui-collection
-    margin: 0;
+    margin 0
     border-bottom 1px solid greyLight
-    font-size: 1.1rem;
-    margin: 0;
-    border-bottom: 1px solid greyLight
-    display: block;
-    margin-top: 1rem !important;
-    height: 108px;
-    cursor: pointer
-    opacity:.9
-    transition: backgroud-color 0.8s ease-in-out;
+    font-size 1.1rem
+    margin 0
+    border-bottom 1px solid greyLight
+    display block
+    margin-top 1rem !important
+    height 108px
+    cursor pointer
+    opacity.9
+    transition backgroud-color 0.8s ease-in-out
     &:hover
-      background-color: greyLight
-      opacity:1
+      background-color greyLight
+      opacity 1
     .grid
-      height: 108px;
+      height 108px
       .pic-sizes
-        margin-top: 0
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0
-      .pic-sizes:last-child
+        margin-top 0
+        height 100%
+        display flex
+        justify-content center
+        align-items center
+        padding 0
+      .pic-sizeslast-child
         @media only screen and (max-width 768px)
-          margin-bottom: 1rem !important
+          margin-bottom 1rem !important
   .box-cat-name
-    justify-content: flex-start;
-    padding-left: 3rem;
-    height: 100%;
-    padding-top: 0rem;
+    justify-content flex-start
+    padding-left 3rem
+    height 100%
+    padding-top 0rem
     .cat-name
-      margin-left: 1rem;
-      text-transform: uppercase;
+      margin-left 1rem
+      text-transform uppercase
       .label
         @media only screen and (max-width 768px)
-          margin-left: 1.4rem
+          margin-left 1.4rem
     .plus.circle
       font-size 1.3em
 
   @media only screen and (max-width 768px)
     .ui.box-ui-collection,.ui.box-ui-collection .grid,.ui.stackable.grid>.wide.column
-      height: 100%;
+      height 100%
     .box-cat-name
-      justify-content: center;
+      justify-content center

@@ -33,7 +33,6 @@ class ModalGallery extends Component {
       <div>
         <Modal
           closeIcon
-          open
           size="large"
           trigger={triggerContent}
         >
