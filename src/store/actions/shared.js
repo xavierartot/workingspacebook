@@ -1,5 +1,9 @@
-import { addProduct, recieveProducts, addProductError } from './product'
+import { likeCategorie, updateCategorie, removeCategorie, addCategorieError, recieveCategories, addCategorie } from './categories'
+import { likeProduct, updateProduct, removeProduct, addProduct, recieveProduct, recieveProducts, addProductError } from './product'
+
+import { likeComment, updateComment, removeComment, addComment, recieveComments, addCommentError } from './comments'
 import { showLoading, hideLoading } from 'react-redux-loading-bar'
+
 
 export function handleInitialData() { // middleware thunk
   return (dispatch, getState, { getFirebase, getFirestore }) => { // thunk pattern with redux-thunk
@@ -36,5 +40,11 @@ export function handleAddProduct(product) { // middleware thunk
         console.log(error)
         dispatch(addProductError(error))
       })
+  }
+}
+export function handleAddCategorie(categorie) { // middleware thunk
+  return (dispatch, getState, { getFirebase, getFirestore }) => {
+    // const firestore = getFirestore()
+    dispatch(addCategorie(categorie))
   }
 }
