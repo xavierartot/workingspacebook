@@ -33,13 +33,13 @@
     display flex
     cursor pointer
     transition color 0.3s ease-in-out
-    &hover
+    &:hover
       color black
   .box-like
     .heart.link.icon
       cursor pointer
       transition color 0.3s ease-in-out
-      &hover
+      &:hover
         color red
 
   .description
@@ -82,7 +82,7 @@
       transition background-color 0.2s ease-in-out
       filter brightness(100%)
       cursor pointer
-      &hover
+      &:hover
         filter brightness(80%)
   .box-founded
     display flex
@@ -138,7 +138,7 @@
     .ui.basic.segment
       padding 0
       padding 0 5.2rem
-    .icon.linkify
+    .icon.linkify, .icon.outline
       font-size 1.2rem
       position relative
       top -12px
@@ -167,5 +167,5 @@
     align-self flex-start
     @media only screen and (min-width 991px)
       margin-left 5rem
-    .image
+    .ui.image
       width 50px

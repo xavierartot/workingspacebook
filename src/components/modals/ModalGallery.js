@@ -145,7 +145,7 @@ class ModalGallery extends Component {
               <Grid.Row columns={1}>
                 <Grid.Column className="comment-section">
                   <Header as="h2" className="tac">
-                    write your first comment<Icon name="linkify" />
+                    write your first comment<Icon name="comment outline" />
                   </Header>
                   <div className="box-comment-form">
                     <div className="pic-author">

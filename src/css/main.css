@@ -800,14 +800,14 @@ div.basic.doubleButtons {
   cursor: pointer;
   transition: color 0.3s ease-in-out;
 }
-.ModalGallery .box-collecthover {
+.ModalGallery .box-collect:hover {
   color: rgba(0,0,0,0.949);
 }
 .ModalGallery .box-like .heart.link.icon {
   cursor: pointer;
   transition: color 0.3s ease-in-out;
 }
-.ModalGallery .box-like .heart.link.iconhover {
+.ModalGallery .box-like .heart.link.icon:hover {
   color: #db2828;
 }
 .ModalGallery .description .ui.header {
@@ -858,7 +858,7 @@ div.basic.doubleButtons {
   filter: brightness(100%);
   cursor: pointer;
 }
-.ModalGallery .box-modal-gallery img.ui.imagehover {
+.ModalGallery .box-modal-gallery img.ui.image:hover {
   filter: brightness(80%);
 }
 .ModalGallery .box-founded {
@@ -918,7 +918,8 @@ div.basic.doubleButtons {
   padding: 0;
   padding: 0 5.2rem;
 }
-.ModalGallery .icon.linkify {
+.ModalGallery .icon.linkify,
+.ModalGallery .icon.outline {
   font-size: 1.2rem;
   position: relative;
   top: -12px;
@@ -957,7 +958,7 @@ div.basic.doubleButtons {
     margin-left: 5rem;
   }
 }
-.pic-author .image {
+.pic-author .ui.image {
   width: 50px;
 }
 .ui.top.center.popup:before {
