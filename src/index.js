@@ -32,6 +32,7 @@ const store = createStore(
       logger,
       loadingBarMiddleware,
     ),
+    reactReduxFirebase(fbConfig),
     // reactReduxFirebase(fbConfig, {userProfile: 'users', useFirestoreForProfile: true, attachAuthIsReady: true}),
     reduxFirestore(fbConfig), // redux bindings for firestore
   ),

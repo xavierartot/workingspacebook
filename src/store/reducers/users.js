@@ -1,7 +1,7 @@
 import { ADD_USER, RECEIVES_USERS } from '../actions/users'
-import { initStateUsers } from './initState'
+// import { initStateUsers } from './initState'
 
-export default function users(state = initStateUsers, action) {
+export default function users(state = {}, action) {
   switch (action.type) {
     case RECEIVES_USERS:
       return {
@@ -9,6 +9,7 @@ export default function users(state = initStateUsers, action) {
         ...action.users,
       }
     case ADD_USER:
+      console.log('user', action)
       return {
         ...state,
         ...action.user,

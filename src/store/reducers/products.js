@@ -1,7 +1,7 @@
 import { REMOVE_PRODUCT, UPDATE_PRODUCT, LIKE_PRODUCT, ADD_PRODUCT_ERROR, ADD_PRODUCT, RECEIVES_PRODUCTS } from '../actions/product'
-import { initStateProducts } from './initState'
+// import { initStateProducts } from './initState'
 
-export default function product(state = initStateProducts, action) {
+export default function products(state = {}, action) {
   switch (action.type) {
     case RECEIVES_PRODUCTS:
       console.log('receive Products', action.products)

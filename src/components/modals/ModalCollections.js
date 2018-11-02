@@ -1,16 +1,26 @@
 /*
  * ModalCollections
  * Copyright (C) 2018 xav <xav@xavs-Mac-mini>
- * Parent ProductGallery, shop
+ * Parent <ProductGallery/>, <shop/>
  */
 import React, { Component } from 'react'
+// redux and firestore
+import { connect } from 'react-redux'
+import { compose } from 'redux'// add to use Higher Order Component
+import { firestoreConnect } from 'react-redux-firebase'// add firebase Redux
+
+
 import { Grid, Segment, Label, Input, Icon, Modal, Header, Image, Transition } from 'semantic-ui-react'
 import InputCreate from '../InputCreate'
+import CollectionsDisplay from '../CollectionsDisplay'
 
 class ModalCollections extends Component {
   state = {
     visible: true,
     addProduct: null,
+  }
+  handleNewCollection = (e) => {
+    console.log(e)
   }
   handleCreateLibrary = () => {
     this.setState(() => ({
@@ -21,20 +31,21 @@ class ModalCollections extends Component {
   render() {
     const { visible, addProduct } = this.state
     const {
-      image, contentText, children,
+      image, contentText, children, collections, products,
     } = this.props
     let bgc = ''
     if (!visible) {
       bgc = 'text-create-library'
     }
-    console.log(children)
+    // console.log(products, collections)
     let child
     if (children && children !== '') { child = <span className="collect-text">{children}</span> }
     return (
       <div className="">
         <Modal
-          className="ModalCollections "
+          className="ModalCollections"
           closeIcon
+          open
           size="large"
           trigger={
             <div>
@@ -58,72 +69,20 @@ class ModalCollections extends Component {
                 >
                   {
                   visible
-                  ? <InputCreate eventCreateLibrary={this.handleCreateLibrary} />
+                  ? <InputCreate eventCreateLibrary={this.handleCreateLibrary} newCollection={() => this.handleNewCollection()} />
                   : <span>Create a new Library</span>
                   }
                 </Header>
               </div>
-
-              <Header
-                as="h1"
-                className="box-ui-collection"
-                onClick={null}
-              >
-                <Grid columns="equal" stackable>
-                  <Grid.Column verticalAlign="middle" width={5}>
-                    <div className="center box-cat-name">
-                      <Icon as="i" link name="plus circle" />
-                      <div className="cat-name">name</div>
-                      <Label basic color="grey" content="1" />
-                    </div>
-                  </Grid.Column>
-                  <Grid.Column className="pic-sizes" width={2}>
-                    <Image
-                      bordered
-                      circular
-                      size="tiny"
-                      src="https://react.semantic-ui.com/images/avatar/small/rachel.png"
-                    />
-                  </Grid.Column>
-                  <Grid.Column className="pic-sizes" width={2}>
-                    <Image circular size="tiny" src="https://react.semantic-ui.com/images/avatar/large/matthew.png" />
-                  </Grid.Column>
-                  <Grid.Column className="pic-sizes" width={2}>
-                    <Image circular size="tiny" src="https://react.semantic-ui.com/images/avatar/large/molly.png" />
-                  </Grid.Column>
-                </Grid>
-              </Header>
-              <Header
-                as="h1"
-                className="box-ui-collection"
-                onClick={null}
-              >
-                <Grid columns="equal" stackable>
-                  <Grid.Column verticalAlign="middle" width={5}>
-                    <div className="center box-cat-name">
-                      <Icon as="i" link name="plus circle" />
-                      <div className="cat-name">name</div>
-                      <Label basic color="grey" content="1" />
-                    </div>
-                  </Grid.Column>
-                  <Grid.Column className="pic-sizes" width={2}>
-                    <Image
-                      bordered
-                      circular
-                      size="tiny"
-                      src="https://react.semantic-ui.com/images/avatar/small/rachel.png"
-                    />
-                  </Grid.Column>
-                  <Grid.Column className="pic-sizes" width={2}>
-                    <Image circular size="tiny" src="https://react.semantic-ui.com/images/avatar/large/matthew.png" />
-                  </Grid.Column>
-                  <Grid.Column className="pic-sizes" width={2}>
-                    <Image circular size="tiny" src="https://react.semantic-ui.com/images/avatar/large/molly.png" />
-                  </Grid.Column>
-                </Grid>
-              </Header>
-
-
+              { collections && collections.map(collection => (
+                <CollectionsDisplay
+                  key={collection.id}
+                  collection={collection}
+                  newCollection={this.handleNewCollection}
+                  token={this.nameCollection}
+                />
+                ))
+                }
             </Modal.Description>
           </Modal.Content>
         </Modal>
@@ -131,4 +90,21 @@ class ModalCollections extends Component {
     )
   }
 }
-export default ModalCollections
+function mapStateToProps(state, props) {
+  // console.log(state)
+  return {
+    collections: state.firestore.ordered.collections,
+    products: state.firestore.ordered.products,
+    state,
+  }
+}
+export default compose(// HOC -  add
+  connect(mapStateToProps),
+  firestoreConnect([// arr
+    {
+      products: 'products',
+      collection: 'collections',
+      auths: 'auths',
+    }, // which collection we want connected
+  ]),
+)(ModalCollections)

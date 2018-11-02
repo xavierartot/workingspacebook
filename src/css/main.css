@@ -121,8 +121,7 @@ h2.ui.header {
   font-style: normal;
   font-weight: 400;
 }
-.btn-radius,
-.ShopHeader .btn-radius {
+.btn-radius {
   border-radius: 50px;
 }
 .border {

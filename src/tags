@@ -4,8 +4,12 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+894toq4at84uz8v4t8wunvox	store/reducers/initState.js	/^  '894toq4at84uz8v4t8wunvox': {$/;"	o
 894toq4zt84ut8v4t8wun89g	store/reducers/initState.js	/^  '894toq4zt84ut8v4t8wun89g': {$/;"	o
 894toq4zt84uz8v4t8wun52a	store/reducers/initState.js	/^  '894toq4zt84uz8v4t8wun52a': {$/;"	o
+894toq4zt84uz8v4t8wunafe	store/reducers/initState.js	/^  '894toq4zt84uz8v4t8wunafe': {$/;"	o
+894toq4zt84uz8v4t8wuntro	store/reducers/initState.js	/^  '894toq4zt84uz8v4t8wuntro': {$/;"	o
+894toq4zt84uz8v4t8wunvox	store/reducers/initState.js	/^  '894toq4zt84uz8v4t8wunvox': {$/;"	o
 894toq4zt84uz8v4t8wunxav	store/reducers/initState.js	/^  '894toq4zt84uz8v4t8wunxav': {$/;"	o
 894toq4zt84uz8v4t8wunz28	store/reducers/initState.js	/^  '894toq4zt84uz8v4t8wunz28': {$/;"	o
 894toq4zt84uz8v4t8wunz2a	store/reducers/initState.js	/^  '894toq4zt84uz8v4t8wunz2a': {$/;"	o
@@ -18,16 +22,17 @@
 8tu4bsun805n8un48vea0	store/reducers/initState.js	/^  '8tu4bsun805n8un48vea0': {$/;"	o
 ACCOUNT	constants/routes.js	/^export const ACCOUNT = '\/account'$/;"	n
 ADD_COLLECTION	store/actions/collections.js	/^export const ADD_COLLECTION = 'ADD_COLLECTION'$/;"	n
+ADD_COLLECTION_ERROR	store/actions/collections.js	/^export const ADD_COLLECTION_ERROR = 'ADD_COLLECTION_ERROR'$/;"	n
 ADD_COMMENT	store/actions/comments.js	/^export const ADD_COMMENT = 'ADD_COMMENT'$/;"	n
+ADD_COMMENT_ERROR	store/actions/comments.js	/^export const ADD_COMMENT_ERROR = 'ADD_COMMENT_ERROR'$/;"	n
 ADD_PRODUCT	store/actions/product.js	/^export const ADD_PRODUCT = 'ADD_PRODUCT'$/;"	n
 ADD_PRODUCT_ERROR	store/actions/product.js	/^export const ADD_PRODUCT_ERROR = 'ADD_PRODUCT_ERROR'$/;"	n
 ADD_USER	store/actions/users.js	/^export const ADD_USER = 'ADD_USER'$/;"	n
 App	components/App.js	/^class App extends Component {$/;"	c
-Author	store/reducers/initState.js	/^    likeAuthor: { id: '8tu4bsun805n8un48ve00' }, \/\/ collections of authors you liked$/;"	c
-Author	store/reducers/initState.js	/^    likeAuthor: {}, \/\/ collections of authors you liked$/;"	c
 Button	components/auth/ForgotPassword.js	/^  submitButton = (event) => {$/;"	c
+CONNECT	store/actions/auth.js	/^export const CONNECT = 'CONNECT'$/;"	n
 Categories	components/Categories.js	/^class Categories extends Component {$/;"	c
-Change	components/InputCreate.js	/^            onChange={this.handleChange}$/;"	c
+Change	components/InputCreate.js	/^              onChange={this.handleChange}$/;"	c
 Change	components/InputCreate.js	/^  handleChange = (event) => {$/;"	c
 Change	components/auth/ForgotPassword.js	/^          onChange={this.handleChange}$/;"	c
 Change	components/auth/ForgotPassword.js	/^  handleChange = (e) => {$/;"	c
@@ -38,11 +43,9 @@ Change	components/auth/SignUp.js	/^         onChange={this.handleChange}$/;"	c
 Change	components/auth/SignUp.js	/^        <input onChange={this.fileSelectHandle} type="file" \/>$/;"	c
 Change	components/auth/SignUp.js	/^  handleChange = (e) => {$/;"	c
 ClassName	components/Header.js	/^                    activeClassName={activeItem === 'home' ? 'active' : ''}$/;"	c
-Click	components/Footer.js	/^                <Menu.Item active={activeItem === 'inbox'} name="inbox" onClick={this.handleItemClick}>$/;"	c
-Click	components/Footer.js	/^                <Menu.Item active={activeItem === 'spam'} name="spam" onClick={this.handleItemClick}>$/;"	c
-Click	components/Footer.js	/^                <Menu.Item active={activeItem === 'updates'} name="updates" onClick={this.handleItemClick}>$/;"	c
+Click	components/CollectionsDisplay.js	/^        onClick={null}$/;"	c
 Click	components/Header.js	/^                    onClick={this.handleItemClick}$/;"	c
-Click	components/InputCreate.js	/^          <Button onClick={this.handleCreate} size="big" type="submit">Create<\/Button>$/;"	c
+Click	components/InputCreate.js	/^            onClick={eventCreateLibrary}$/;"	c
 Click	components/Responsive.js	/^                  onClick={this.handleItemClick}$/;"	c
 Click	components/Responsive.js	/^                onClick={this.handleItemClick}$/;"	c
 Click	components/Responsive.js	/^              <Menu.Item active={activeItem === 'gamepad'} name="gamepad" onClick={this.handleItemClick}>$/;"	c
@@ -51,12 +54,18 @@ Click	components/auth/SignUp.js	/^        <Button onClick={this.fileUploadHandle
 Click	components/menus/MenuHome.js	/^                onClick={this.handleItemClick}$/;"	c
 Click	components/menus/SignedInShopNav.js	/^                onClick={this.handleItemClick}$/;"	c
 Click	components/menus/SignedOutShopNav.js	/^                onClick={this.handleItemClick}$/;"	c
-Click	components/modals/ModalCollections.js	/^              <Header as="h1" onClick={this.newLibrary} >$/;"	c
+Click	components/modals/ModalCollections.js	/^                  onClick={bgc && this.handleCreateLibrary || null}$/;"	c
+Click	components/modals/ModalGallery.js	/^                      <div className="box-collect" onClick={this.handleCollectCategorie} >$/;"	c
+Click	components/modals/ModalGallery.js	/^                      <div className="box-like" onClick={this.handleLike} >$/;"	c
 Close	components/modals/ModalSignUp.js	/^          onClose={this.handleClose}$/;"	c
 Close	components/modals/ModalSignUp.js	/^  handleClose = () => {$/;"	c
 ClosePopup	components/modals/ModalSignUp.js	/^            <SignUp onClosePopup={this.handleClose} \/>$/;"	c
+CollectCategorie	components/modals/ModalGallery.js	/^  handleCollectCategorie = (event) => {$/;"	c
+Collection	components/modals/ModalCollections.js	/^                  newCollection={this.handleNewCollection}$/;"	c
+CollectionsDisplay	components/CollectionsDisplay.js	/^class CollectionsDisplay extends Component {$/;"	c
 Create	components/InputCreate.js	/^  handleCreate = (event) => {$/;"	c
-DProduct	store/reducers/initState.js	/^    likesiDProduct: {},$/;"	c
+CreateLibrary	components/modals/ModalCollections.js	/^                  ? <InputCreate eventCreateLibrary={this.handleCreateLibrary} \/>$/;"	c
+CreateLibrary	components/modals/ModalCollections.js	/^  handleCreateLibrary = () => {$/;"	c
 Explore	components/Explore.js	/^class Explore extends Component {$/;"	c
 Extension	components/auth/SignUp.js	/^          imgExtension={['.jpg', '.gif', '.png', '.gif']}$/;"	c
 Featured	components/Featured.js	/^class Featured extends Component {$/;"	c
@@ -65,8 +74,6 @@ Footer	components/Footer.js	/^class Footer extends Component {$/;"	c
 HOME	constants/routes.js	/^export const HOME = '\/home'$/;"	n
 Header	components/Header.js	/^class Header extends Component {$/;"	c
 Home	components/Home.js	/^class Home extends Component {$/;"	c
-Id	store/reducers/initState.js	/^    followerId: {},$/;"	c
-Id	store/reducers/initState.js	/^    followingId: {},$/;"	c
 InputCreate	components/InputCreate.js	/^class InputCreate extends Component {$/;"	c
 ItemClick	components/Footer.js	/^  handleItemClick = (e, { name }) => this.setState({ activeItem: name })$/;"	c
 ItemClick	components/Header.js	/^  handleItemClick = (e, { name }) => this.setState({ activeItem: name })$/;"	c
@@ -77,6 +84,11 @@ ItemClick	components/menus/SignedInShopNav.js	/^  handleItemClick = (e, { name }
 ItemClick	components/menus/SignedOutShopNav.js	/^  handleItemClick = (e, { name }) => this.setState({ activeItem: name })$/;"	c
 Join	components/Join.js	/^class Join extends Component {$/;"	c
 LANDING	constants/routes.js	/^export const LANDING = '\/'$/;"	n
+LIKE_COLLECTION	store/actions/collections.js	/^export const LIKE_COLLECTION = 'LIKE_COLLECTION'$/;"	n
+LIKE_COMMENT	store/actions/comments.js	/^export const LIKE_COMMENT = 'LIKE_COMMENT'$/;"	n
+LIKE_PRODUCT	store/actions/product.js	/^export const LIKE_PRODUCT = 'LIKE_PRODUCT'$/;"	n
+Like	components/ProductGallery.js	/^  heartLike = (event) => {$/;"	c
+Like	components/modals/ModalGallery.js	/^  handleLike = (event) => {$/;"	c
 Localhost	serviceWorker.js	/^const isLocalhost = Boolean($/;"	c
 Login	components/auth/SignUp.js	/^class Login extends Component {$/;"	c
 MenuHome	components/menus/MenuHome.js	/^class MenuHome extends Component {$/;"	c
@@ -88,20 +100,25 @@ ModalGallery	components/modals/ModalGallery.js	/^class ModalGallery extends Comp
 ModalSignIn	components/modals/ModalSignIn.js	/^class ModalSignIn extends Component {$/;"	c
 ModalSignIn	components/modals/ModalSignUp.js	/^class ModalSignIn extends Component {$/;"	c
 ModuleFilter	components/ModuleFilter.js	/^class ModuleFilter extends Component {$/;"	c
-Number	store/reducers/initState.js	/^    likeNumber: {}, \/\/ collections of product you liked$/;"	c
+Name	components/modals/ModalCollections.js	/^                  className={`box-ui-library-new ${bgc}`}$/;"	c
+Name	components/modals/ModalCollections.js	/^              <div className={visible ? 'containerInput container-both' : 'containerText container-both'} >$/;"	c
+NewCollection	components/modals/ModalCollections.js	/^  handleNewCollection = (event) => {$/;"	c
 Open	components/modals/ModalSignUp.js	/^          onOpen={this.handleOpen}$/;"	c
 Open	components/modals/ModalSignUp.js	/^  handleOpen = () => {$/;"	c
 PASSWORD_FORGET	constants/routes.js	/^export const PASSWORD_FORGET = '\/pw-forget'$/;"	n
 Page	components/Page.js	/^class Page extends Component {$/;"	c
 PageNotFound	components/PageNotFound.js	/^class PageNotFound extends Component {$/;"	c
 Popup	components/auth/SignUp.js	/^ closePopup = (event) => {$/;"	c
+PopupModalGallery	components/PopupModalGallery.js	/^class PopupModalGallery extends Component {$/;"	c
 ProductGallery	components/ProductGallery.js	/^class ProductGallery extends Component {$/;"	c
-Products	store/reducers/initState.js	/^    idProducts: {$/;"	c
 Profil	components/admin/Profil.js	/^class Profil extends Component {$/;"	c
 RECEIVES_COLLECTIONS	store/actions/collections.js	/^export const RECEIVES_COLLECTIONS = 'RECEIVES_COLLECTIONS'$/;"	n
 RECEIVES_COMMENTS	store/actions/comments.js	/^export const RECEIVES_COMMENTS = 'RECEIVES_COMMENTS'$/;"	n
 RECEIVES_PRODUCTS	store/actions/product.js	/^export const RECEIVES_PRODUCTS = 'RECEIVES_PRODUCTS'$/;"	n
 RECEIVES_USERS	store/actions/users.js	/^export const RECEIVES_USERS = 'RECEIVES_USERS'$/;"	n
+REMOVE_COLLECTION	store/actions/collections.js	/^export const REMOVE_COLLECTION = 'REMOVE_COLLECTION'$/;"	n
+REMOVE_COMMENT	store/actions/comments.js	/^export const REMOVE_COMMENT = 'REMOVE_COMMENT'$/;"	n
+REMOVE_PRODUCT	store/actions/product.js	/^export const REMOVE_PRODUCT = 'REMOVE_PRODUCT'$/;"	n
 Responsive	components/Responsive.js	/^class Responsive extends Component {$/;"	c
 SIGN_IN	constants/routes.js	/^export const SIGN_IN = '\/signin'$/;"	n
 SIGN_UP	constants/routes.js	/^export const SIGN_UP = '\/signup'$/;"	n
@@ -118,38 +135,46 @@ StateCollections	store/reducers/initState.js	/^export const initStateCollections
 StateComments	store/reducers/initState.js	/^export const initStateComments = {$/;"	c
 StateProducts	store/reducers/initState.js	/^export const initStateProducts = {$/;"	c
 StateUsers	store/reducers/initState.js	/^export const initStateUsers = {$/;"	c
+Submit	components/InputCreate.js	/^      <form onSubmit={this.handleCreate}>$/;"	c
 Submit	components/auth/ForgotPassword.js	/^        onSubmit={this.handleSubmit}$/;"	c
 Submit	components/auth/SignIn.js	/^        onSubmit={this.handleSubmit}$/;"	c
 Submit	components/auth/SignIn.js	/^  handleSubmit = (event) => {$/;"	c
 Submit	components/auth/SignUp.js	/^       onSubmit={this.handleSubmit}$/;"	c
 Submit	components/auth/SignUp.js	/^  handleSubmit = (event) => {$/;"	c
+Submit	components/modals/ModalGallery.js	/^                    <Form onSubmit={this.handleSubmit}>$/;"	c
+Text	components/ProductGallery.js	/^                  contentText={truncate('Book', 19)}$/;"	c
+UNCONNECT	store/actions/auth.js	/^export const UNCONNECT = 'UNCONNECT'$/;"	n
+UPDATE_COLLECTION	store/actions/collections.js	/^export const UPDATE_COLLECTION = 'UPDATE_COLLECTION'$/;"	n
+UPDATE_COMMENT	store/actions/comments.js	/^export const UPDATE_COMMENT = 'UPDATE_COMMENT'$/;"	n
+UPDATE_PRODUCT	store/actions/product.js	/^export const UPDATE_PRODUCT = 'UPDATE_PRODUCT'$/;"	n
 User	components/User.js	/^class User extends Component {$/;"	c
+Visibility	components/modals/ModalCollections.js	/^  toggleVisibility = () => this.setState({ visible: !this.state.visible })$/;"	c
 Width	components/Header.js	/^                <Responsive as={Segment} minWidth={1000}>$/;"	c
 Width	components/Header.js	/^        <Responsive className="menu-mobile" maxWidth={768}>$/;"	c
 Width	components/Header.js	/^        <Responsive maxWidth={10559} minWidth={768}>$/;"	c
+addCollection	store/actions/collections.js	/^export function addCollection(collection) {$/;"	f
+addCollectionError	store/actions/collections.js	/^export function addCollectionError(error) {$/;"	f
 addComment	store/actions/comments.js	/^export function addComment(comment) {$/;"	f
+addCommentError	store/actions/comments.js	/^export function addCommentError(error) {$/;"	f
 addProduct	store/actions/product.js	/^export function addProduct(product) {$/;"	f
 addProductError	store/actions/product.js	/^export function addProductError(error) {$/;"	f
 addUser	store/actions/users.js	/^export function addUser(user) {$/;"	f
-addcollection	store/actions/collections.js	/^export function addcollection(collection) {$/;"	f
-auth	store/reducers/auth.js	/^export default function auth(state = {}, action) {$/;"	f
+auth	store/reducers/auth.js	/^export default function auth(state = true, action) {$/;"	f
 checkValidServiceWorker	serviceWorker.js	/^function checkValidServiceWorker(swUrl, config) {$/;"	f
-collection	store/reducers/collections.js	/^export default function collection(state = initStateCollections, action) {$/;"	f
-collection	store/reducers/initState.js	/^    collection: { id: '894toq4zt84uz8v4t8wunxav' },$/;"	o
-collection	store/reducers/initState.js	/^    collection: {},$/;"	o
-comment	store/reducers/comments.js	/^export default function comment(state = initStateComments, action) {$/;"	f
+collections	store/reducers/collections.js	/^export default function collections(state = {}, action) {$/;"	f
+comments	store/reducers/comments.js	/^export default function comments(state = {}, action) {$/;"	f
 componentDidMount	components/App.js	/^  componentDidMount() {$/;"	f
 componentDidMount	components/Home.js	/^  componentDidMount() {$/;"	f
+connectAuth	store/actions/auth.js	/^export function connectAuth(connect) {$/;"	f
 content	components/auth/SignUp.js	/^    content: {$/;"	o
-facebook	store/reducers/initState.js	/^    facebook: { link: 'https:\/\/facebook.com\/idTwitter' },$/;"	o
-followerId	store/reducers/initState.js	/^    followerId: {},$/;"	o
-followingId	store/reducers/initState.js	/^    followingId: {},$/;"	o
 formatDate	utils/helpers.js	/^export function formatDate(timestamp) {$/;"	f
 generateUID	utils/helpers.js	/^export function generateUID() {$/;"	f
+handleAddCollection	store/actions/shared.js	/^export function handleAddCollection(collection) { \/\/ middleware thunk$/;"	f
 handleAddProduct	store/actions/shared.js	/^export function handleAddProduct(product) { \/\/ middleware thunk$/;"	f
 handleInitialData	store/actions/shared.js	/^export function handleInitialData() { \/\/ middleware thunk$/;"	f
-idProducts	store/reducers/initState.js	/^    idProducts: {$/;"	o
 if	components/Shop.js	/^    if (subNav) {$/;"	f
+if	components/modals/ModalCollections.js	/^    if (!visible) {$/;"	f
+if	components/modals/ModalCollections.js	/^    if (children && children !== '') { child = <span className="collect-text">{children}<\/span> }$/;"	f
 if	serviceWorker.js	/^              if (config && config.onSuccess) {$/;"	f
 if	serviceWorker.js	/^              if (config && config.onUpdate) {$/;"	f
 if	serviceWorker.js	/^            if (navigator.serviceWorker.controller) {$/;"	f
@@ -158,24 +183,30 @@ if	serviceWorker.js	/^      if (isLocalhost) {$/;"	f
 if	serviceWorker.js	/^    if (publicUrl.origin !== window.location.origin) {$/;"	f
 if	serviceWorker.js	/^  if ('serviceWorker' in navigator) {$/;"	f
 if	serviceWorker.js	/^  if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {$/;"	f
-likeAuthor	store/reducers/initState.js	/^    likeAuthor: { id: '8tu4bsun805n8un48ve00' }, \/\/ collections of authors you liked$/;"	o
-likeAuthor	store/reducers/initState.js	/^    likeAuthor: {}, \/\/ collections of authors you liked$/;"	o
-likeNumber	store/reducers/initState.js	/^    likeNumber: {}, \/\/ collections of product you liked$/;"	o
-likesiDProduct	store/reducers/initState.js	/^    likesiDProduct: {},$/;"	o
+likeCollection	store/actions/collections.js	/^export function likeCollection(id) {$/;"	f
+likeComment	store/actions/comments.js	/^export function likeComment(id) {$/;"	f
+likeProduct	store/actions/product.js	/^export function likeProduct(id) {$/;"	f
 mapStateToProps	components/App.js	/^\/\/ function mapStateToProps(state, props) {$/;"	f
+mapStateToProps	components/CollectionsDisplay.js	/^function mapStateToProps({ state }, { nameCollection }) {$/;"	f
 mapStateToProps	components/Home.js	/^\/\/ function mapStateToProps({ product, auth }, props) {$/;"	f
+mapStateToProps	components/InputCreate.js	/^function mapStateToProps(state, props) {$/;"	f
 mapStateToProps	components/Shop.js	/^function mapStateToProps({ state }, props) {$/;"	f
 mapStateToProps	components/ShopGallery.js	/^function mapStateToProps({ state }, props) {$/;"	f
+mapStateToProps	components/modals/ModalCollections.js	/^function mapStateToProps(state, props) {$/;"	f
 onDrop	components/auth/SignUp.js	/^  \/\/ onDrop(picture) {$/;"	f
-product	store/reducers/products.js	/^export default function product(state = initStateProducts, action) {$/;"	f
-recieveCollection	store/actions/collections.js	/^export function recieveCollection(collections) {$/;"	f
-recieveComment	store/actions/comments.js	/^export function recieveComment(comments) {$/;"	f
+product	store/reducers/products.js	/^export default function product(state = {}, action) {$/;"	f
+recieveCollections	store/actions/collections.js	/^export function recieveCollections(collections) {$/;"	f
+recieveComments	store/actions/comments.js	/^export function recieveComments(comments) {$/;"	f
 recieveProducts	store/actions/product.js	/^export function recieveProducts(products) {$/;"	f
 recieveUser	store/actions/users.js	/^export function recieveUser(users) {$/;"	f
 register	serviceWorker.js	/^export function register(config) {$/;"	f
 registerValidSW	serviceWorker.js	/^function registerValidSW(swUrl, config) {$/;"	f
+removeCollection	store/actions/collections.js	/^export function removeCollection(collection) {$/;"	f
+removeComment	store/actions/comments.js	/^export function removeComment(comment) {$/;"	f
+removeProduct	store/actions/product.js	/^export function removeProduct(product) {$/;"	f
 render	components/App.js	/^  render() {$/;"	f
 render	components/Categories.js	/^  render() {$/;"	f
+render	components/CollectionsDisplay.js	/^  render() {$/;"	f
 render	components/Explore.js	/^  render() {$/;"	f
 render	components/Featured.js	/^  render() {$/;"	f
 render	components/Footer.js	/^  render() {$/;"	f
@@ -186,6 +217,7 @@ render	components/Join.js	/^  render() {$/;"	f
 render	components/ModuleFilter.js	/^  render() {$/;"	f
 render	components/Page.js	/^  render() {$/;"	f
 render	components/PageNotFound.js	/^  render() {$/;"	f
+render	components/PopupModalGallery.js	/^  render() {$/;"	f
 render	components/ProductGallery.js	/^  render() {$/;"	f
 render	components/Responsive.js	/^  render() {$/;"	f
 render	components/Shop.js	/^  render() {$/;"	f
@@ -213,6 +245,10 @@ switch	store/reducers/collections.js	/^  switch (action.type) {$/;"	f
 switch	store/reducers/comments.js	/^  switch (action.type) {$/;"	f
 switch	store/reducers/products.js	/^  switch (action.type) {$/;"	f
 switch	store/reducers/users.js	/^  switch (action.type) {$/;"	f
-twitter	store/reducers/initState.js	/^    twitter: { link: 'https:\/\/twitter.com\/idTwitter' },$/;"	o
+truncate	utils/helpers.js	/^export function truncate(source, size) {$/;"	f
+unconnectAuth	store/actions/auth.js	/^export function unconnectAuth(unconnect) {$/;"	f
 unregister	serviceWorker.js	/^export function unregister() {$/;"	f
-users	store/reducers/users.js	/^export default function users(state = initStateUsers, action) {$/;"	f
+updateCollection	store/actions/collections.js	/^export function updateCollection(collection) {$/;"	f
+updateComment	store/actions/comments.js	/^export function updateComment(comment) {$/;"	f
+updateProduct	store/actions/product.js	/^export function updateProduct(product) {$/;"	f
+users	store/reducers/users.js	/^export default function users(state = {}, action) {$/;"	f

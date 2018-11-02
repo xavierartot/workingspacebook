@@ -11,6 +11,7 @@ export const initStateProducts = {
     followerIdUser: ['8tu4bsun805n8un48ve89'],
     followingIdUser: [],
     amazonStore: 'amazon.com/stores/node/14511840011',
+    collections: ['894toq4zt84uz8v4t8wunvox'],
   },
   '8tu4bsun805n8un48ve89': {
     author: '1Now Designs',
@@ -24,6 +25,7 @@ export const initStateProducts = {
     followerIdUser: [],
     followingIdUser: [],
     amazonStore: 'amazon.com/stores/node/14511840011',
+    collections: ['894toq4at84uz8v4t8wunvox'],
   },
   '8tu4bsun805n8un48ve00': {
     author: '2Now Designs',
@@ -39,6 +41,7 @@ export const initStateProducts = {
     twitter: 'https://twitter.com/idTwitter',
     facebook: 'https://facebook.com/idTwitter',
     amazonStore: 'amazon.com/stores/node/14511840011',
+    collections: ['894toq4at84uz8v4t8wunvox'],
   },
 }
 
@@ -163,7 +166,7 @@ export const initStateUsers = {
 }
 
 
-export const initStateCategories = {
+export const initStateCollections = {
   '894toq4at84uz8v4t8wunvox': {
     id: '894toq4at84uz8v4t8wunvox',
     name: 'French Novel',

@@ -1,7 +1,7 @@
 import { REMOVE_COMMENT, UPDATE_COMMENT, LIKE_COMMENT, ADD_COMMENT_ERROR, ADD_COMMENT, RECEIVES_COMMENTS } from '../actions/comments'
-import { initStateComments } from './initState'
+// import { initStateComments } from './initState'
 
-export default function comment(state = initStateComments, action) {
+export default function comments(state = {}, action) {
   switch (action.type) {
     case RECEIVES_COMMENTS:
       console.log('receive comments', action.comments)
