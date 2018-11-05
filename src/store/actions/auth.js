@@ -1,15 +1,15 @@
-export const UNCONNECT = 'UNCONNECT'
-export const CONNECT = 'CONNECT'
+export const LOGIN_ERROR = 'LOGIN_ERROR'
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
 
-export function unconnectAuth(unconnect) {
-  return {
-    type: UNCONNECT,
-    unconnect,
-  }
-}
-export function connectAuth(connect) {
-  return {
-    type: CONNECT,
-    connect,
-  }
+export const signIn = credentials => (dispatch, getState, { getFirebase }) => {
+  const firebase = getFirebase()
+
+  firebase.auth().signInWithEmailAndPassword(
+    credentials.email,
+    credentials.password,
+  ).then(() => {
+    dispatch({ type: 'LOGIN_SUCCESS' })
+  }).catch((err) => {
+    dispatch({ type: 'LOGIN_ERROR' })
+  })
 }

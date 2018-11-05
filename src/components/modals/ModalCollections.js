@@ -45,7 +45,6 @@ class ModalCollections extends Component {
         <Modal
           className="ModalCollections"
           closeIcon
-          open
           size="large"
           trigger={
             <div>

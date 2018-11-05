@@ -967,6 +967,11 @@ div.basic.doubleButtons {
   font-size: 1.2rem;
   color: #4e4e4e;
 }
+.Footer i.icon.outline.heart {
+  color: #db2828;
+  margin-right: 0;
+  font-size: 0.9rem;
+}
 .Footer .box-social {
   font-size: 1.2rem;
 }
@@ -985,4 +990,9 @@ div.basic.doubleButtons {
   position: relative;
   margin-right: 0.9rem;
   color: #adadad;
+}
+body .ui.form .error.message,
+body .ui.form .success.message,
+body .ui.form .warning.message {
+  display: block;
 }

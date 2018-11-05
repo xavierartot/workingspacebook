@@ -1,6 +1,7 @@
 /*
  * SignedInLinks.js
  * Copyright (C) 2018 xav <xav@xavs-Mac-mini>
+ * Parent: Header
  */
 import React, { Component } from 'react'
 import { Label, Dropdown, Icon, Menu, Button, Input } from 'semantic-ui-react'

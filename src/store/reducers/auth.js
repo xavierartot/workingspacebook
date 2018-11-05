@@ -1,19 +1,44 @@
-import { UNCONNECT, CONNECT } from '../actions/auth'
+import { LOGIN_SUCCESS, LOGIN_ERROR } from '../actions/auth'
 
-export default function auth(state = true, action) {
+const initState = { authError: null }
+
+const auth = (state = initState, action) => {
+  console.log(action.type)
   switch (action.type) {
-    case UNCONNECT:
-      console.log('unconnect', action.unconnect)
+    case LOGIN_ERROR:
+      console.log('login error')
       return {
         ...state,
-        ...action.unconnect,
+        authError: 'Login failed',
       }
-    case CONNECT:
-      console.log('connect', action.connect)
+    case LOGIN_SUCCESS:
+      console.log('login success')
       return {
         ...state,
-        connect: action.connect,
+        authError: null,
       }
-    default: return state
+
+    case 'SIGNOUT_SUCCESS':
+      console.log('signout success')
+      return state
+
+    case 'SIGNUP_SUCCESS':
+      console.log('signup success')
+      return {
+        ...state,
+        authError: null,
+      }
+
+    case 'SIGNUP_ERROR':
+      console.log('signup error')
+      return {
+        ...state,
+        authError: action.err.message,
+      }
+
+    default:
+      return state
   }
 }
+
+export default auth

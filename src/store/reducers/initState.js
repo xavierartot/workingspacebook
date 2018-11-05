@@ -1,11 +1,10 @@
 export const initStateProducts = {
   '894tuq4ut84ut8v4t8wun89g': {
     author: '0Now Designs',
-    email: '0@gmail.com',
     bio: '0help me find peach',
-    timestamp: 1468166872634,
+    timestamp: Date.now(),
     productLink: 'http://0.com',
-    picture: '0moi.jpg',
+    picture: 'https://placeimg.com/226/210/tech',
     deleted: false,
     likeAuthorProduct: ['8tu4bsun805n8un48ve89', '8tu4bsun805n8un48ve00'], // collections of product liked  by author
     followerIdUser: ['8tu4bsun805n8un48ve89'],
@@ -15,11 +14,10 @@ export const initStateProducts = {
   },
   '8tu4bsun805n8un48ve89': {
     author: '1Now Designs',
-    email: '1@gmail.com',
     bio: '1help me find peach',
     timestamp: 1468166872634,
     productLink: 'http://1.com',
-    picture: '1moi.jpg',
+    picture: 'https://placeimg.com/226/210/tech',
     deleted: false,
     likeAuthorProduct: ['8tu4bsun805n8un48ve00'], // collections of product liked  by author
     followerIdUser: [],
@@ -29,11 +27,10 @@ export const initStateProducts = {
   },
   '8tu4bsun805n8un48ve00': {
     author: '2Now Designs',
-    email: '2@gmail.com',
     bio: '2help me find peach',
     timestamp: 1468166872635,
     productLink: 'http://2.com',
-    picture: '2moi.jpg',
+    picture: 'https://placeimg.com/226/210/tech',
     deleted: false,
     likeAuthorProduct: ['8tu4bsun805n8un48ve00'], // collections of product liked  by author
     followerIdUser: [],
@@ -107,7 +104,7 @@ export const initStateUsers = {
     timestamp: 1468166872634, // create
     personalSite: 'http://0.com',
     amazonStore: 'http://amazon.com',
-    picture: '0moi.jpg', // your picture
+    picture: 'https://placeimg.com/226/210/tech', // your picture
     deleted: false,
     likeProductId: [], // collections of product you liked
     likeAuthorId: [], // collections of authors you liked
@@ -123,7 +120,7 @@ export const initStateUsers = {
     timestamp: 1468166872634,
     personalSite: 'http://1.com',
     amazonStore: 'http://amazon.com/1',
-    picture: '1moi.jpg',
+    picture: 'https://placeimg.com/226/210/tech',
     deleted: false,
     likeProduct: [], // collections of product you liked
     likeAuthor: [], // collections of authors you liked
@@ -139,7 +136,7 @@ export const initStateUsers = {
     timestamp: 1468166872635,
     personalSite: 'http://2.com',
     amazonStore: 'http://amazon.com/2',
-    picture: '2moi.jpg',
+    picture: 'https://placeimg.com/226/210/tech',
     deleted: false,
     likeProduct: [], // collections of product you liked
     likeAuthor: [], // collections of authors you liked
@@ -155,7 +152,7 @@ export const initStateUsers = {
     timestamp: 1468166872635,
     personalSite: 'http://3.com',
     amazonStore: 'http://amazon.com/3',
-    picture: 'images/picture.jpg',
+    picture: 'https://placeimg.com/226/210/tech',
     deleted: false,
     likeProduct: [], // collections of product you liked
     likeAuthor: [], // collections of authors you liked

@@ -33,7 +33,7 @@ class ProductGallery extends Component {
             <ModalGallery
               description
               header
-              image="http://place-hold.it/226x210"
+              image="https://placeimg.com/640/480/tech"
               productId
               userId
             />

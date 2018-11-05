@@ -3,6 +3,9 @@
  * Copyright (C) 2018 xav <xav@xavs-Mac-mini>
  */
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
+import { signIn } from '../../store/actions/auth'
 import { Message, Form, Input, Button, Segment } from 'semantic-ui-react'
 import ModalForgetEmail from '../modals/ModalForgetEmail'
 
@@ -12,7 +15,6 @@ class SignIn extends Component {
     password: '',
     errorForm: false,
     errorField: false,
-    name: '',
   }
   handleChange = (e) => {
     this.setState({
@@ -21,29 +23,31 @@ class SignIn extends Component {
   }
   handleSubmit = (event) => {
     event.preventDefault()
-    console.log(this.state)
+    this.props.signIn({ email: this.state.email, password: this.state.password })
   }
   render() {
+    const { authError } = this.props
+    // if (!authError) {
+    // <Redirect to="/admin/" />
+    // }
+    console.log(authError)
     return (
       <Form
         className="formWidth"
-        error={false}
+        error
         loading={false}
         onSubmit={this.handleSubmit}
         size="large"
         success={false}
         widths="equal"
       >
-        <Message
-          content="You're all signed up for the newsletter"
-          header="Form Completed"
-          success
-        />
-        <Message
-          content="You can only sign up for an account once with a given e-mail address."
-          error
-          header="Action Forbidden"
-        />
+        { !authError ||
+          <Message
+            content="You can only sign up for an account once with a given e-mail address."
+            error
+            header="Action Forbidden"
+          />
+        }
         <Form.Field
           control={Input}
           error={false}
@@ -80,13 +84,20 @@ class SignIn extends Component {
           <ModalForgetEmail>
             Forget Your Password
           </ModalForgetEmail>
-
         </Segment>
-        <div className="ui error message" />
-
       </Form>
     )
   }
 }
-export default SignIn
+function mapStateToProps(state, props) {
+  return {
+    authError: state.auth.authError,
+  }
+}
+function mapDispatchToProps(dispatch) {
+  return {
+    signIn: creds => dispatch(signIn(creds)),
+  }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn)
 

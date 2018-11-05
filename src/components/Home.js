@@ -1,7 +1,6 @@
 /*
  * Home.js
  * Copyright (C) 2018 xav <xav@xavs-Mac-mini>
- *
  */
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'

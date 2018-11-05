@@ -1,0 +1,29 @@
+Hello,
+My goal is too help to discover the best products on Etsy, curated by a community with great taste.
+Curated site features beautiful and functional products, you can actually buy.
+We bring boutique curation to the Internet’s largest catalog.
+It will not be based on the price
+
+Etsy has great prices, fast shipping, excellent customer support,
+and a massive catalog. Only linking to Etsy makes things simple and predictable.
+
+I will have an extension Chrome/Firefox/Safari, a Website, and an Iphone App
+The website need the api Etsy to works and is based on affiliate marketing.
+
+Customer will be able to use their brand, subscribe and collect products.
+People will be able to like and add to collection each product from Etsy with the extension.
+
+
+
+name: Curated
+
+explain:
+Hello,
+I want to create a community to discover the best products on Wallmart, it will be curated by a community of users.
+We'll bring boutique curation to the Internet’s largest catalog.
+It will not be based on the price
+I will have an extension Chrome/Firefox/Safari, a Website, and an Iphone App
+The website need the api Walmart to work properly.
+Regards,
+
+link: https://heart-shaped-life.com/ and https://frenchybooks.com/

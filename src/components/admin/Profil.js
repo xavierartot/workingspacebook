@@ -5,6 +5,8 @@
  * Distributed under terms of the MIT license.
  */
 import React, { Component } from 'react'
+import AddProduct from './AddProduct'
+
 import { Header, List, Pane, Tab, Container, Segment, Label, Icon, Menu, Button, Input } from 'semantic-ui-react'
 
 import { Link } from 'react-router-dom'
@@ -49,7 +51,7 @@ class Profil extends Component {
         menuItem: '0 Finds',
         render: () =>
           (<Tab.Pane>
-          Tab 2 Content
+            <AddProduct />
           </Tab.Pane>),
       },
       {
@@ -57,6 +59,13 @@ class Profil extends Component {
         render: () =>
           (<Tab.Pane>
           Tab 3 Content
+          </Tab.Pane>),
+      },
+      {
+        menuItem: 'Add Product',
+        render: () =>
+          (<Tab.Pane>
+            <AddProduct />
           </Tab.Pane>),
       },
     ]

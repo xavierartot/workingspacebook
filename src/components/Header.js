@@ -4,17 +4,14 @@
  *
  */
 import React, { Component, Fragment } from 'react'
-import { withRouter, NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
+import { withRouter, NavLink } from 'react-router-dom'
+
 import { Dropdown, Responsive, Segment, Icon, Menu } from 'semantic-ui-react'
-// import '../css/helpers.css'
 
 
 import SignedOutLinks from './layouts/SignedOutLinks'
-// import SignedOutLinkMobile from './layouts/SignedOutLinkMobile'
 import SignedInLinks from './layouts/SignedInLinks'
-// import SignedInLinksMobile from './layouts/SignedInLinksMobile'
-
 
 class Header extends Component {
   state = {
@@ -128,5 +125,20 @@ class Header extends Component {
     )
   }
 }
-export default withRouter(connect()(Header))
+function mapStateToProps(state, props) {
+  console.log(state)
+  return {
+    state,
+  }
+}
+function mapStateToProps(state, props) {
+  console.log(state)
+  return {
+    state,
+  }
+}
+export default connect(mapStateToProps)(Header)
+
+// export default withRouter(connect(mapStateToProps)(Header))
+// export default connect()(Header))
 

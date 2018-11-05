@@ -25,8 +25,7 @@ class Footer extends Component {
             </Grid.Column>
             <Grid.Column className="tac">
               <span className="tac">
-                <Icon name="heart outline" />
-                made with love and passion
+                made with <Icon name="heart outline" /> and passion
               </span>
             </Grid.Column>
             <Grid.Column className="box-social">

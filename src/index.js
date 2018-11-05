@@ -30,7 +30,7 @@ const store = createStore(
     applyMiddleware(
       thunk.withExtraArgument({ getFirebase, getFirestore }),
       logger,
-      loadingBarMiddleware,
+      // loadingBarMiddleware,
     ),
     reactReduxFirebase(fbConfig),
     // reactReduxFirebase(fbConfig, {userProfile: 'users', useFirestoreForProfile: true, attachAuthIsReady: true}),
