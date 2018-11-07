@@ -61,9 +61,9 @@ class Login extends Component {
        success={false}
      >
        <Message
-         content="You're all signed up for the newsletter"
+         content="xxxxxxxx"
          header="Form Completed"
-         success
+         success={false}
        />
        <Message
          content="You can only sign up for an account once with a given e-mail address."

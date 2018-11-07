@@ -1,10 +1,11 @@
 /*
  * SignIn
  * Copyright (C) 2018 xav <xav@xavs-Mac-mini>
+ * Parent: <SignIn />
  */
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Redirect } from 'react-router-dom'
+import { Redirect, withRouter } from 'react-router-dom'
 import { signIn } from '../../store/actions/auth'
 import { Message, Form, Input, Button, Segment } from 'semantic-ui-react'
 import ModalForgetEmail from '../modals/ModalForgetEmail'
@@ -13,8 +14,8 @@ class SignIn extends Component {
   state = {
     email: '',
     password: '',
-    errorForm: false,
-    errorField: false,
+    errorForm: null,
+    loading: false,
   }
   handleChange = (e) => {
     this.setState({
@@ -23,40 +24,46 @@ class SignIn extends Component {
   }
   handleSubmit = (event) => {
     event.preventDefault()
-    this.props.signIn({ email: this.state.email, password: this.state.password })
+    this.setState(() => ({
+      loading: !this.state.loading,
+    }))
+    const {
+      email, password, errorFieldEmail, errorForm,
+    } = this.state
+
+    this.props.signIn({ email, password })// check in firebase authentification
+    console.log(this.props)
+    this.setState(() => ({
+      loading: !this.state.loading,
+    }))
+    // this.props.handleClose()
   }
   render() {
     const { authError } = this.props
-    // if (!authError) {
-    // <Redirect to="/admin/" />
-    // }
-    console.log(authError)
+    const { errorFieldEmail } = this.state
     return (
       <Form
         className="formWidth"
-        error
-        loading={false}
         onSubmit={this.handleSubmit}
         size="large"
-        success={false}
         widths="equal"
       >
-        { !authError ||
+        { authError ?
           <Message
             content="You can only sign up for an account once with a given e-mail address."
             error
             header="Action Forbidden"
           />
+          : null
         }
         <Form.Field
           control={Input}
-          error={false}
+          error={errorFieldEmail}
           icon="at"
           iconPosition="left"
           id="email"
           onChange={this.handleChange}
-          placeholder="E-mail address"
-          required
+          placeholder={!errorFieldEmail ? 'E-mail address' : 'E-mail Required'}
           type="email"
         />
         <Form.Field
@@ -78,7 +85,7 @@ class SignIn extends Component {
             content="Join"
             icon="sign language"
             labelPosition="left"
-            loading={false}
+            loading={!authError && this.state.loading}
             size="large"
           />
           <ModalForgetEmail>
@@ -99,5 +106,5 @@ function mapDispatchToProps(dispatch) {
     signIn: creds => dispatch(signIn(creds)),
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(SignIn)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SignIn))
 

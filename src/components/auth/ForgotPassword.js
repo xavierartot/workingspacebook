@@ -3,7 +3,7 @@
  * Copyright (C) 2018 xav <xav@xavs-Mac-mini>
  */
 import React, { Component } from 'react'
-import { Message, Form, Input, Button, } from 'semantic-ui-react'
+import { Message, Form, Input, Button } from 'semantic-ui-react'
 
 class SignIn extends Component {
   state = {
@@ -39,7 +39,7 @@ class SignIn extends Component {
           success
         />
         <Message
-          content="You can only sign up for an account once with a given e-mail address."
+          content="xxxx"
           error
           header="Action Forbidden"
         />

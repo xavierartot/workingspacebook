@@ -1,5 +1,6 @@
 export const LOGIN_ERROR = 'LOGIN_ERROR'
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
+export const SIGNOUT_SUCCESS = 'SIGNOUT_SUCCESS'
 
 export const signIn = credentials => (dispatch, getState, { getFirebase }) => {
   const firebase = getFirebase()
@@ -13,3 +14,12 @@ export const signIn = credentials => (dispatch, getState, { getFirebase }) => {
     dispatch({ type: 'LOGIN_ERROR' })
   })
 }
+
+export const signOut = () => (dispatch, getState, { getFirebase }) => {
+  const firebase = getFirebase()
+
+  firebase.auth().signOut().then(() => {
+    dispatch({ type: 'SIGNOUT_SUCCESS' })
+  })
+}
+

@@ -8,6 +8,15 @@ import { Modal, Column, Grid, Button, Segment, Divider } from 'semantic-ui-react
 import SignIn from '../auth/SignIn'
 
 class ModalSignIn extends Component {
+  state = {
+    something: '',
+    showModal: false,
+  }
+
+  closeModal = () => { // use to close modal
+    this.setState({ showModal: false })
+  }
+
   render() {
     const {
       login,
@@ -17,8 +26,10 @@ class ModalSignIn extends Component {
       <div>
         <Modal
           closeIcon
+          onClose={this.closeModal}
+          open={this.state.showModal}
           size="large"
-          trigger={<Button circular>{contentLogin}</Button>}
+          trigger={<Button circular onClick={() => this.setState({ showModal: true })}>{contentLogin}</Button>}
         >
           <Modal.Header className="header-form">{this.props.children}</Modal.Header>
           <Modal.Content>
@@ -27,7 +38,7 @@ class ModalSignIn extends Component {
               <Button circular>Log in with Facebook</Button>
             </div>
             <Divider />
-            <SignIn />
+            <SignIn handleClose={this.closeModal} />
           </Modal.Content>
         </Modal>
       </div>

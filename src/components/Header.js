@@ -23,11 +23,7 @@ class Header extends Component {
   render() {
     const { activeItem } = this.state
     const { auth, profile } = this.props
-    const links = false ? <SignedInLinks profile /> : <SignedOutLinks />
-    // const linksMobile = true ? <SignedInLinks profile /> : <SignedOutLinks />
-
-    // console.log(auth);//firebase
-    // const links = auth.uid ? <SignedInLinks profile={profile} /> : <SignedOutLinks />
+    const links = auth.uid ? <SignedInLinks profile={profile} /> : <SignedOutLinks />
     return (
       <Fragment>
         <Responsive maxWidth={10559} minWidth={768}>
@@ -126,19 +122,10 @@ class Header extends Component {
   }
 }
 function mapStateToProps(state, props) {
-  console.log(state)
   return {
-    state,
+    authError: state.auth.authError,
+    auth: state.firebase.auth,
   }
 }
-function mapStateToProps(state, props) {
-  console.log(state)
-  return {
-    state,
-  }
-}
-export default connect(mapStateToProps)(Header)
-
-// export default withRouter(connect(mapStateToProps)(Header))
-// export default connect()(Header))
+export default withRouter(connect(mapStateToProps)(Header))
 

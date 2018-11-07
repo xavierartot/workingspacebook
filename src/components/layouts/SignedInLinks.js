@@ -4,13 +4,21 @@
  * Parent: Header
  */
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { signOut } from '../../store/actions/auth'
+
 import { Label, Dropdown, Icon, Menu, Button, Input } from 'semantic-ui-react'
+
+import { signIn } from '../../store/actions/auth'
 // import ModalSignIn from '../modals/ModalSignIn'
 // import ModalSignUp from '../modals/ModalSignUp'
-import { Link } from 'react-router-dom'
 
 
 class SignedInLinks extends Component {
+  signOut = () => {
+    this.props.dispatch(signOut())
+  }
   render() {
     return (
       <div className="right item signedIn">
@@ -52,9 +60,10 @@ class SignedInLinks extends Component {
             />
             <Dropdown.Divider className="m0" />
             <Dropdown.Item
-              as={Link}
-              content="Log Out"
+              as="a"
+              content="Sign Out"
               icon="window close outline"
+              onClick={this.signOut}
               to="/"
             />
           </Dropdown.Menu>
@@ -68,4 +77,13 @@ class SignedInLinks extends Component {
     )
   }
 }
-export default SignedInLinks
+function mapStateToProps({ state }, props) {
+  return {
+    state,
+  }
+}
+// function mapDispatchToProps(dispatch) {
+// () => dispatch(signOut())
+// }
+export default connect(mapStateToProps)(SignedInLinks)
+
