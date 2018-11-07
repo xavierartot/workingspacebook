@@ -23,8 +23,8 @@ class SignIn extends Component {
     })
   }
   handleSubmit = (event) => {
-    console.log(this.props)
     event.preventDefault()
+    console.log(this.props, this.props.auth)
     this.setState(() => ({
       loading: !this.state.loading,
     }))
@@ -37,13 +37,13 @@ class SignIn extends Component {
     this.setState(() => ({
       loading: !this.state.loading,
     }))
-    console.log(this.props)
+    console.log(this.props, this.props.auth)
     // this.props.handleClose()
   }
   render() {
-    const { authError } = this.props
+    const { authError, auth } = this.props
     const { errorFieldEmail } = this.state
-    console.log(this.props)
+    console.log(this.props, auth)
     return (
       <Form
         className="formWidth"
@@ -102,6 +102,7 @@ class SignIn extends Component {
 function mapStateToProps(state, props) {
   return {
     authError: state.auth.authError,
+    auth: state.firebase.auth,
   }
 }
 function mapDispatchToProps(dispatch) {
