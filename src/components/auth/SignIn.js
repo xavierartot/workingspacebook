@@ -23,6 +23,7 @@ class SignIn extends Component {
     })
   }
   handleSubmit = (event) => {
+    console.log(this.props)
     event.preventDefault()
     this.setState(() => ({
       loading: !this.state.loading,
@@ -36,11 +37,13 @@ class SignIn extends Component {
     this.setState(() => ({
       loading: !this.state.loading,
     }))
+    console.log(this.props)
     // this.props.handleClose()
   }
   render() {
     const { authError } = this.props
     const { errorFieldEmail } = this.state
+    console.log(this.props)
     return (
       <Form
         className="formWidth"

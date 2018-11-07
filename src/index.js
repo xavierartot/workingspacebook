@@ -34,7 +34,7 @@ const store = createStore(
     ),
     reactReduxFirebase(fbConfig),
     // reactReduxFirebase(fbConfig, {userProfile: 'users', useFirestoreForProfile: true, attachAuthIsReady: true}),
-    reactReduxFirebase(fbConfig, { useFirestoreForProfile: true, attachAuthIsReady: true }),
+    reactReduxFirebase(fbConfig, { attachAuthIsReady: true }),
     reduxFirestore(fbConfig), // redux bindings for firestore
   ),
 )
