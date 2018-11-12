@@ -1,13 +1,13 @@
 /*
  * SignIn
  * Copyright (C) 2018 xav <xav@xavs-Mac-mini>
- * Parent: <SignIn />
+ * Parent: <ModalSignIn />
  */
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { Redirect, withRouter } from 'react-router-dom'
-import { signIn } from '../../store/actions/auth'
-import { Message, Form, Input, Button, Segment } from 'semantic-ui-react'
+import { signIn, loginFacebook, loginTwitter } from '../../store/actions/auth'
+import { Divider, Icon, Message, Form, Input, Button, Segment } from 'semantic-ui-react'
 import ModalForgetEmail from '../modals/ModalForgetEmail'
 
 class SignIn extends Component {
@@ -46,70 +46,85 @@ class SignIn extends Component {
     console.log(this.props, auth)
     if (auth.uid) return <Redirect to="/pseudo/likes" />
     return (
-      <Form
-        className="formWidth"
-        onSubmit={this.handleSubmit}
-        size="large"
-        widths="equal"
-      >
-        { authError ?
-          <Message
-            content="You can only sign up for an account once with a given e-mail address."
-            error
-            header="Action Forbidden"
-          />
+      <Fragment>
+        <div className="centerButtons">
+          <Button circular className="twitterButtons" color="twitter" onClick={() => this.props.loginTwitter()}>
+            <Icon name="twitter" />
+            Log in with Twitter
+          </Button>
+          <Button circular color="facebook" onClick={() => this.props.loginFacebook()}>
+            <Icon name="facebook" /> Log in with Facebook
+          </Button>
+        </div>
+        <Divider />
+        <Form
+          className="formWidth"
+          onSubmit={this.handleSubmit}
+          size="large"
+          widths="equal"
+        >
+          { authError ?
+            <Message
+              content="You can only sign up for an account once with a given e-mail address."
+              error
+              header="Action Forbidden"
+            />
           : null
         }
-        <Form.Field
-          control={Input}
-          error={errorFieldEmail}
-          icon="at"
-          iconPosition="left"
-          id="email"
-          onChange={this.handleChange}
-          placeholder={!errorFieldEmail ? 'E-mail address' : 'E-mail Required'}
-          type="email"
-        />
-        <Form.Field
-          control={Input}
-          error={false}
-          icon="lock"
-          iconPosition="left"
-          id="password"
-          onChange={this.handleChange}
-          placeholder="Password"
-          required
-          type="password"
-        />
-        <Segment basic className="d-flex center doubleButtons">
-          <Button
-            active={false}
-            circular
-            color="teal"
-            content="Join"
-            icon="sign language"
-            labelPosition="left"
-            loading={!authError && this.state.loading}
-            size="large"
+          <Form.Field
+            control={Input}
+            error={errorFieldEmail}
+            icon="at"
+            iconPosition="left"
+            id="email"
+            onChange={this.handleChange}
+            placeholder={!errorFieldEmail ? 'E-mail address' : 'E-mail Required'}
+            type="email"
           />
-          <ModalForgetEmail>
+          <Form.Field
+            control={Input}
+            error={false}
+            icon="lock"
+            iconPosition="left"
+            id="password"
+            onChange={this.handleChange}
+            placeholder="Password"
+            required
+            type="password"
+          />
+          <Segment basic className="d-flex center doubleButtons">
+            <Button
+              active={false}
+              circular
+              color="teal"
+              content="Join"
+              icon="sign language"
+              labelPosition="left"
+              loading={!authError && this.state.loading}
+              size="large"
+            />
+            <ModalForgetEmail>
             Forget Your Password
-          </ModalForgetEmail>
-        </Segment>
-      </Form>
+            </ModalForgetEmail>
+          </Segment>
+        </Form>
+      </Fragment>
+
     )
   }
 }
 function mapStateToProps(state, props) {
+  // console.log(state)
   return {
-    authError: state.auth.authError,
     auth: state.firebase.auth,
+    authError: state.auth.authError,
   }
 }
 function mapDispatchToProps(dispatch) {
   return {
-    signIn: creds => dispatch(signIn(creds)),
+    signIn: newUser => dispatch(signIn(newUser)),
+    loginFacebook: () => dispatch(loginFacebook()),
+    loginTwitter: () => dispatch(loginTwitter()),
   }
 }
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SignIn))
-

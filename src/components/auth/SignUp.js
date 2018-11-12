@@ -4,10 +4,10 @@
  */
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
-import { Divider, Message, Form, Input, Button } from 'semantic-ui-react'
+import { Icon, Divider, Message, Form, Input, Button } from 'semantic-ui-react'
 // import ImageUploader from 'react-images-upload'
 import { withRouter } from 'react-router-dom'
-import { signUp, loginFacebook } from '../../store/actions/auth'
+import { signUp, loginFacebook, loginTwitter } from '../../store/actions/auth'
 
 import ModalSignIn from '../modals/ModalSignIn'
 
@@ -45,15 +45,6 @@ class SignUp extends Component {
 
     this.setState(() => ({ submitActive: false }))
   }
-
-  loginWithFacebook = (event) => {
-    // console.log(3)
-    this.props.loginFacebook()
-  }
-  // closePopup = (event) => {
-  // console.log('yeag')
-  // this.props.onClosePopup()
-  // }
   // onDrop(picture) {
   // console.log(picture)
   // this.setState({
@@ -62,12 +53,16 @@ class SignUp extends Component {
   // }
   render() {
     const { authError } = this.props
-    // console.log(this.props)
     return (
       <Fragment>
         <div className="centerButtons">
-          <Button circular className="twitterButtons" onClick={this.twitterLogin}>Log in with Twitter</Button>
-          <Button circular onClick={this.loginWithFacebook}>Log in with Facebook</Button>
+          <Button circular className="twitterButtons" color="twitter" onClick={() => this.props.loginTwitter()}>
+            <Icon name="twitter" />
+            Sign Up with Twitter
+          </Button>
+          <Button circular color="facebook" onClick={() => this.props.loginFacebook()}>
+            <Icon name="facebook" /> Sign Up with Facebook
+          </Button>
         </div>
         <Divider />
         <Form
@@ -174,6 +169,7 @@ function mapDispatchToProps(dispatch) {
   return {
     signUp: newUser => dispatch(signUp(newUser)),
     loginFacebook: () => dispatch(loginFacebook()),
+    loginTwitter: () => dispatch(loginTwitter()),
   }
 }
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SignUp))

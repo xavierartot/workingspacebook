@@ -46,11 +46,6 @@ class ModalSignIn extends Component {
         >
           <Modal.Header className="header-form">{this.props.children}</Modal.Header>
           <Modal.Content>
-            <div className="centerButtons">
-              <Button circular className="twitterButtons">Log in with Twitter</Button>
-              <Button circular>Log in with Facebook</Button>
-            </div>
-            <Divider />
             <SignIn handleClose={this.closeModal} />
           </Modal.Content>
         </Modal>

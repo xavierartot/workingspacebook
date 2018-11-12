@@ -5,6 +5,8 @@ export const SIGNUP_SUCCESS = 'SIGNUP_SUCCESS'
 export const SIGNUP_ERROR = 'SIGNUP_ERROR'
 export const FB_LOGIN_SUCCESS = 'FB_LOGIN_SUCCESS'
 export const FB_LOGIN_ERROR = 'FB_LOGIN_ERROR'
+export const TWITTER_LOGIN_SUCCESS = 'TWITTER_LOGIN_SUCCESS'
+export const TWITTER_LOGIN_ERROR = 'TWITTER_LOGIN_ERROR'
 
 export const signIn = credentials => (dispatch, getState, { getFirebase }) => {
   const firebase = getFirebase()
@@ -69,7 +71,7 @@ export const loginFacebook = () => (dispatch, getState, { getFirebase, getFirest
     return result
   })
     .then((resp) => {
-      console.log(resp)
+      // console.log(resp)
       const profile = resp.additionalUserInfo.profile
       firestore.collection('users') // and add an uid
         .doc(resp.user.uid).set({ // set the data in users collection
@@ -85,5 +87,50 @@ export const loginFacebook = () => (dispatch, getState, { getFirebase, getFirest
     })
     .catch((err) => {
       dispatch({ type: 'FB_LOGIN_ERROR', err })
+    })
+}
+export const loginTwitter = () => (dispatch, getState, { getFirebase, getFirestore }) => {
+  // console.log(1)
+  const firebase = getFirebase()
+  const firestore = getFirestore()
+  const provider = new firebase.auth.TwitterAuthProvider()
+  firebase.auth().signInWithPopup(provider).then((result) => {
+    // This gives you a the Twitter OAuth 1.0 Access Token and Secret.
+    // You can use these server side with your app's credentials to access the Twitter API.
+    const token = result.credential.accessToken
+    const secret = result.credential.secret
+    // The signed-in user info.
+    const user = result.user
+    // console.log(result)
+    return result
+    // ...
+  })
+    .then((resp) => {
+      // console.log(resp)
+      const profile = resp.additionalUserInfo.profile
+      firestore.collection('users') // and add an uid
+        .doc(resp.user.uid).set({ // set the data in users collection
+          firstName: profile.name,
+          lastName: profile.screen_name,
+          initials: profile.screen_name[0] + profile.name[0],
+          pseudoUser: profile.screen_name,
+          displayName: profile.screen_name,
+        })
+    })
+    .then(() => {
+      dispatch({ type: 'TWITTER_LOGIN_SUCCESS' })
+    })
+    .catch((err) => {
+      dispatch({ type: 'TWITTER_LOGIN_ERROR', err })
+    })
+    .catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code
+      const errorMessage = error.message
+      // The email of the user's account used.
+      const email = error.email
+      // The firebase.auth.AuthCredential type that was used.
+      const credential = error.credential
+      // ...
     })
 }
