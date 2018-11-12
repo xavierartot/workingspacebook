@@ -1,18 +1,16 @@
 /*
  * SignedInLinks.js
  * Copyright (C) 2018 xav <xav@xavs-Mac-mini>
- * Parent: Header and Modal
+ * Parent: <ModalSignedIn/>
+ * styl: menu.styl
  */
 import React from 'react'
 import { connect } from 'react-redux'
-import { Link, withRouter, Redirect } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import { signOut } from '../../store/actions/auth'
+import { Label, Dropdown, Menu, Input } from 'semantic-ui-react'
 
-import { Label, Dropdown, Icon, Menu, Button, Input } from 'semantic-ui-react'
-
-import { signIn } from '../../store/actions/auth'
-
-const SignedInLinks = ({ signOut }) => (
+const SignedInLinks = ({ signOut, profile }) => (
   <div className="right item signedIn">
     <Menu.Item className="fz-normal" position="right">
       <Input
@@ -33,15 +31,15 @@ const SignedInLinks = ({ signOut }) => (
         <Dropdown.Item
           as={Link}
           className="dropdownImage"
-          content="Max Art sdfs fd sf sdf ds fsdf sdf  w"
+          content={`${profile.firstName} ${profile.lastName}`}
           image="http://place-hold.it/50x50"
-          to="/pseudo/likes"
+          to="/pseudo/likes/0"
         />
         <Dropdown.Item
           as={Link}
           content="View Profile"
           icon="paper plane outline"
-          to="/pseudo/likes"
+          to="/pseudo/likes/0"
         />
         <Dropdown.Divider className="m0" />
         <Dropdown.Item
@@ -62,14 +60,18 @@ const SignedInLinks = ({ signOut }) => (
     </Dropdown>
     <Menu.Item>
       <Label as={Link} circular color="teal" to="/">
-          2
+        {profile.initials}
       </Label>
     </Menu.Item>
   </div>
 )
 function mapStateToProps(state, props) {
+  // console.log(props.profile)
+  // console.log(state)
+  // console.log(state.firebase.auth.uid)
   return {
     auth: state.firebase.auth,
+    profile: state.firebase.profile,
   }
 }
 const mapDispatchToProps = {

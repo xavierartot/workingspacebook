@@ -1,19 +1,23 @@
 /*
- * Gallery.js
+ * ProductGallery.js
  * Copyright (C) 2018 xav <xav@xavs-Mac-mini>
  * Parent: Home, shop
+ * Style: productGallery.styl
  */
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { truncate } from '../utils/helpers'
 import { Divider, Segment, Label, Icon } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import ModalGallery from './modals/ModalGallery'
 import ModalCollections from './modals/ModalCollections'
+import ModalSignUp from './modals/ModalSignUp'
 
 class ProductGallery extends Component {
   heartLike = (event) => {
   }
   render() {
+    const { auth } = this.props
     return (
       <div className="column gallery-col">
         <Segment
@@ -27,7 +31,7 @@ class ProductGallery extends Component {
             ribbon="right"
             size="big"
           >
-              $50
+            $50
           </Label>
           <div className="gallery-image-container">
             <ModalGallery
@@ -71,7 +75,7 @@ class ProductGallery extends Component {
                 <Icon as="i" link name="heart" />
                 <span className="number-like">5</span>
               </div>
-              <ModalCollections />
+              { auth.uid ? <ModalCollections /> : <ModalSignUp contentLogin="add" plusIcon />}
             </div>
           </footer>
         </Segment>
@@ -79,4 +83,10 @@ class ProductGallery extends Component {
     )
   }
 }
-export default ProductGallery
+function mapStateToProps(state, props) {
+  return {
+    state,
+    auth: state.firebase.auth,
+  }
+}
+export default connect(mapStateToProps)(ProductGallery)

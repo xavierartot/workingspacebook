@@ -2,7 +2,6 @@
  * Shop.js
  * Copyright (C) 2018 xav <xav@xavs-Mac-mini>
  *
- * Distributed under terms of the MIT license.
  */
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
@@ -12,7 +11,6 @@ import ShopHeader from './ShopHeader'
 import ModuleFilter from './ModuleFilter'
 import ProductGallery from './ProductGallery'
 
-import SignedInShopNav from './menus/SignedInShopNav'
 import SignedOutShopNav from './menus/SignedOutShopNav'
 
 class Shop extends Component {

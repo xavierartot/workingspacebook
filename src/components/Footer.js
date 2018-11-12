@@ -6,15 +6,11 @@
  */
 import React, { Component } from 'react'
 
-import { Icon, Image, Grid, Label, Segment, Menu, Input } from 'semantic-ui-react'
-import { Link } from 'react-router-dom'
+import { Icon, Grid } from 'semantic-ui-react'
+// import { Link } from 'react-router-dom'
 
 class Footer extends Component {
-  state = { activeItem: 'inbox' }
-
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
   render() {
-    const { activeItem } = this.state
     return (
       <div className="Footer">
         <Grid stackable>

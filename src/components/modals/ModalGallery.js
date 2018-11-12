@@ -1,9 +1,12 @@
 /*
  * Modal.js
  * Copyright (C) 2018 Xavier Artot
+ * Parent: <ProductGallery/>
  */
+
+
 import React, { Component } from 'react'
-import { Form, Segment, Divider, Popup, Label, Button, Icon, Grid, Modal, Header, Image } from 'semantic-ui-react'
+import { Form, Segment, Divider, Button, Icon, Grid, Modal, Header, Image } from 'semantic-ui-react'
 import ModalCollections from './ModalCollections'
 import PopupModalGallery from '../PopupModalGallery'
 import { Link } from 'react-router-dom'

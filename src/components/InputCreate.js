@@ -9,9 +9,9 @@ import { connect } from 'react-redux'
 import { compose } from 'redux'// add to use Higher Order Component
 import { firestoreConnect } from 'react-redux-firebase'// add firebase Redux
 
-import { Form, Button, Icon, Input } from 'semantic-ui-react'
+import { Button, Icon, Input } from 'semantic-ui-react'
 import { handleAddCollection } from '../store/actions/shared'
-import { addCollection } from '../store/actions/collections'
+// import { addCollection } from '../store/actions/collections'
 
 class InputCreate extends Component {
   state = {
@@ -28,7 +28,7 @@ class InputCreate extends Component {
     })
   }
   render() {
-    const { eventCreateLibrary, collections } = this.props
+    const { eventCreateLibrary } = this.props
     // console.log(collections)
     return (
       <form onSubmit={this.handleCreate}>

@@ -29,7 +29,7 @@ class SignIn extends Component {
       loading: !this.state.loading,
     }))
     const {
-      email, password, errorFieldEmail, errorForm,
+      email, password,
     } = this.state
 
     this.props.signIn({ email, password })// check in firebase authentification
@@ -44,6 +44,7 @@ class SignIn extends Component {
     const { authError, auth } = this.props
     const { errorFieldEmail } = this.state
     console.log(this.props, auth)
+    if (auth.uid) return <Redirect to="/pseudo/likes" />
     return (
       <Form
         className="formWidth"

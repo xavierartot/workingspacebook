@@ -12,8 +12,8 @@ import { firestoreConnect } from 'react-redux-firebase'// add firebase Redux
 
 class CollectionsDisplay extends Component {
   render() {
-    const { collection, newCollection, token } = this.props
-    console.log(this.props)
+    const { collection } = this.props
+    //console.log(this.props)
     return (
       <Header
         as="h1"
@@ -43,7 +43,7 @@ class CollectionsDisplay extends Component {
   }
 }
 function mapStateToProps(state, props) {
-  console.log(state)
+  //console.log(state)
   return {
     products: state.firestore.ordered.collections,
     state,

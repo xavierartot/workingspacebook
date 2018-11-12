@@ -125,6 +125,7 @@ function mapStateToProps(state, props) {
   return {
     authError: state.auth.authError,
     auth: state.firebase.auth,
+    profile: state.firebase.profile,
   }
 }
 export default withRouter(connect(mapStateToProps)(Header))

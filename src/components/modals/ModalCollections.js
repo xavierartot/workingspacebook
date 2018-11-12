@@ -9,8 +9,7 @@ import { connect } from 'react-redux'
 import { compose } from 'redux'// add to use Higher Order Component
 import { firestoreConnect } from 'react-redux-firebase'// add firebase Redux
 
-
-import { Grid, Segment, Label, Input, Icon, Modal, Header, Image, Transition } from 'semantic-ui-react'
+import { Icon, Modal, Header } from 'semantic-ui-react'
 import InputCreate from '../InputCreate'
 import CollectionsDisplay from '../CollectionsDisplay'
 
@@ -29,9 +28,9 @@ class ModalCollections extends Component {
   }
   toggleVisibility = () => this.setState({ visible: !this.state.visible })
   render() {
-    const { visible, addProduct } = this.state
+    const { visible } = this.state
     const {
-      image, contentText, children, collections, products,
+      children, collections,
     } = this.props
     let bgc = ''
     if (!visible) {
@@ -58,7 +57,7 @@ class ModalCollections extends Component {
             <Modal.Description>
               <h1 className="headerContent">
                 <span>Add this to a Library</span>
-                <img src="https://react.semantic-ui.com/images/avatar/large/rachel.png" />
+                <img alt="rachel" src="https://react.semantic-ui.com/images/avatar/large/rachel.png" />
               </h1>
               <div className={visible ? 'containerInput container-both' : 'containerText container-both'} >
                 <Header
@@ -94,7 +93,7 @@ function mapStateToProps(state, props) {
   return {
     collections: state.firestore.ordered.collections,
     products: state.firestore.ordered.products,
-    state,
+    auth: state.firebase.auth,
   }
 }
 export default compose(// HOC -  add

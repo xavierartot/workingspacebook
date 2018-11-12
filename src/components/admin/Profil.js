@@ -5,22 +5,30 @@
  * Distributed under terms of the MIT license.
  */
 import React, { Component } from 'react'
-import AddProduct from './AddProduct'
+import { connect } from 'react-redux'
+import { compose } from 'redux'
+import { firestoreConnect } from 'react-redux-firebase'// add
+import { Redirect } from 'react-router-dom'
 
-import { Header, List, Pane, Tab, Container, Segment, Label, Icon, Menu, Button, Input } from 'semantic-ui-react'
+import AddProduct from './AddProduct'
+// import ModalAddProduct from '../modals/ModalAddProduct'
+
+import { Header, List, Tab, Container, Segment, Label, Icon, Menu } from 'semantic-ui-react'
 
 import { Link } from 'react-router-dom'
 
 class Profil extends Component {
-  state = { activeItem: 'home' }
-
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+  state = {
+    tabLoading: false,
+  }
   render() {
+    if (!this.props.auth.uid) return <Redirect to="/" />
+    const { profile, auth } = this.props
     const panes = [
       {
         menuItem: '0 Likes',
         render: () =>
-          (<Tab.Pane>
+          (<Tab.Pane active="false" loading>
             <List divided selection>
               <List.Item>
                 <Label color="red" horizontal>
@@ -50,27 +58,40 @@ class Profil extends Component {
       {
         menuItem: '0 Finds',
         render: () =>
-          (<Tab.Pane>
+          (<Tab.Pane loading>
             <AddProduct />
           </Tab.Pane>),
       },
       {
         menuItem: '0 Collections',
         render: () =>
-          (<Tab.Pane>
+          (<Tab.Pane loading>
           Tab 3 Content
           </Tab.Pane>),
       },
       {
         menuItem: 'Add Product',
         render: () =>
-          (<Tab.Pane>
+          (<Tab.Pane loading={false}>
             <AddProduct />
+          </Tab.Pane>),
+      },
+      {
+        menuItem: 'Edit Profil',
+        render: () =>
+          (<Tab.Pane>
+          Tab 4 Content
+          </Tab.Pane>),
+      },
+      {
+        menuItem: 'Store',
+        render: () =>
+          (<Tab.Pane>
+            Edit: link amazon, link Etsy, Store personal...
           </Tab.Pane>),
       },
     ]
     // https://canopy.co/xavierartot/likes
-    const { activeItem } = this.state
     return (
       <Container className="Profil">
         <Segment className="mt-1 jumbotron" raised>
@@ -82,21 +103,21 @@ class Profil extends Component {
             <span className="fz-1">Find Friends</span>
           </Label>
           <div className="titleBox">
-            <Header as="h1">Xavier Maxim</Header>
+            <Header as="h1">{`${profile.firstName} ${profile.lastName}`}</Header>
             <Menu compact stackable>
               <Menu.Item as={Link} to="pseudo/likes">
-                <Icon name="mail" /> @xaviermaxim {/* name */}
+                <Icon name="mail" /> {auth.email}
               </Menu.Item>
               <Menu.Item as={Link} to="/followers/pseudo">
                 <Icon name="users" /> Follower
                 <Label color="teal" floating>
-                  22
+                  0
                 </Label>
               </Menu.Item>
               <Menu.Item as={Link} to="/following/pseudo">
                 <Icon name="users" /> Following
                 <Label color="red" floating>
-                  8
+                  0
                 </Label>
               </Menu.Item>
             </Menu>
@@ -110,6 +131,7 @@ class Profil extends Component {
           </div>
         </Segment>
         <Tab
+          defaultActiveIndex={3}
           menu={{ fluid: true, vertical: true }}
           menuPosition="left"
           panes={panes}
@@ -119,4 +141,21 @@ class Profil extends Component {
     )
   }
 }
-export default Profil
+function mapStateToProps(state, props) {
+  // console.log(state)
+  // console.log(state.firestore.data.collections)
+  // console.log(state.firestore.data.products)
+  return {
+    state,
+    auth: state.firebase.auth,
+    profile: state.firebase.profile,
+    collections: state.collections,
+  }
+}
+export default compose(// HOC -  add
+  connect(mapStateToProps),
+  firestoreConnect([// arr
+    'collections', // which collection we want connected
+    'products',
+  ]),
+)(Profil)

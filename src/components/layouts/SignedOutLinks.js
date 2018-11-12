@@ -1,6 +1,8 @@
 /*
  * SignedOutLinks.js
  * Copyright (C) 2018 xav <xav@xavs-Mac-mini>
+ * Parent: <ModalSignIn/>
+ * Style:
  */
 import React, { Component } from 'react'
 import { Input, Menu, Button } from 'semantic-ui-react'
@@ -10,7 +12,7 @@ import ModalSignIn from '../modals/ModalSignIn'
 class SignedOutLinks extends Component {
   render() {
     return (
-      <div className="right item">
+      <div className="right item SignOut">
         <Menu.Item className="fz-normal" position="right">
           <Input
             className="sign-btn "

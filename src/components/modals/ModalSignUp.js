@@ -1,13 +1,16 @@
 /*
- * Modal.js
+ * ModalSignUp
  * Copyright (C) 2018 xav <xav@xavs-Mac-mini>
- *
+ * Parent: <ProductGallery/>; <SignedOutLinks/>
+ * style: ...
  */
 import React, { Component } from 'react'
-import { Modal, Button, Divider } from 'semantic-ui-react'
+import { connect } from 'react-redux'
+import { Icon, Modal, Button } from 'semantic-ui-react'
 import SignUp from '../auth/SignUp'
+// import has from 'lodash/has'
 
-class ModalSignIn extends Component {
+class ModalSignUp extends Component {
   state = { isOpen: false }
 
   handleOpen = () => {
@@ -18,27 +21,29 @@ class ModalSignIn extends Component {
     this.setState({ isOpen: false })
   }
   render() {
+    let trigger = null
     const {
-      contentLogin,
+      contentLogin, plusIcon,
     } = this.props
+    // console.log(auth)
+    if (plusIcon) {
+      trigger = <Icon as="i" name="plus circle" />
+    } else {
+      trigger = <Button circular className="headerButtonCircle">{contentLogin}</Button>
+    }
+    // console.log(trigger)
     return (
       <div>
-
         <Modal
           closeIcon
           onClose={this.handleClose}
           onOpen={this.handleOpen}
           open={this.state.isOpen}
           size="large"
-          trigger={<Button circular className="headerButtonCircle">{contentLogin}</Button>}
+          trigger={trigger}
         >
           <Modal.Header className="header-form">{this.props.children}</Modal.Header>
           <Modal.Content>
-            <div className="centerButtons">
-              <Button circular className="twitterButtons">Log in with Twitter</Button>
-              <Button circular >Log in with Facebook</Button>
-            </div>
-            <Divider />
             <SignUp onClosePopup={this.handleClose} />
           </Modal.Content>
         </Modal>
@@ -46,4 +51,11 @@ class ModalSignIn extends Component {
     )
   }
 }
-export default ModalSignIn
+function mapStateToProps(state, props) {
+  // console.log(state)
+  // console.log(state.firebase.auth)
+  return {
+    state: state.firebase.auth,
+  }
+}
+export default connect(mapStateToProps)(ModalSignUp)

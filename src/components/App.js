@@ -19,6 +19,7 @@ import User from './User'
 import Explore from './Explore'
 import Footer from './Footer'
 import Profil from './admin/Profil'
+import AddProduct from './admin/AddProduct'
 
 // import { DB_CONFIG } from '../config/base'
 // import * as firebase from 'firebase'
@@ -41,7 +42,8 @@ class App extends Component {
             <Route component={Page} path="/page/:id" />
             <Route component={Explore} path="/explore/:id" />
             <Route component={Responsive} path="/responsive" />
-            <Route component={Profil} path="/:id/likes" />
+            <Route component={Profil} path="/:pseudo/likes/:idActivePanel" />
+            <Route component={AddProduct} path="/:id/addproduct" />
             <Route component={PageNotFound} />
           </Switch>
           <Footer />

@@ -1,20 +1,14 @@
 export const ADD_COLLECTION = 'ADD_COLLECTION'
 export const UPDATE_COLLECTION = 'UPDATE_COLLECTION'
 export const RECEIVES_COLLECTIONS = 'RECEIVES_COLLECTIONS'
-export const ADD_COLLECTION_ERROR = 'ADD_COLLECTION_ERROR'
 export const LIKE_COLLECTION = 'LIKE_COLLECTION'
 export const REMOVE_COLLECTION = 'REMOVE_COLLECTION'
+export const ADD_COLLECTION_ERROR = 'ADD_COLLECTION_ERROR'
 
 export function recieveCollections(collections) {
   return {
     type: RECEIVES_COLLECTIONS,
     collections,
-  }
-}
-export function addCollectionError(error) {
-  return {
-    type: ADD_COLLECTION_ERROR,
-    error,
   }
 }
 export function addCollection(collection) {
@@ -41,3 +35,10 @@ export function likeCollection(id) {
     id,
   }
 }
+export function addCollectionError(error) {
+  return {
+    type: ADD_COLLECTION_ERROR,
+    error,
+  }
+}
+

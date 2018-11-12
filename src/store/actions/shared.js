@@ -1,4 +1,4 @@
-import { likeCollection, updateCollection, removeCollection, addCollectionError, recieveCollections, addCollection } from './collections'
+import { likeCollection, updateCollection, removeCollection, recieveCollections, addCollection, addCollectionError } from './collections'
 import { likeProduct, updateProduct, removeProduct, addProduct, recieveProduct, recieveProducts, addProductError } from './product'
 
 import { likeComment, updateComment, removeComment, addComment, recieveComments, addCommentError } from './comments'
@@ -7,8 +7,12 @@ import { generateUID } from '../../utils/helpers'
 
 export function handleAddCollection(collection) { // middleware thunk
   return (dispatch, getState, { getFirebase, getFirestore }) => {
+    const firebase = getFirebase()
+    const uid = getState().firebase.auth.uid
+    console.log(uid)
     const collections = {
       id: generateUID(),
+      uid,
       name: collection, // name of collection
       path: collection,
       deleted: false,
@@ -21,13 +25,12 @@ export function handleAddCollection(collection) { // middleware thunk
     const firestore = getFirestore()
     firestore.collection('collections').add({
       ...collections,
-      createdAt: new Date(),
     })
       .then(() => {
         console.log('Yeah, firestore you can dispatch this action')
       }).catch((error) => {
         console.log(error)
-        dispatch(addProductError(error))
+        dispatch(addCollectionError(error))
       })
   }
 }
@@ -57,15 +60,20 @@ export function handleInitialData() { // middleware thunk
 export function handleAddProduct(product) { // middleware thunk
   return (dispatch, getState, { getFirebase, getFirestore }) => {
     const firestore = getFirestore()
-    dispatch(addProduct(product))
-    firestore.collection('projects').add({
+    const productToAdd = {
       ...product,
+      author: getState().firebase.auth.uid,
+      deleted: false,
       createdAt: new Date(),
+      controlForm: undefined,
+    }
+    dispatch(addProduct(...productToAdd))
+    firestore.collection('projects').add({
+      ...productToAdd,
     })
       .then(() => {
         console.log('Yeah, firestore you can dispatch this action')
       }).catch((error) => {
-        console.log(error)
         dispatch(addProductError(error))
       })
   }

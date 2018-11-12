@@ -4,14 +4,9 @@
  * Parent <ModalGallery/>
  */
 import React, { Component } from 'react'
-import { Popup, Label, Button, Icon, Grid, Modal, Header, Image } from 'semantic-ui-react'
+import { Popup, Button, Grid, Header, Image } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
-const style = {
-  borderRadius: 0,
-  opacity: 0.7,
-  padding: '2em',
-}
 class PopupModalGallery extends Component {
   render() {
     return (

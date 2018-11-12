@@ -227,9 +227,6 @@ div.ui.header.ui.segment {
   font-size: 1.9rem;
   font-weight: 500;
 }
-.signedIn .ui.dropdown .menu>.divider {
-  margin: 0;
-}
 div.right.item.signedIn .dropdownImage .ui.image {
   border-radius: 50%;
 }
@@ -238,6 +235,13 @@ div.right.item.signedIn .dropdownImage .ui.image {
 }
 .ui.top.right.pointing.dropdown>.menu.dropdownSize .item {
   padding: 1em 1.14285714em !important;
+}
+.signedIn .label.circular {
+  height: 33px;
+  line-height: 19px;
+}
+.signedIn .ui.dropdown .menu>.divider {
+  margin: 0;
 }
 div.ui.segment.home {
   margin-left: 0;
@@ -339,6 +343,7 @@ div.ui.segment.gallery:hover {
 }
 .gallery-image {
   cursor: pointer;
+  padding: 1rem 1rem 0;
 }
 .gallery-col .ui.divider {
   opacity: 0.4;
@@ -995,4 +1000,10 @@ body .ui.form .error.message,
 body .ui.form .success.message,
 body .ui.form .warning.message {
   display: block;
+}
+.SignOut .ui.small.buttons .ui.headerButtonCircle {
+  margin-left: 1em;
+}
+.ui.menu .item:before {
+  width: 0;
 }

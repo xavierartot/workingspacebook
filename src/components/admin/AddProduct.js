@@ -1,38 +1,24 @@
 /*
  * AddProduct.js
- * Copyright (C) 2018 xav <xav@xavs-Mac-mini>
+ * Parent: <Profil/>
  */
 import React, { Component } from 'react'
-import { Select, Message, Form, Input, Button, Segment } from 'semantic-ui-react'
+import { Header, Select, Form, Input, Button } from 'semantic-ui-react'
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 
-const options = [
-  { key: 'm', text: 'Male', value: 'male' },
-  { key: 'f', text: 'Female', value: 'female' },
-]
 
 class AddProduct extends Component {
   state = {
-    author: '',
     title: '',
-    description: '',
-    createAt: '',
+    body: '',
+    price: '',
     productLink: '',
-    picture: ['https://placeimg.com/640/480/tech'],
     deleted: false,
-    likeAuthorProduct: [], // collections of product liked  by author
-    followerIdUser: [],
-    followingIdUser: [],
-    amazonStore: 'amazon.com/stores/14511840011',
-    amazonLink: 'amazon.com/stores/14511840011',
-    walmartLink: 'amazon.com/stores/14511840011',
-    collections: ['894toq4zt84uz8v4t8wunvox'],
-
-    errorForm: false,
-    errorField: false,
-    submitActive: false,
-    pictures: [],
-    content: {
+    picture: [],
+    collections: [], // categorie of the product
+    controlForm: {
+      submitActive: null,
     },
   }
   handleChange = (e) => {
@@ -43,41 +29,35 @@ class AddProduct extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
     // placholder images: https://placeimg.com/640/480/tech
-    this.setState(() => ({
-      submitActive: true,
-    }))
-    console.log(this.state.submitActive)
+    this.setState({ controlForm: { ...this.state.controlForm, submitActive: true } })
 
-    this.props.history.push('/')
-    setTimeout(() => this.closePopup(), 2000)
+    // const { profile } = this.props
+    // this.props.history.push(`/${profile.firstName}${profile.lastName}/likes`)
 
     // this.props.dispatch(handleAddProduct(this.state))
   }
   render() {
-    console.log(this.state)
+    const { profile, collections } = this.props
+    const options = collections && collections.map(c => ({ key: c.id, text: c.name, value: c.name }))
+    console.log(options)
+    // const options = [
+    // { key: '5', text: '5 minutes', value: '5' },
+    // { key: '15', text: '15 minutes', value: '15' },
+    // { key: '30', text: '30 minutes', value: '30' },
+    // { key: '60', text: '1 hour', value: '60' },
+    // { key: '120', text: '2 hours', value: '120' },
+    // ]
+    // console.log(options)
     return (
       <div className="AddProduct">
-        <Form>
-
-          <Form.Field
-            control={Input}
-            error={false}
-            icon=""
-            iconPosition="left"
-            id="author"
-            onChange={this.handleChange}
-            placeholder="author"
-            required
-            type="text"
-            value={this.state.author}
-          />
+        <Header as="h3" className="tac">{`${profile.firstName}${profile.lastName}`}</Header>
+        <Form onClick={this.handleSubmit} >
           <Form.Field
             control={Input}
             error={false}
             icon=""
             iconPosition="left"
             id="title"
-            onChange={this.handleChange}
             placeholder="Title"
             required
             type="text"
@@ -88,8 +68,20 @@ class AddProduct extends Component {
             error={false}
             icon=""
             iconPosition="left"
+            id="price"
+            label="Price"
+            placeholder="Price"
+            required
+            type="text"
+            value={this.state.price}
+          />
+          <Form.Field
+            control={Input}
+            error={false}
+            icon=""
+            iconPosition="left"
             id="description"
-            onChange={this.handleChange}
+            label="Description"
             placeholder="description"
             required
             type="text"
@@ -101,7 +93,7 @@ class AddProduct extends Component {
             icon=""
             iconPosition="left"
             id="productLink"
-            onChange={this.handleChange}
+            label="Link of Product"
             placeholder="Link of Product"
             required
             type="text"
@@ -114,7 +106,7 @@ class AddProduct extends Component {
             icon=""
             iconPosition="left"
             id="amazonStore"
-            onChange={this.handleChange}
+            label="Amazone Store Link"
             placeholder="Amazone Store Link"
             required
             type="text"
@@ -126,7 +118,7 @@ class AddProduct extends Component {
             icon=""
             iconPosition="left"
             id="amazonLink"
-            onChange={this.handleChange}
+            label="Amazone Link"
             placeholder="Amazone Link"
             required
             type="text"
@@ -138,27 +130,39 @@ class AddProduct extends Component {
             icon=""
             iconPosition="left"
             id="walmartLink"
+            label="Walmart link"
             onChange={this.handleChange}
-            placeholder="walmartLink Link"
-            required
+            placeholder="walmart Link"
             type="text"
             value={this.state.walmartLink}
           />
-          <Form.Field
-            control={Select}
-            label="Gender"
-            options={options}
-            placeholder="Gender"
-          />
+          { options &&
+            <Form.Select
+              control={Select}
+              label="Categorie"
+              options={options}
+              required
+            />
+          }
+          <Button loading={this.state.submitActive}>Create</Button>
         </Form>
 
       </div>
     )
   }
 }
-function mapStateToProps({ state }, props) {
+function mapStateToProps(state, props) {
+  const p = props.match.params
+  console.log(p)
+  const products = state.firestore.data.products
+  const collections = state.firestore.data.collections
+  // console.log(products)
   return {
-    state,
+    auth: state.firebase.auth,
+    profile: state.firebase.profile,
+    products,
+    collections: collections && Object.values(collections),
   }
 }
-export default connect(mapStateToProps)(AddProduct)
+export default withRouter(connect(mapStateToProps)(AddProduct))
+

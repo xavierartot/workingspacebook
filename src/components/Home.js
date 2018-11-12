@@ -1,6 +1,8 @@
 /*
  * Home.js
  * Copyright (C) 2018 xav <xav@xavs-Mac-mini>
+ * Parent: <App/>
+ * Style: home.styl
  */
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
@@ -27,8 +29,4 @@ class Home extends Component {
     )
   }
 }
-// function mapStateToProps({ product, auth }, props) {
-// return {
-// }
-// }
 export default connect(null, null)(Home)

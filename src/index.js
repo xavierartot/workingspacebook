@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 // redux
 import { applyMiddleware, createStore, compose } from 'redux'
-import { loadingBarMiddleware } from 'react-redux-loading-bar'
+// import { loadingBarMiddleware } from 'react-redux-loading-bar'
 import thunk from 'redux-thunk'
 import { createLogger } from 'redux-logger'
 import { Provider } from 'react-redux'
@@ -32,9 +32,7 @@ const store = createStore(
       logger,
       // loadingBarMiddleware,
     ),
-    reactReduxFirebase(fbConfig),
-    // reactReduxFirebase(fbConfig, {userProfile: 'users', useFirestoreForProfile: true, attachAuthIsReady: true}),
-    reactReduxFirebase(fbConfig, { attachAuthIsReady: true }),
+    reactReduxFirebase(fbConfig, { useFirestoreForProfile: true, userProfile: 'users', attachAuthIsReady: true }),
     reduxFirestore(fbConfig), // redux bindings for firestore
   ),
 )

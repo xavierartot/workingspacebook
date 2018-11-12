@@ -5,7 +5,7 @@
  * Distributed under terms of the MIT license.
  */
 import React, { Component } from 'react'
-import { Icon, Modal, Button, Divider } from 'semantic-ui-react'
+import { Icon, Modal, Button } from 'semantic-ui-react'
 import ForgotPassword from '../auth/ForgotPassword'
 
 class ModalForgetEmail extends Component {
